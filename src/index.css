@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 40% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 40% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 189 94% 43%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 220 40% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 40% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 189 94% 43%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 40% 25%;
+    --input: 220 40% 25%;
+    --ring: 189 94% 43%;
+
+    --radius: 0.75rem;
+
+    /* Tech gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(189 94% 43%) 0%, hsl(210 100% 56%) 100%);
+    --gradient-secondary: linear-gradient(180deg, hsl(220 40% 15%) 0%, hsl(222 47% 11%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(220 40% 15%) 50%, hsl(222 47% 11%) 100%);
+    
+    /* Shadows with glow */
+    --shadow-glow: 0 0 40px hsla(189 94% 43% / 0.3);
+    --shadow-card: 0 10px 40px hsla(0 0% 0% / 0.5);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20 md:py-32;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow)];
+  }
+}
