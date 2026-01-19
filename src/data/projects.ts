@@ -5,7 +5,6 @@ export interface Project {
   fullDescription: string;
   tech: string[];
   image: string;
-  screenshots: string[];
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;
@@ -17,258 +16,398 @@ export const projects: Project[] = [
   {
     slug: "greenweek",
     title: "Green Week",
-    shortDescription: "Platformă completă de comerț electronic cu React, Node.js și Stripe.",
+    shortDescription: "Platformă digitală pentru protejarea mediului, dezvoltată cu React, care susține acțiuni ecologice și inițiative sustenabile.",
     fullDescription: `
       <h2>Despre Proiect</h2>
-      <p>O platformă de e-commerce completă dezvoltată de la zero, cu funcționalități avansate pentru gestionarea produselor, coș de cumpărături și procesare plăți.</p>
-      
-      <h2>Funcționalități Cheie</h2>
-      <ul>
-        <li>Catalog produse cu filtrare și căutare avansată</li>
-        <li>Coș de cumpărături persistent</li>
-        <li>Checkout securizat cu Stripe</li>
-        <li>Dashboard admin pentru gestionarea comenzilor</li>
-        <li>Sistem de review-uri și rating</li>
-        <li>Notificări email automate</li>
-      </ul>
-      
-      <h2>Provocări Tehnice</h2>
-      <p>Cea mai mare provocare a fost implementarea unui sistem de inventar în timp real care să sincronizeze corect stocurile între utilizatori multipli.</p>
-    `,
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe", "Redis", "Docker"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
-    ],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: true,
-    category: "fullstack",
-    date: "2024-01-01"
-  },
-  {
-    slug: "geolocation-api",
-    title: "Geolocation API",
-    shortDescription: "API REST pentru geolocalizare cu funcționalități avansate de localizare și mapare.",
-    fullDescription: `
-      <h2>Despre Proiect</h2>
-      <p>Un API REST complet pentru geolocalizare care oferă funcționalități avansate de localizare, mapare și analiză geografică.</p>
-      
-      <h2>Funcționalități Cheie</h2>
-      <ul>
-        <li>Board-uri Kanban cu drag & drop</li>
-        <li>Sincronizare în timp real cu WebSockets</li>
-        <li>Sistem de permisiuni pentru echipe</li>
-        <li>Notificări push în browser</li>
-        <li>Integrare cu Slack și Discord</li>
-        <li>Export rapoarte în PDF</li>
-      </ul>
-      
-      <h2>Arhitectură</h2>
-      <p>Aplicația folosește o arhitectură microservicii cu Event Sourcing pentru a asigura consistența datelor în timp real.</p>
-    `,
-    tech: ["Next.js", "Socket.io", "MongoDB", "Tailwind CSS", "Redis", "AWS"],
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-      "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80"
-    ],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: true,
-    category: "web",
-    date: "2023-11-15"
-  },
-  {
-    slug: "christmas-memory",
-    title: "Christmas Memory ",
-    shortDescription: "Dashboard interactiv pentru analiza datelor cu grafice complexe și rapoarte.",
-    fullDescription: `
-      <h2>Despre Proiect</h2>
-      <p>Un dashboard de analytics enterprise-grade care permite vizualizarea și analiza datelor în timp real din multiple surse.</p>
-      
-      <h2>Funcționalități Cheie</h2>
-      <ul>
-        <li>Grafice interactive cu D3.js</li>
-        <li>Widget-uri customizabile</li>
-        <li>Export în CSV, PDF și Excel</li>
-        <li>Alerte automate pe threshold-uri</li>
-        <li>API REST pentru integrări</li>
-      </ul>
-    `,
-    tech: ["React", "D3.js", "Express", "PostgreSQL", "Chart.js"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-    ],
-    githubUrl: "https://github.com",
-    featured: true,
-    category: "fullstack",
-    date: "2023-10-01"
-  },
-  {
-    slug: "social-media-platform",
-    title: "Social Media Platform",
-    shortDescription: "Platformă socială cu feed în timp real, chat, stories și notificări.",
-    fullDescription: `
-      <h2>Despre Proiect</h2>
-      <p>O platformă socială modernă cu toate funcționalitățile standard plus features inovatoare.</p>
-      
-      <h2>Funcționalități Cheie</h2>
-      <ul>
-        <li>Feed în timp real</li>
-        <li>Stories cu expirare</li>
-        <li>Chat privat și de grup</li>
-        <li>Sistem de follow/unfollow</li>
-        <li>Notificări push</li>
-      </ul>
-    `,
-    tech: ["Vue.js", "Firebase", "Node.js", "WebSockets", "Redis"],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
-    ],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: false,
-    category: "fullstack",
-    date: "2023-08-15"
-  },
-  {
-    slug: "weather-mobile-app",
-    title: "Weather Mobile App",
-    shortDescription: "Aplicație meteo cross-platform cu predicții detaliate și alerte.",
-    fullDescription: `
-      <h2>Despre Proiect</h2>
-      <p>O aplicație mobilă elegantă pentru prognoza meteo, cu animații fluide și date precise.</p>
-      
-      <h2>Funcționalități Cheie</h2>
-      <ul>
-        <li>Prognoza pe 7 zile</li>
-        <li>Alerte meteo severe</li>
-        <li>Widget-uri pentru home screen</li>
-        <li>Hărți interactive cu radar</li>
-      </ul>
-    `,
-    tech: ["React Native", "TypeScript", "OpenWeather API", "Redux"],
-    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80"
-    ],
-    githubUrl: "https://github.com",
-    featured: false,
-    category: "mobile",
-    date: "2023-06-01"
-  },
-  {
-    slug: "portfolio-generator",
-    title: "Portfolio Generator",
-    shortDescription: "Tool pentru generarea automată de portofolii profesionale.",
-    fullDescription: `
-      <h2>Despre Proiect</h2>
-      <p>Un generator de portofolii care permite dezvoltatorilor să-și creeze rapid site-uri profesionale.</p>
+      <p>Green Week este o aplicație web <em>modernă și interactivă</em> dedicată promovării activităților de mediu și a inițiativelor de curățenie comunitară în timpul <strong>Săptămânii Verzi</strong>. Proiectul reprezintă o <em>inițiativă digitală</em> pentru creșterea conștientizării publice asupra problemelor de mediu, oferind resurse educaționale, informații despre evenimente locale și instrumente pentru implicarea activă în protejarea mediului înconjurător.</p>
+
+      <br><br>
 
       <h2>Funcționalități Cheie</h2>
       <ul>
-        <li>Template-uri multiple</li>
-        <li>Import automat din GitHub</li>
-        <li>Customizare completă</li>
-        <li>Deploy automat</li>
+        <li><strong>Secțiune Hero:</strong> Prezentare vizuală atractivă cu imagini reprezentative pentru activitățile de mediu</li>
+        <li><strong>Activități:</strong> Informații detaliate despre evenimentele de curățenie comunitară și programele de reciclare</li>
+        <li><strong>Resurse:</strong> Ghiduri și materiale utile pentru reciclare și reducerea deșeurilor</li>
+        <li><strong>Sfaturi Practice:</strong> Recomandări pentru un stil de viață sustenabil</li>
+        <li><strong>Galerie Foto:</strong> Colecție de imagini din evenimentele anterioare pentru inspirație</li>
+        <li><strong>Video Educaționale:</strong> Conținut multimedia pentru învățare interactivă</li>
+        <li><strong>Footer Informativ:</strong> Link-uri către organizații partenere și informații de contact</li>
       </ul>
-    `,
-    tech: ["Next.js", "Prisma", "PostgreSQL", "Vercel", "GitHub API"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-    ],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: false,
-    category: "web",
-    date: "2023-04-01"
-  },
-  {
-    slug: "greenweek",
-    title: "Green Week",
-    shortDescription: "A web application promoting environmental awareness and sustainable living.",
-    fullDescription: `
-      <h2>About the Project</h2>
-      <p>A modern web application designed to raise awareness about environmental issues and promote sustainable living practices.</p>
 
-      <h2>Key Features</h2>
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Proiectul este construit folosind tehnologii web de ultimă generație:</p>
       <ul>
-        <li>Interactive environmental tips</li>
-        <li>Carbon footprint calculator</li>
-        <li>Educational content</li>
-        <li>Responsive design</li>
+        <li><strong>Vite:</strong> Bundler rapid pentru dezvoltarea și procesele de build ale aplicației</li>
+        <li><strong>React:</strong> Framework JavaScript pentru crearea interfețelor utilizator dinamice</li>
+        <li><strong>TypeScript:</strong> Superset JavaScript pentru tipizare statică și dezvoltare mai sigură</li>
+        <li><strong>Tailwind CSS:</strong> Framework CSS utility-first pentru stilizare rapidă și responsivă</li>
+        <li><strong>shadcn/ui:</strong> Componente UI accesibile și personalizabile</li>
+        <li><strong>ESLint:</strong> Pentru asigurarea calității și consistenței codului</li>
       </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <br>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 16 sau mai recentă)</li>
+        <li>Manager de pachete npm sau yarn</li>
+      </ul>
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/greenweek.git</code></li>
+        <li>Intrați în director: <code>cd greenweek</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <br>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:5173/</code>.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat pentru producție: <code>npm run build</code></p>
+      <p>Fișierele build vor fi generate în directorul <code>dist/</code>.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>greenweek/
+├── public/                 # Active statice
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   │   ├── Activities.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Gallery.jsx
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Resources.jsx
+│   │   ├── Tips.jsx
+│   │   └── Videos.jsx
+│   ├── pages/              # Componente pagină
+│   ├── hooks/              # Hook-uri React personalizate
+│   ├── assets/             # Imagini și fișiere media
+│   ├── App.jsx             # Componenta principală a aplicației
+│   └── main.jsx            # Punctul de intrare al aplicației
+├── package.json            # Dependențe și script-uri ale proiectului
+├── vite.config.js          # Configurație Vite
+├── tailwind.config.js      # Configurație Tailwind CSS
+└── README.md               # Documentație proiect</code></pre>
+
+      <br><br>
+
+      <h2>Contribuții</h2>
+      <p>Contribuțiile sunt binevenite! Dacă doriți să îmbunătățiți proiectul:</p>
+      <ol>
+        <li>Fork repository-ul</li>
+        <li>Creați o ramură pentru feature (<code>git checkout -b feature/new-feature</code>)</li>
+        <li>Commit schimbările (<code>git commit -am 'Add new feature'</code>)</li>
+        <li>Push la ramură (<code>git push origin feature/new-feature</code>)</li>
+        <li>Deschideți un Pull Request</li>
+      </ol>
+
+      <br><br>
+
+      <h2>Variabile de Mediu</h2>
+      <p>Aplicația utilizează Google Analytics pentru urmărirea interacțiunilor utilizatorilor. ID-ul de tracking este configurat în fișierul <code>index.html</code>.</p>
+
+      <br><br>
+
+      <h2>Optimizări de Performanță</h2>
+      <ul>
+        <li><strong>Lazy Loading:</strong> Componentele sunt încărcate la cerere pentru îmbunătățirea timpilor de încărcare inițială</li>
+        <li><strong>Optimizarea Imaginilor:</strong> Imaginile sunt optimizate pentru livrare web</li>
+        <li><strong>Code Splitting:</strong> Codul aplicației este împărțit în chunk-uri pentru caching mai bun</li>
+        <li><strong>Minificare:</strong> Build-urile de producție includ CSS și JavaScript minificat</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Suport Browser</h2>
+      <p>Aplicația suportă toate browserele moderne:</p>
+      <ul>
+        <li>Chrome (ultima versiune)</li>
+        <li>Firefox (ultima versiune)</li>
+        <li>Safari (ultima versiune)</li>
+        <li>Edge (ultima versiune)</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Acest proiect este open-source și licențiat sub Licența MIT.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru întrebări sau sugestii, vă rugăm să deschideți un issue în repository-ul GitHub sau să contactați echipa de dezvoltare.</p>
     `,
-    tech: ["JavaScript", "TypeScript", "CSS", "HTML"],
-    image: "https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1569163139394-de4e4f43e4e3?w=800&q=80"
-    ],
+    tech: ["Vite", "React" , "TypeScript", "Tailwind CSS"],
+    image: "/projects/greenweek.jpg",
     githubUrl: "https://github.com/iam269/greenweek",
     liveUrl: "https://iam269.github.io/greenweek/",
-    featured: false,
+    featured: true,
     category: "web",
     date: "2025-10-21"
   },
   {
-    slug: "christmas-memory",
-    title: "Christmas Memory Game",
-    shortDescription: "A festive memory card game with Christmas themes and animations.",
-    fullDescription: `
-      <h2>About the Project</h2>
-      <p>A fun and interactive memory card game featuring Christmas themes, built with modern web technologies.</p>
-
-      <h2>Key Features</h2>
-      <ul>
-        <li>Christmas-themed cards</li>
-        <li>Score tracking</li>
-        <li>Responsive design</li>
-        <li>Smooth animations</li>
-      </ul>
-    `,
-    tech: ["TypeScript", "CSS", "HTML", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1608744882201-52a7f7f3dd60?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1608744882201-52a7f7f3dd60?w=800&q=80"
-    ],
-    githubUrl: "https://github.com/iam269/christmas-memory",
-    liveUrl: "https://iam269.github.io/christmas-memory/",
-    featured: false,
-    category: "web",
-    date: "2025-12-28"
-  },
-  {
     slug: "geolocation-api",
-    title: "Geolocation API Demo",
-    shortDescription: "Demonstration of browser geolocation API with interactive map integration.",
+    title: "Geolocation API",
+    shortDescription: "Aplicație web modernă care folosește GPS și API-ul de Geolocalizare al browserului pentru a afișa în timp real locația utilizatorului, coordonate precise și informații de adresă pe hărți interactive.",
     fullDescription: `
-      <h2>About the Project</h2>
-      <p>A web application showcasing the use of the browser's geolocation API with map visualization and location-based features.</p>
+      <h2>Despre Proiect</h2>
+      <p><strong>Geolocation App</strong> este o aplicație web <em>modernă</em> care permite utilizatorilor să își detecteze și să își exploreze locația geografică în timp real, folosind tehnologia GPS și API-ul de Geolocalizare al browserului. Aplicația oferă coordonate precise, nivelul de acuratețe al locației și informații detaliate despre adresă prin servicii de <em>reverse geocoding</em>.</p>
+      <p>Proiectul pune accent pe experiența utilizatorului, confidențialitate și performanță, fiind potrivit atât pentru testarea funcționalităților bazate pe locație, cât și pentru utilizatori curioși de poziția lor exactă.</p>
 
-      <h2>Key Features</h2>
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
       <ul>
-        <li>Real-time location tracking</li>
-        <li>Interactive map display</li>
-        <li>Location permissions handling</li>
-        <li>Geocoding integration</li>
+        <li><strong>Detectare locație GPS:</strong> Obținerea coordonatelor latitude și longitude în timp real</li>
+        <li><strong>Acuratețe locație:</strong> Afișarea preciziei poziției în metri</li>
+        <li><strong>Hărți interactive:</strong> Vizualizare pe hartă folosind Leaflet și OpenStreetMap</li>
+        <li><strong>Reverse Geocoding:</strong> Conversia coordonatelor în adrese lizibile</li>
+        <li><strong>Urmărire în timp real:</strong> Monitorizarea modificării poziției utilizatorului</li>
+        <li><strong>Design modern:</strong> Interfață glass-morphism cu animații fluide</li>
+        <li><strong>Dark / Light Mode:</strong> Temă adaptivă în funcție de preferințele utilizatorului</li>
       </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Aplicația este dezvoltată folosind tehnologii moderne:</p>
+      <ul>
+        <li><strong>React 18</strong> – interfață dinamică și component-based</li>
+        <li><strong>TypeScript</strong> – siguranță și claritate în dezvoltare</li>
+        <li><strong>Vite</strong> – build rapid și server de dezvoltare performant</li>
+        <li><strong>Leaflet.js</strong> – hărți interactive</li>
+        <li><strong>OpenStreetMap & Nominatim API</strong> – date geografice și reverse geocoding</li>
+        <li><strong>Tailwind CSS</strong> – stilizare rapidă și responsive</li>
+        <li><strong>Framer Motion</strong> – animații fluide</li>
+        <li><strong>TanStack Query</strong> – gestionarea eficientă a datelor</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 18 sau mai recentă)</li>
+        <li>npm sau yarn</li>
+        <li>Browser modern cu suport pentru Geolocation API</li>
+      </ul>
+
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/geolocation-api.git</code></li>
+        <li>Intrați în directorul proiectului: <code>cd geolocation-api</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:8080</code>.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a genera un build optimizat:</p>
+      <pre><code>npm run build</code></pre>
+      <p>Fișierele vor fi generate în directorul <code>dist/</code>.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>geolocation-api/
+├── public/                 # Active statice
+├── src/
+│   ├── components/         # Componente UI reutilizabile
+│   ├── hooks/              # Hook-uri personalizate (geolocation, geocoding)
+│   ├── pages/              # Pagini aplicație
+│   ├── lib/                # Funcții utilitare
+│   ├── App.tsx             # Componenta principală
+│   └── main.tsx            # Punctul de intrare
+├── package.json            # Dependențe și script-uri
+├── vite.config.ts          # Configurație Vite
+├── tailwind.config.ts      # Configurație Tailwind CSS
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Optimizări de Performanță</h2>
+      <ul>
+        <li>Lazy loading pentru componente</li>
+        <li>Code splitting automat cu Vite</li>
+        <li>Caching eficient al datelor</li>
+        <li>Optimizarea resurselor vizuale</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Confidențialitate</h2>
+      <ul>
+        <li>Datele de locație sunt procesate exclusiv pe client</li>
+        <li>Nu se stochează informații pe server</li>
+        <li>Accesul la locație necesită consimțământ explicit</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Proiect open-source, licențiat sub <strong>MIT License</strong>.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub.</p>
     `,
-    tech: ["TypeScript", "CSS", "HTML", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
-    screenshots: [
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80"
-    ],
+    tech: ["React","TypeScript", "Vite", "Tailwind CSS"],
+    image: "/projects/geolocationapi.jpg",
     githubUrl: "https://github.com/iam269/geolocation-api",
     liveUrl: "https://iam269.github.io/geolocation-api/",
-    featured: false,
+    featured: true,
     category: "web",
-    date: "2026-01-03"
-  }
+    date: "2026-01-3"
+  },
+  {
+    slug: "christmas-memory",
+    title: "Christmas Memory",
+    shortDescription: "Aplicație web interactivă și festivă care permite utilizatorilor să creeze, să împărtășească și să retrăiască amintiri de Crăciun prin jocuri tematice și conținut personalizat.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Christmas Memory este o aplicație web <em>interactivă și festivă</em> care permite utilizatorilor să creeze, să împărtășească și să retrăiască amintiri de Crăciun prin jocuri tematice și conținut personalizat. Proiectul combină distracția cu elemente de nostalgie, oferind experiențe interactive precum potrivirea cardurilor, prinderea cadourilor și adăugarea de urări și amintiri personale.</p>
+      <p>Aplicația pune accent pe experiența utilizatorului, atmosfera festivă și accesibilitate, fiind potrivită atât pentru jucători, cât și pentru cei care doresc să creeze amintiri digitale de Crăciun.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+
+      <h3>Jocuri Interactive</h3>
+      <ul>
+        <li><strong>Christmas Memory Game</strong> – potrivește carduri cu teme de Crăciun, Moș Crăciun, reni și ornamente</li>
+        <li><strong>Gift Catcher</strong> – prinde cadouri care cad într-un joc cu cronometru</li>
+        <li><strong>Easter Eggs</strong> ascunse pentru surprize suplimentare</li>
+      </ul>
+
+      <h3>Gestionarea Amintirilor</h3>
+      <ul>
+        <li>Formular pentru adăugarea de povești, poze și urări de Crăciun</li>
+        <li><strong>Memory Wall</strong> – vizualizează amintirile comunității</li>
+        <li><strong>Panou Admin</strong> – moderarea amintirilor (acces admin)</li>
+      </ul>
+
+      <h3>Atmosferă Festivă</h3>
+      <ul>
+        <li>Countdown până la Crăciun</li>
+        <li>Zăpadă animată și efecte vizuale</li>
+        <li>Muzică de Crăciun cu control audio</li>
+      </ul>
+
+      <h3>Experiență Utilizator</h3>
+      <ul>
+        <li>Light/Dark Mode</li>
+        <li>Design responsive pentru desktop, tabletă și mobil</li>
+        <li>Emoji Picker pentru amintiri și interacțiuni</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Proiectul este construit folosind tehnologii web moderne:</p>
+      <ul>
+        <li><strong>Frontend Framework:</strong> React 18 + TypeScript</li>
+        <li><strong>Build Tool:</strong> Vite</li>
+        <li><strong>Styling:</strong> Tailwind CSS + shadcn/ui</li>
+        <li><strong>Animații:</strong> Framer Motion</li>
+        <li><strong>State Management:</strong> React hooks și custom hooks</li>
+        <li><strong>Altele:</strong> SVG personalizate, audio festive, ESLint</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <br>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 18 sau mai recentă)</li>
+        <li>npm sau Bun</li>
+        <li>Browser modern</li>
+      </ul>
+
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/christmas-memory.git</code></li>
+        <li>Intrați în director: <code>cd christmas-memory</code></li>
+        <li>Instalați dependențele: <code>npm install</code> sau <code>bun install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code> sau <code>bun run dev</code></li>
+      </ol>
+
+      <br>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code>.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat pentru producție:</p>
+      <pre><code>npm run build
+# sau
+bun run build</code></pre>
+      <p>Fișierele build vor fi generate în directorul <code>dist/</code> și gata pentru deploy.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>christmas-memory/
+├── public/                 # Active statice (imagini, audio, icoane)
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   │   ├── ui/            # Componente shadcn/ui
+│   │   └── ...            # Componente specifice funcționalităților
+│   ├── hooks/              # Hook-uri React personalizate
+│   ├── lib/                # Funcții utilitare
+│   ├── pages/              # Pagini aplicație
+│   └── ...                 # Fișiere principale ale aplicației
+├── package.json            # Dependențe și script-uri
+├── tailwind.config.ts      # Configurare Tailwind CSS
+├── vite.config.ts          # Configurare Vite
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Optimizări de Performanță</h2>
+      <ul>
+        <li>Lazy loading pentru componente și jocuri</li>
+        <li>Code splitting automat cu Vite</li>
+        <li>Caching eficient al resurselor și imaginilor</li>
+        <li>Minificare CSS și JS în build de producție</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Confidențialitate</h2>
+      <p>Toate amintirile și datele introduse sunt stocate local sau în baza de date doar cu acordul utilizatorului. Accesul la funcționalități sensibile necesită consimțământ explicit.</p>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Proiect open-source, licențiat sub <strong>MIT License</strong>.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/christmas-memory" target="_blank">Christmas Memory GitHub</a>.</p>
+    `,
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+    image: "/projects/christmasmemory.jpg",
+    githubUrl: "https://github.com/iam269/christmas-memory",
+    featured: true,
+    category: "web",
+    date: "2026-01-19"
+  },
 ];

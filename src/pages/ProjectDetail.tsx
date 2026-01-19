@@ -126,24 +126,6 @@ const ProjectDetail = () => {
                 </div>
               </div>
 
-              {/* Screenshots */}
-              {project.screenshots.length > 1 && (
-                <div className="p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm">
-                  <h3 className="text-lg font-semibold mb-4">Screenshots</h3>
-                  <div className="grid gap-3">
-                    {project.screenshots.slice(1).map((screenshot, index) => (
-                      <div key={index} className="aspect-video overflow-hidden rounded-lg border border-border/30">
-                        <img
-                          src={screenshot}
-                          alt={`${project.title} screenshot ${index + 2}`}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
               {/* Links */}
               <div className="p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm">
                 <h3 className="text-lg font-semibold mb-4">Link-uri</h3>

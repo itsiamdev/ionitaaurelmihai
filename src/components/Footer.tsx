@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-primary">IAM</h3>
+            <h3 className="text-lg font-semibold mb-4 text-primary">Ionita Aurel Mihai</h3>
             <p className="text-muted-foreground text-sm">
               Full-stack developer pasionat de tehnologii moderne
             </p>
@@ -58,10 +58,10 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold mb-4 text-foreground">Contact</h4>
             <div className="flex gap-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/iam269" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/ionita-aurel-mihai-20648536a/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-primary transition-colors">
