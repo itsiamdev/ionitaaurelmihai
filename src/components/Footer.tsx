@@ -3,8 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    window.location.href = `/#${id}`;
   };
 
   return (
@@ -32,9 +31,24 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">
+                <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection("blog")} className="text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection("proiecte")} className="text-muted-foreground hover:text-primary transition-colors">
                   Proiecte
-                </Link>
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection("certificari")} className="text-muted-foreground hover:text-primary transition-colors">
+                  Certificări
+                </button>
               </li>
             </ul>
           </div>
@@ -43,9 +57,9 @@ const Footer = () => {
             <h4 className="text-sm font-semibold mb-4 text-foreground">Blog</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <button onClick={() => scrollToSection("blog")} className="text-muted-foreground hover:text-primary transition-colors">
                   Toate Articolele
-                </Link>
+                </button>
               </li>
               <li>
                 <button onClick={() => scrollToSection("blog")} className="text-muted-foreground hover:text-primary transition-colors">
@@ -63,9 +77,6 @@ const Footer = () => {
               </a>
               <a href="https://www.linkedin.com/in/ionita-aurel-mihai-20648536a/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
-              </a>
-              <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail size={20} />
               </a>
             </div>
           </div>

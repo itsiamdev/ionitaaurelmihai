@@ -49,13 +49,6 @@ const Blog = () => {
                     </div>
                     <CardTitle className="text-xl">{post.title}</CardTitle>
                     <CardDescription className="text-sm flex items-center gap-2">
-                      {post.author?.avatar && (
-                        <img 
-                          src={post.author.avatar} 
-                          alt={post.author.name}
-                          className="w-5 h-5 rounded-full object-cover"
-                        />
-                      )}
                       <span>{post.author?.name || "Ionita Aurel Mihai"}</span>
                       <span>•</span>
                       <span>{post.date}</span>

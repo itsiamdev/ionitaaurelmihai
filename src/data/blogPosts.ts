@@ -15,343 +15,259 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "best-practices-react-2024",
-    title: "Best Practices în React pentru 2024",
-    excerpt: "Descoperă cele mai importante tehnici și pattern-uri pentru dezvoltarea aplicațiilor React moderne și performante.",
+    slug: "algoritmi-de-baza-pentru-incepatori-sortare-cautare-complexitate",
+    title: "Algoritmi de bază pentru începători: sortare, căutare și complexitate",
+    excerpt: "Indiferent de limbajul de programare folosit, algoritmii stau la baza oricărei aplicații. Un algoritm este o succesiune de pași clari care rezolvă o problemă. În acest articol voi prezenta câțiva algoritmi de bază, esențiali pentru orice programator începător.",
     content: `
-      <h2>Introducere</h2>
-      <p>React continuă să evolueze, iar în 2024 avem la dispoziție o mulțime de instrumente și best practices care ne ajută să construim aplicații mai performante și mai ușor de întreținut.</p>
-      
-      <h2>1. Folosește Server Components</h2>
-      <p>Server Components reprezintă viitorul React. Permit renderizarea pe server și reduc dimensiunea bundle-ului JavaScript.</p>
-      
-      <h2>2. Optimizează Performance-ul</h2>
-      <p>Folosește React.memo, useMemo și useCallback doar când este necesar. Măsoară performance-ul înainte de a optimiza.</p>
-      
-      <h2>3. TypeScript pentru Type Safety</h2>
-      <p>TypeScript devine standard în dezvoltarea React. Ajută la prevenirea bug-urilor și îmbunătățește developer experience.</p>
-      
+      <h2>Ce este un algoritm?</h2>
+      <p>Un algoritm reprezintă o metodă clară și finită de rezolvare a unei probleme.</p>
+      <p>Exemplu simplu:</p>
+      <ul>
+        <li>citim o listă de numere</li>
+        <li>le sortăm</li>
+        <li>afișăm rezultatul</li>
+      </ul>
+      <p>Chiar și cele mai simple aplicații folosesc algoritmi.</p>
+
+      <h2>Algoritmi de sortare</h2>
+      <p>Sortarea este una dintre cele mai comune operații în programare.</p>
+      <h3>Bubble Sort</h3>
+      <p>Bubble Sort compară elemente alăturate și le interschimbă dacă nu sunt în ordinea corectă.</p>
+      <p><strong>Exemplu în C++:</strong></p>
+      <pre><code class="language-cpp">for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+        if (v[j] > v[j + 1]) {
+            swap(v[j], v[j + 1]);
+        }
+    }
+}</code></pre>
+      <p>Este ușor de înțeles, dar ineficient pentru liste mari.</p>
+
+      <h2>Algoritmi de căutare</h2>
+      <h3>Căutarea liniară</h3>
+      <p>Parcurge elementele unul câte unul până găsește valoarea căutată.</p>
+      <ul>
+        <li>simplă</li>
+        <li>funcționează pe orice listă</li>
+        <li>complexitate: <strong>O(n)</strong></li>
+      </ul>
+      <h3>Căutarea binară</h3>
+      <p>Funcționează doar pe liste sortate și împarte lista în jumătate la fiecare pas.</p>
+      <ul>
+        <li>mult mai rapidă</li>
+        <li>complexitate: <strong>O(log n)</strong></li>
+      </ul>
+
+      <h2>Ce este complexitatea unui algoritm?</h2>
+      <p>Complexitatea arată cât de eficient este un algoritm în funcție de numărul de date de intrare.</p>
+      <p>Cele mai comune:</p>
+      <ul>
+        <li><strong>O(1)</strong> – timp constant</li>
+        <li><strong>O(n)</strong> – timp liniar</li>
+        <li><strong>O(n²)</strong> – timp pătratic</li>
+        <li><strong>O(log n)</strong> – timp logaritmic</li>
+      </ul>
+      <p>Un algoritm mai eficient va rula mai rapid pentru volume mari de date.</p>
+
+      <h2>De ce sunt importanți algoritmii?</h2>
+      <p>Algoritmii te ajută să:</p>
+      <ul>
+        <li>gândești logic</li>
+        <li>rezolvi probleme complexe</li>
+        <li>scrii cod eficient</li>
+        <li>te descurci mai bine la interviuri</li>
+      </ul>
+      <p>Chiar și în web development, algoritmii sunt esențiali pentru performanță.</p>
+
       <h2>Concluzie</h2>
-      <p>Aceste best practices te vor ajuta să construiești aplicații React mai bune în 2024.</p>
+      <p>Înțelegerea algoritmilor de bază este un pas important în formarea oricărui programator. De la sortare și căutare până la aplicații complexe, totul pornește de la aceleași principii.</p>
+
+      <p><em>Acest articol face parte dintr-o serie dedicată începătorilor în programare. Urmărește site-ul pentru articole noi și explicații clare.</em></p>
     `,
-    date: "2024-01-15",
+    date: "2026-01-20",
     readTime: "5 min citire",
-    tags: ["React", "JavaScript", "TypeScript", "Best Practices"],
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=450&fit=crop",
+    tags: ["Algoritmi", "Programare", "Sortare", "Căutare", "Complexitate"],
+    image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&h=450&fit=crop",
     author: {
       name: "Ionita Aurel Mihai",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
     }
   },
   {
-    slug: "ghid-complet-typescript",
-    title: "Ghid Complet TypeScript pentru Începători",
-    excerpt: "Tot ce trebuie să știi despre TypeScript: de la tipuri de bază până la generics și utility types.",
+    slug: "cum-functioneaza-html-css-javascript-intr-o-aplicatie-web",
+    title: "Cum funcționează HTML, CSS și JavaScript într-o aplicație web",
+    excerpt: "Atunci când vizităm un website, tot ce vedem și cu care interacționăm este rezultatul colaborării dintre HTML, CSS și JavaScript. Fiecare dintre aceste tehnologii are un rol bine definit, iar împreună formează baza oricărei aplicații web moderne.",
     content: `
-      <h2>Ce este TypeScript?</h2>
-      <p>TypeScript este un superset de JavaScript care adaugă tipare statice opționale limbajului.</p>
-      
-      <h2>Tipuri de Bază</h2>
-      <p>TypeScript oferă tipuri precum string, number, boolean, array, tuple și multe altele.</p>
-      
-      <h2>Interfaces și Types</h2>
-      <p>Interfaces și type aliases permit definirea structurilor de date complexe.</p>
-      
-      <h2>Generics</h2>
-      <p>Generics oferă flexibilitate și type safety pentru cod reutilizabil.</p>
-    `,
-    date: "2024-01-10",
-    readTime: "8 min citire",
-    tags: ["TypeScript", "Tutorial", "Programming"],
-    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=450&fit=crop",
-    author: {
-      name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-    }
-  },
-  {
-    slug: "tailwind-css-tips-tricks",
-    title: "10 Tips & Tricks pentru Tailwind CSS",
-    excerpt: "Trucuri și tehnici avansate pentru a maximiza productivitatea cu Tailwind CSS în proiectele tale.",
-    content: `
-      <h2>De ce Tailwind CSS?</h2>
-      <p>Tailwind CSS revolutionează modul în care scriem CSS, oferind un sistem utility-first.</p>
+      <h2>Ce este HTML?</h2>
+      <p>HTML (HyperText Markup Language) este limbajul care definește <strong>structura</strong> unei pagini web.</p>
+      <p>Cu HTML stabilim:</p>
+      <ul>
+        <li>titluri</li>
+        <li>paragrafe</li>
+        <li>butoane</li>
+        <li>imagini</li>
+        <li>formulare</li>
+      </ul>
+      <p><strong>Exemplu simplu de HTML:</strong></p>
+      <pre><code class="language-html"><h1>Bun venit!</h1>
+<p>Acesta este primul meu website.</p>
+<button>Click aici</button></code></pre>
+      <p>Fără HTML, o pagină web nu ar avea conținut.</p>
 
-      <h2>1. Custom Design System</h2>
-      <p>Configurează tailwind.config.js pentru a crea un design system consistent.</p>
+      <h2>Ce este CSS?</h2>
+      <p>CSS (Cascading Style Sheets) se ocupă de <strong>aspectul vizual</strong> al paginii.</p>
+      <p>Cu CSS putem controla:</p>
+      <ul>
+        <li>culorile</li>
+        <li>fonturile</li>
+        <li>poziționarea elementelor</li>
+        <li>layout-ul (responsive design)</li>
+      </ul>
+      <p><strong>Exemplu de CSS:</strong></p>
+      <pre><code class="language-css">body {
+  font-family: Arial;
+  background-color: #f5f5f5;
+}
 
-      <h2>2. Componente Reutilizabile</h2>
-      <p>Folosește @apply pentru a crea clase custom pentru componente reutilizabile.</p>
+button {
+  background-color: blue;
+  color: white;
+}</code></pre>
+      <p>Dacă HTML este scheletul, CSS este designul.</p>
 
-      <h2>3. Dark Mode</h2>
-      <p>Implementează dark mode ușor cu clasa 'dark:' din Tailwind.</p>
-    `,
-    date: "2024-01-05",
-    readTime: "6 min citire",
-    tags: ["CSS", "Tailwind", "Design", "Frontend"],
-    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800&h=450&fit=crop",
-    author: {
-      name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-    }
-  },
-  {
-    slug: "javascript-es2024-features",
-    title: "Noutățile JavaScript ES2024 - Ce Trebuie să Știi",
-    excerpt: "Descoperă cele mai importante caracteristici noi din ES2024 și cum să le folosești în proiectele tale moderne.",
-    content: `
-      <h2>Introducere în ES2024</h2>
-      <p>JavaScript continuă să evolueze rapid, iar ES2024 aduce noi caracteristici care îmbunătățesc productivitatea și performanța.</p>
+      <h2>Ce este JavaScript?</h2>
+      <p>JavaScript este limbajul care adaugă <strong>interactivitate</strong> unei pagini web.</p>
+      <p>Cu JavaScript putem:</p>
+      <ul>
+        <li>răspunde la click-uri</li>
+        <li>valida formulare</li>
+        <li>modifica conținutul paginii dinamic</li>
+        <li>comunica cu servere (API-uri)</li>
+      </ul>
+      <p><strong>Exemplu simplu de JavaScript:</strong></p>
+      <pre><code class="language-html"><button onclick="afiseazaMesaj()">Click aici</button>
 
-      <h2>1. Array.fromAsync()</h2>
-      <p>O metodă nouă pentru a crea array-uri din iterabile asincrone, foarte utilă pentru lucrul cu stream-uri de date.</p>
+<script>
+  function afiseazaMesaj() {
+    alert("Ai apăsat butonul!");
+  }
+</script></code></pre>
+      <p>Fără JavaScript, un website ar fi static.</p>
 
-      <h2>2. Iterator helpers</h2>
-      <p>Metode noi pentru iteratori precum map, filter și reduce, care permit procesarea lazy a datelor.</p>
+      <h2>Cum lucrează împreună?</h2>
+      <p>Un mod simplu de a le înțelege este următorul:</p>
+      <ul>
+        <li><strong>HTML</strong> – ce elemente există pe pagină</li>
+        <li><strong>CSS</strong> – cum arată aceste elemente</li>
+        <li><strong>JavaScript</strong> – cum se comportă</li>
+      </ul>
+      <p>Exemplu:</p>
+      <ul>
+        <li>HTML creează un buton</li>
+        <li>CSS îl colorează</li>
+        <li>JavaScript definește ce se întâmplă când este apăsat</li>
+      </ul>
 
-      <h2>3. Promise.withResolvers()</h2>
-      <p>O metodă convenabilă pentru crearea promise-urilor cu resolve/reject handlers separate.</p>
-
-      <h2>4. RegExp v flag</h2>
-      <p>Un nou flag pentru expresii regulate care permite set-uri Unicode și proprietăți string.</p>
-
-      <h2>Impact asupra Dezvoltării</h2>
-      <p>Aceste noi caracteristici fac JavaScript mai puternic și mai expresiv, reducând nevoia de biblioteci externe.</p>
-    `,
-    date: "2024-02-01",
-    readTime: "7 min citire",
-    tags: ["JavaScript", "ES2024", "Programming", "Web Development"],
-    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=450&fit=crop",
-    author: {
-      name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-    }
-  },
-  {
-    slug: "nodejs-best-practices-2024",
-    title: "Best Practices Node.js pentru 2024",
-    excerpt: "Ghid complet pentru dezvoltarea aplicațiilor Node.js scalabile, sigure și performante în anul 2024.",
-    content: `
-      <h2>De ce Best Practices?</h2>
-      <p>Node.js este matur, dar aplicarea best practices rămâne crucială pentru proiecte de succes.</p>
-
-      <h2>1. Arhitectură Modulară</h2>
-      <p>Împarte aplicația în module mici, independente, cu responsabilități clare. Folosește pattern-ul MVC sau Clean Architecture.</p>
-
-      <h2>2. Gestionarea Erorilor</h2>
-      <p>Implementează un sistem centralizat de gestionare a erorilor. Folosește middleware pentru erori și logging structurat.</p>
-
-      <h2>3. Securitate</h2>
-      <p>Validează toate input-urile, folosește helmet pentru headers de securitate, și implementează rate limiting.</p>
-
-      <h2>4. Performance</h2>
-      <p>Folosește clustering pentru utilizarea tuturor CPU-urilor, implementează caching, și optimizează database queries.</p>
-
-      <h2>5. Testing</h2>
-      <p>Scrie teste unitare, de integrare și E2E. Folosește Jest sau Mocha cu coverage reporting.</p>
+      <h2>Greșeli frecvente ale începătorilor</h2>
+      <ul>
+        <li>Învățarea CSS sau JavaScript fără a înțelege bine HTML</li>
+        <li>Amestecarea logicii JavaScript direct în HTML</li>
+        <li>Ignorarea structurii și organizării codului</li>
+      </ul>
+      <p>O bază solidă în aceste tehnologii face învățarea framework-urilor precum <strong>React</strong> mult mai ușoară.</p>
 
       <h2>Concluzie</h2>
-      <p>Aceste practici te vor ajuta să construiești aplicații Node.js robuste și ușor de întreținut.</p>
+      <p>HTML, CSS și JavaScript sunt fundamentul web developmentului. Orice framework sau librărie modernă se bazează pe aceste trei tehnologii.</p>
+      <p>În următorul articol voi discuta despre <strong>algoritmi de bază pentru începători</strong> și de ce sunt importanți chiar și pentru programatorii web.</p>
+
+      <p><em>Dacă ești la început în web development, acest site va conține articole care explică conceptele pas cu pas.</em></p>
     `,
-    date: "2024-02-15",
-    readTime: "10 min citire",
-    tags: ["Node.js", "Backend", "Best Practices", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=450&fit=crop",
+    date: "2026-01-20",
+    readTime: "5 min citire",
+    tags: ["HTML", "CSS", "JavaScript", "Web Development", "Începători"],
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=450&fit=crop",
     author: {
       name: "Ionita Aurel Mihai",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
     }
   },
   {
-    slug: "responsive-design-techniques",
-    title: "Tehnici Avansate de Responsive Design",
-    excerpt: "Cum să creezi interfețe care se adaptează perfect pe toate dispozitivele folosind CSS modern și JavaScript.",
+    slug: "bazele-programarii-variabile-tipuri-date-functii",
+    title: "Bazele programării: variabile, tipuri de date și funcții",
+    excerpt: "Programarea poate părea complicată la început, dar orice limbaj de programare se bazează pe câteva concepte fundamentale. În acest articol voi explica variabilele, tipurile de date și funcțiile, trei elemente esențiale pe care orice programator trebuie să le înțeleagă.",
     content: `
-      <h2>Importanța Responsive Design-ului</h2>
-      <p>În era dispozitivelor mobile, responsive design-ul nu mai este opțional - este esențial pentru UX.</p>
+      <h2>Ce este o variabilă?</h2>
+      <p>O variabilă este un „container" în care stocăm o valoare ce poate fi folosită sau modificată pe parcursul unui program.</p>
+      <p>Gândește-te la o variabilă ca la o cutie etichetată, în care pui o informație.</p>
+      <p><strong>Exemplu în C++:</strong></p>
+      <pre><code class="language-cpp">int varsta = 16;</code></pre>
+      <p>În acest exemplu:</p>
+      <ul>
+        <li><code>int</code> este tipul de date</li>
+        <li><code>varsta</code> este numele variabilei</li>
+        <li><code>16</code> este valoarea stocată</li>
+      </ul>
 
-      <h2>1. Mobile-First Approach</h2>
-      <p>Începe design-ul de la mobile și adaugă complexitate pentru ecrane mai mari. Folosește min-width în media queries.</p>
+      <h2>Tipuri de date de bază</h2>
+      <p>Tipurile de date definesc <strong>ce fel de informație</strong> poate stoca o variabilă.</p>
+      <h3>Cele mai comune tipuri de date:</h3>
+      <ul>
+        <li><strong>int</strong> – numere întregi
+          <pre><code class="language-cpp">int scor = 100;</code></pre>
+        </li>
+        <li><strong>float / double</strong> – numere zecimale
+          <pre><code class="language-cpp">double temperatura = 36.5;</code></pre>
+        </li>
+        <li><strong>char</strong> – un singur caracter
+          <pre><code class="language-cpp">char litera = 'A';</code></pre>
+        </li>
+        <li><strong>string</strong> – text
+          <pre><code class="language-cpp">string nume = "Alex";</code></pre>
+        </li>
+        <li><strong>bool</strong> – adevărat sau fals
+          <pre><code class="language-cpp">bool esteLogat = true;</code></pre>
+        </li>
+      </ul>
+      <p>Alegerea corectă a tipului de date este importantă pentru eficiența și corectitudinea programului.</p>
 
-      <h2>2. CSS Grid și Flexbox</h2>
-      <p>Aceste layout systems moderne permit crearea de design-uri complexe care se adaptează automat.</p>
+      <h2>Ce este o funcție?</h2>
+      <p>O funcție este un bloc de cod care îndeplinește o anumită sarcină și poate fi reutilizat de mai multe ori.</p>
+      <p>Funcțiile ajută la:</p>
+      <ul>
+        <li>organizarea codului</li>
+        <li>evitarea repetării</li>
+        <li>o mai bună înțelegere a programului</li>
+      </ul>
+      <p><strong>Exemplu de funcție în C++:</strong></p>
+      <pre><code class="language-cpp">int suma(int a, int b) {
+    return a + b;
+}</code></pre>
+      <p>Această funcție:</p>
+      <ul>
+        <li>primește două numere (<code>a</code> și <code>b</code>)</li>
+        <li>returnează suma lor</li>
+      </ul>
+      <p><strong>Apelarea funcției:</strong></p>
+      <pre><code class="language-cpp">int rezultat = suma(3, 5);</code></pre>
 
-      <h2>3. Container Queries</h2>
-      <p>O alternativă modernă la media queries, care permite componentelor să se adapteze bazat pe containerul părinte.</p>
-
-      <h2>4. Fluid Typography</h2>
-      <p>Folosește clamp() pentru font sizes care scalează fluid între valori minime și maxime.</p>
-
-      <h2>5. JavaScript pentru Interactivitate</h2>
-      <p>Detectează dispozitivul și ajustează comportamentul UI-ului folosind JavaScript modern.</p>
-
-      <h2>Testing și Debugging</h2>
-      <p>Testează pe dispozitive reale și folosește Chrome DevTools pentru debugging responsive.</p>
-    `,
-    date: "2024-03-01",
-    readTime: "8 min citire",
-    tags: ["CSS", "Responsive Design", "Frontend", "Mobile"],
-    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=450&fit=crop",
-    author: {
-      name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-    }
-  },
-  {
-    slug: "api-security-best-practices",
-    title: "Securitatea API-urilor: Best Practices pentru Dezvoltatori",
-    excerpt: "Ghid complet pentru securizarea API-urilor REST și GraphQL împotriva amenințărilor comune.",
-    content: `
-      <h2>De ce este Importantă Securitatea API?</h2>
-      <p>API-urile sunt puncte de intrare în aplicații și trebuie protejate împotriva atacurilor și abuzurilor.</p>
-
-      <h2>1. Autentificare și Autorizare</h2>
-      <p>Folosește JWT, OAuth 2.0 sau API keys. Implementează role-based access control (RBAC).</p>
-
-      <h2>2. Validarea Input-urilor</h2>
-      <p>Validează și sanitizează toate input-urile. Folosește biblioteci precum Joi sau Yup pentru validare.</p>
-
-      <h2>3. Rate Limiting</h2>
-      <p>Implementează rate limiting pentru a preveni abuzurile și atacurile DDoS. Folosește Redis pentru stocare.</p>
-
-      <h2>4. HTTPS Everywhere</h2>
-      <p>Folosește întotdeauna HTTPS. Implementează HSTS și certificate pinning pentru securitate suplimentară.</p>
-
-      <h2>5. Logging și Monitoring</h2>
-      <p>Loghează toate activitățile suspecte și implementează monitoring în timp real pentru detectarea amenințărilor.</p>
-
-      <h2>6. Gestionarea Secretelor</h2>
-      <p>Nu stoca secrete în cod. Folosește environment variables și servicii de management al secretelor.</p>
+      <h2>De ce sunt aceste concepte atât de importante?</h2>
+      <p>Fără variabile, tipuri de date și funcții:</p>
+      <ul>
+        <li>nu ai putea stoca informații</li>
+        <li>nu ai putea lua decizii</li>
+        <li>nu ai putea construi aplicații reale</li>
+      </ul>
+      <p>Aceste concepte apar în <strong>toate limbajele de programare</strong>, fie că vorbim de C++, JavaScript, Python sau Java.</p>
 
       <h2>Concluzie</h2>
-      <p>Securitatea API este un proces continuu. Rămâi la curent cu ultimele vulnerabilități și patch-uri.</p>
+      <p>Dacă înțelegi bine aceste baze, restul programării devine mult mai ușor. Orice aplicație complexă este construită pornind de la aceste elemente simple.</p>
+      <p>În articolele următoare voi vorbi despre <strong>HTML, CSS și JavaScript</strong> și despre <strong>algoritmi de bază pentru începători</strong>.</p>
+
+      <p><em>Dacă ești la început în programare, urmărește acest site pentru articole noi și explicații clare.</em></p>
     `,
-    date: "2024-03-15",
-    readTime: "9 min citire",
-    tags: ["API", "Security", "Backend", "Best Practices"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=450&fit=crop",
-    author: {
-      name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-    }
-  },
-  {
-    slug: "database-optimization-techniques",
-    title: "Optimizarea Bazelor de Date: De la SQL la NoSQL",
-    excerpt: "Strategii avansate pentru optimizarea performanței bazelor de date în aplicațiile web moderne.",
-    content: `
-      <h2>Importanța Optimizării Bazei de Date</h2>
-      <p>Performanța aplicației depinde direct de eficiența bazei de date. Optimizarea poate îmbunătăți timpul de răspuns cu până la 10x.</p>
-
-      <h2>1. Indexing Strategic</h2>
-      <p>Creează indexuri pe coloanele frecvent căutate. Evită over-indexing care încetinește scrierile.</p>
-
-      <h2>2. Query Optimization</h2>
-      <p>Scrie queries eficiente. Folosește EXPLAIN pentru analiza planurilor de execuție în PostgreSQL/MySQL.</p>
-
-      <h2>3. Caching</h2>
-      <p>Implementează caching la nivel de aplicație (Redis) și database (query result caching).</p>
-
-      <h2>4. Normalizare vs Denormalizare</h2>
-      <p>Găsește echilibrul potrivit între integritatea datelor și performanță. Denormalizează pentru citiri frecvente.</p>
-
-      <h2>5. Connection Pooling</h2>
-      <p>Folosește connection pooling pentru a evita overhead-ul creării/distrugerii conexiunilor.</p>
-
-      <h2>6. Sharding și Partitioning</h2>
-      <p>Pentru scale mare, împarte datele în shard-uri sau partiții pentru distribuție eficientă.</p>
-
-      <h2>Monitorizare și Maintenance</h2>
-      <p>Monitorizează performanța continuu și efectuează maintenance regulat (VACUUM, ANALYZE).</p>
-    `,
-    date: "2024-04-01",
-    readTime: "11 min citire",
-    tags: ["Database", "SQL", "NoSQL", "Performance", "Backend"],
-    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=450&fit=crop",
-    author: {
-      name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-    }
-  },
-  {
-    slug: "git-workflow-teams",
-    title: "Git Workflow pentru Echipe de Dezvoltare",
-    excerpt: "Ghid complet pentru gestionarea codului în echipe folosind Git Flow, GitHub Flow și alte strategii moderne.",
-    content: `
-      <h2>De ce un Git Workflow?</h2>
-      <p>Un workflow clar previne conflictele și asigură calitatea codului în proiecte cu multiple persoane.</p>
-
-      <h2>1. Git Flow</h2>
-      <p>Un model clasic cu branch-uri separate pentru features, releases și hotfixes. Bun pentru proiecte cu releases planificate.</p>
-
-      <h2>2. GitHub Flow</h2>
-      <p>Un workflow simplu bazat pe branch-uri de feature și pull requests. Ideal pentru deploy continuu.</p>
-
-      <h2>3. Trunk-Based Development</h2>
-      <p>Toți dezvoltă pe main/master cu feature flags. Maximizează colaborarea dar necesită discipline.</p>
-
-      <h2>4. Pull Requests și Code Review</h2>
-      <p>Folosește PR-uri pentru review obligatoriu. Definește guidelines clare pentru code review.</p>
-
-      <h2>5. Branch Naming Conventions</h2>
-      <p>Stabilește convenții pentru numele branch-urilor: feature/nume, bugfix/description, etc.</p>
-
-      <h2>6. Conflict Resolution</h2>
-      <p>Învață să rezolvi conflicte eficient. Comunică cu echipa înainte de merge.</p>
-
-      <h2>7. Automatizare</h2>
-      <p>Folosește Git hooks, CI/CD și branch protection rules pentru automatizarea proceselor.</p>
-
-      <h2>Concluzie</h2>
-      <p>Alege workflow-ul potrivit pentru echipa ta și rămâi consistent în aplicarea lui.</p>
-    `,
-    date: "2024-04-15",
-    readTime: "8 min citire",
-    tags: ["Git", "Workflow", "Team Collaboration", "DevOps"],
-    image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=450&fit=crop",
-    author: {
-      name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-    }
-  },
-  {
-    slug: "testing-strategies-web-development",
-    title: "Strategii de Testing în Dezvoltarea Web",
-    excerpt: "De la teste unitare la E2E: cum să implementezi o strategie completă de testing pentru aplicațiile web.",
-    content: `
-      <h2>Importanța Testing-ului</h2>
-      <p>Testing-ul automat asigură calitatea codului și reduce bug-urile în producție. Este esențial pentru proiecte scalabile.</p>
-
-      <h2>1. Teste Unitare</h2>
-      <p>Testează funcții individuale. Folosește Jest pentru JavaScript, JUnit pentru Java. Acoperire minimă 80%.</p>
-
-      <h2>2. Teste de Integrare</h2>
-      <p>Testează interacțiunea între componente. Verifică API calls, database operations și middleware.</p>
-
-      <h2>3. Teste End-to-End (E2E)</h2>
-      <p>Simulează utilizatorul real. Folosește Cypress sau Playwright pentru testarea completă a flow-urilor.</p>
-
-      <h2>4. Test-Driven Development (TDD)</h2>
-      <p>Scrie teste înainte de cod. Acest approach duce la design mai bun și cod mai testabil.</p>
-
-      <h2>5. Behavior-Driven Development (BDD)</h2>
-      <p>Scrie teste în limbaj natural folosind Gherkin. Îmbunătățește colaborarea cu stakeholder-ii.</p>
-
-      <h2>6. Testing Pyramid</h2>
-      <p>Distribuția ideală: 70% unit tests, 20% integration tests, 10% E2E tests.</p>
-
-      <h2>7. Mocking și Stubbing</h2>
-      <p>Izolarea dependențelor externe folosind mock-uri. Folosește Sinon.js sau Mock Service Worker.</p>
-
-      <h2>CI/CD Integration</h2>
-      <p>Integrează testing-ul în pipeline-ul CI/CD. Rulează teste automat la fiecare push.</p>
-
-      <h2>Concluzie</h2>
-      <p>Un testing strategy bun combină toate tipurile de teste și se integrează în procesul de dezvoltare.</p>
-    `,
-    date: "2024-05-01",
-    readTime: "10 min citire",
-    tags: ["Testing", "Quality Assurance", "JavaScript", "Best Practices"],
+    date: "2026-01-20",
+    readTime: "5 min citire",
+    tags: ["Programare", "Bazele programării", "C++", "Variabile", "Funcții"],
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop",
     author: {
       name: "Ionita Aurel Mihai",

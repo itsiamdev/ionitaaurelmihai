@@ -56,13 +56,6 @@ const BlogPreview = () => {
                   {post.title}
                 </CardTitle>
                 <CardDescription className="text-sm flex items-center gap-2">
-                  {post.author?.avatar && (
-                    <img 
-                      src={post.author.avatar} 
-                      alt={post.author.name}
-                      className="w-5 h-5 rounded-full object-cover"
-                    />
-                  )}
                   <span>{post.date}</span>
                   <span>•</span>
                   <span>{post.readTime}</span>

@@ -7,6 +7,8 @@ import { ArrowLeft } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { Helmet } from "react-helmet";
 import NotFound from "./NotFound";
+import parse from 'html-react-parser';
+import CodeBlock from "@/components/CodeBlock";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -65,13 +67,6 @@ const BlogPost = () => {
               
               {/* Author and Meta */}
               <div className="flex items-center gap-4 py-4 border-y border-border/50">
-                {post.author?.avatar && (
-                  <img 
-                    src={post.author.avatar} 
-                    alt={post.author.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                )}
                 <div>
                   <p className="font-medium">{post.author?.name || "Ionita Aurel Mihai"}</p>
                   <div className="flex gap-3 text-sm text-muted-foreground">
@@ -94,7 +89,20 @@ const BlogPost = () => {
             )}
 
             <div className="prose prose-invert max-w-none">
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              {parse(post.content, {
+                replace: (domNode) => {
+                  if (domNode.type === 'tag' && domNode.name === 'pre') {
+                    const codeElement = domNode.children?.[0];
+                    if (codeElement && codeElement.type === 'tag' && codeElement.name === 'code') {
+                      const className = codeElement.attribs?.class || '';
+                      const language = className.replace('language-', '') || 'text';
+                      const codeChild = codeElement.children?.[0];
+                      const code = (codeChild && codeChild.type === 'text') ? codeChild.data : '';
+                      return <CodeBlock code={code} language={language} />;
+                    }
+                  }
+                }
+              })}
             </div>
           </article>
         </main>

@@ -406,6 +406,7 @@ bun run build</code></pre>
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
     image: "/projects/christmasmemory.jpg",
     githubUrl: "https://github.com/iam269/christmas-memory",
+    liveUrl: "https://iam269.github.io/christmas-memory/",
     featured: true,
     category: "web",
     date: "2026-01-19"

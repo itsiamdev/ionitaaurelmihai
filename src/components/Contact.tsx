@@ -1,30 +1,30 @@
-import { Mail, Linkedin, Github, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, Instagram, Facebook } from "lucide-react";
 
 const Contact = () => {
   const contacts = [
     {
-      icon: Mail,
-      label: "Email",
-      value: "ionita.aurel.mihai@example.com",
-      link: "mailto:ionita.aurel.mihai@example.com",
+      icon: Facebook,
+      label: "Facebook",
+      value: "Ionita Aurel Mihai",
+      link: "https://www.facebook.com/profile.php?id=61572090980230&locale=ro_RO",
     },
     {
-      icon: Phone,
-      label: "Telefon",
-      value: "+40 7XX XXX XXX",
-      link: "tel:+40700000000",
+      icon: Instagram,
+      label: "Instagram",
+      value: "@eusuntaurel1",
+      link: "https://instagram.com/eusuntaurel1",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/ionita-aurel-mihai",
-      link: "https://linkedin.com/in/ionita-aurel-mihai",
+      value: "linkedin.com/in/ionita-aurel-mihai-20648536a/",
+      link: "https://www.linkedin.com/in/ionita-aurel-mihai-20648536a/",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/ionita-aurel-mihai",
-      link: "https://github.com/ionita-aurel-mihai",
+      value: "github.com/iam269",
+      link: "https://github.com/iam269",
     },
   ];
 
@@ -35,10 +35,11 @@ const Contact = () => {
           Hai să <span className="text-gradient">Colaborăm</span>
         </h2>
         <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
-          Sunt mereu interesat de proiecte noi și oportunități interesante. 
-          Fie că ai o întrebare sau doar vrei să spui bună, nu ezita să mă contactezi!
+          Sunt deschis la colaborări și proiecte interesante. Dacă ai o idee, o
+          propunere de colaborare sau vrei să discutăm despre un proiect, nu
+          ezita să mă contactezi. Hai să construim ceva împreună!
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-6">
           {contacts.map((contact) => (
             <a
