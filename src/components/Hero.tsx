@@ -21,7 +21,7 @@ const Hero = () => {
             <span className="text-gradient">Ionita Aurel Mihai</span>
           </h1>
           <h2 className="text-2xl md:text-4xl text-muted-foreground mb-8">
-            Full Stack Developer
+            Frontend Developer
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
             Dezvolt aplicații web moderne folosind React și TypeScript. Sunt

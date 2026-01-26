@@ -45,4 +45,13 @@ export const certifications: Certification[] = [
     credentialUrl: "/ts.png",
     description: "Scriu cod TypeScript tipizat pentru aplicații scalabile și întreținere ușoară.",
   },
+  {
+    id: "5",
+    name: "Git Certificate",
+    institution: "Development Factory",
+    logo: "/git.png",
+    date: "2024",
+    credentialUrl: "/git.png",
+    description: "Mă pricep la controlul versiunilor cu Git, inclusiv branching, merging și colaborare în echipă.",
+  },
 ];

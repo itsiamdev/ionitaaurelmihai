@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Facebook, Mail } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-primary">Ionita Aurel Mihai</h3>
             <p className="text-muted-foreground text-sm">
-              Full-stack developer pasionat de tehnologii moderne
+              Fronted developer pasionat de tehnologii moderne
             </p>
           </div>
           
@@ -77,6 +77,12 @@ const Footer = () => {
               </a>
               <a href="https://www.linkedin.com/in/ionita-aurel-mihai-20648536a/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
+              </a>
+              <a href="https://instagram.com/iam269" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="https://facebook.com/iam269" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Facebook size={20} />
               </a>
             </div>
           </div>
