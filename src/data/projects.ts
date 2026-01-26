@@ -14,6 +14,93 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "stan-radu-gabriel",
+    title: "Stan-Radu-Gabriel",
+    shortDescription: "Site portofoliu personal al lui Stan Radu Gabriel, elev în clasa a 10-a și membru în Consiliul Elevilor la Colegiul Național 'Ștefan cel Mare'.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Site-ul portofoliu personal al lui Stan Radu Gabriel reprezintă o platformă digitală modernă unde își prezintă identitatea, activitățile școlare și contribuțiile în cadrul Consiliului Elevilor. Proiectul reflectă pasiunea pentru literatură, istorie și munca în echipă, demonstrând cum ideile și colaborarea pot aduce schimbări pozitive în comunitatea școlară.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+      <ul>
+        <li><strong>Prezentare Personală:</strong> Informații detaliate despre Stan Radu Gabriel, elev în clasa a 10-a la Colegiul Național "Ștefan cel Mare" și membru activ în Consiliul Elevilor</li>
+        <li><strong>Proiecte Școlare:</strong> Prezentarea inițiativelor caritabile și ecologice, inclusiv "Raftul lui Moș Crăciun", evenimente artistice caritabile și "Eco Creații"</li>
+        <li><strong>Contact și Rețele Sociale:</strong> Link-uri către email (raduq.stan@gmail.com), Instagram (@raduq.st) și Facebook (Radu Gabriel Stan)</li>
+        <li><strong>Design Modern:</strong> Interfață atractivă și responsivă pentru o experiență utilizator optimă</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Site-ul este dezvoltat folosind tehnologii web moderne pentru a asigura performanță și accesibilitate:</p>
+      <ul>
+        <li><strong>React:</strong> Framework JavaScript pentru crearea unei interfețe dinamice și interactive</li>
+        <li><strong>HTML & CSS:</strong> Structura și stilizarea fundamentală a paginilor web</li>
+        <li><strong>JavaScript:</strong> Funcționalități interactive și dinamice</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 16 sau mai recentă)</li>
+        <li>Manager de pachete npm</li>
+      </ul>
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Stan-Radu-Gabriel.git</code></li>
+        <li>Intrați în director: <code>cd Stan-Radu-Gabriel</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:3000</code> sau similar.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat: <code>npm run build</code></p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>Stan-Radu-Gabriel/
+├── public/                 # Active statice (imagini, favicon)
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   ├── pages/              # Pagini principale (Acasă, Despre, Proiecte, Contact)
+│   ├── App.js              # Componenta principală
+│   └── index.js            # Punctul de intrare
+├── package.json            # Dependențe și script-uri
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Contribuții</h2>
+      <p>Proiectul este open-source și contribuțiile sunt binevenite pentru îmbunătățiri.</p>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Acest proiect este open-source și licențiat sub Licența MIT.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru întrebări, contactați Stan Radu Gabriel prin email sau rețele sociale.</p>
+    `,
+    tech: ["HTML", "CSS", "JavaScript", "React"],
+    image: "/projects/RaduStanGabriel.jpg",
+    githubUrl: "https://github.com/iam269/Stan-Radu-Gabriel",
+    liveUrl: "https://iam269.github.io/Stan-Radu-Gabriel/",
+    featured: false,
+    category: "web",
+    date: "2026-01-26"
+  },
+  {
     slug: "greenweek",
     title: "Green Week",
     shortDescription: "Platformă digitală pentru protejarea mediului, dezvoltată cu React, care susține acțiuni ecologice și inițiative sustenabile.",
