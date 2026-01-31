@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { User, Code, Heart, Coffee } from "lucide-react";
 
 const About = () => {
@@ -15,18 +21,24 @@ const About = () => {
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Sunt un dezvoltator full stack pasionat de crearea de experiențe web 
-              excepționale. Cu o experiență solidă în dezvoltarea de aplicații moderne, 
-              aduc idei la viață prin cod elegant și eficient.
+              Sunt dezvoltator Web pasionat de construirea de aplicații web
+              moderne, scalabile și ușor de utilizat. Îmi place să transform
+              idei complexe în soluții simple, eficiente și bine structurate.
             </p>
             <p>
-              Specializarea mea include dezvoltarea de aplicații React cu TypeScript, 
-              integrări API complexe, și implementarea de soluții scalabile în cloud. 
-              Sunt mereu la curent cu cele mai noi tehnologii și best practices din industrie.
+              Am experiență în dezvoltarea de aplicații cu React și TypeScript,
+              integrarea de API-uri complexe și implementarea de soluții
+              cloud-ready, cu accent pe performanță, calitate și bune practici.
             </p>
             <p>
-              Când nu scriu cod, îmi place să explorez noi framework-uri, să contribui la
-              proiecte open-source și să îmi împărtășesc cunoștințele cu comunitatea tech.
+              Sunt mereu interesat de tehnologii noi și de îmbunătățirea
+              continuă a modului în care scriu cod. În timpul liber explorez
+              framework-uri emergente, contribui la proiecte open-source și
+              împărtășesc cunoștințe cu comunitatea tech.
+            </p>
+            <p>
+              Sunt deschis colaborărilor și proiectelor care aduc valoare reală
+              și impact pe termen lung.
             </p>
           </div>
           <div className="pt-6">
@@ -54,9 +66,9 @@ const About = () => {
                       <ul className="text-sm text-muted-foreground space-y-1">
                         <li>• React & TypeScript</li>
                         <li>• Node.js & Express</li>
-                        <li>• Supabase & PostgreSQL</li>
+                        <li>• Supabase & MangoDB</li>
                         <li>• Tailwind CSS</li>
-                        <li>• Next.js & Vite</li>
+                        <li>• Git & GitHub</li>
                       </ul>
                     </div>
                     <div>
@@ -66,10 +78,8 @@ const About = () => {
                       </h4>
                       <ul className="text-sm text-muted-foreground space-y-1">
                         <li>• Dezvoltare Web Modernă</li>
-                        <li>• Open Source</li>
-                        <li>• Învățare Continuă</li>
-                        <li>• Comunitatea Tech</li>
-                        <li>• UI/UX Design</li>
+                        <li>• Sport</li>
+                        <li>• Citit</li>
                       </ul>
                     </div>
                   </div>
@@ -77,18 +87,21 @@ const About = () => {
                   <div>
                     <h4 className="font-semibold mb-3 flex items-center gap-2">
                       <Coffee className="w-4 h-4 text-amber-600" />
-                      Câteva Fapte Interesante
+                      Câteva Lucruri Interesante
                     </h4>
                     <div className="text-sm text-muted-foreground space-y-2">
                       <p>
-                        Începând cu HTML și CSS în 2020, am evoluat rapid către JavaScript modern
-                        și TypeScript. Cred cu tărie în puterea învățării practice și a construirii
-                        de proiecte reale.
+                        Am 17 ani și sunt pasionat de programare de la vârsta de 15.
+                        Sunt elev în clasa a XI-a la Colegiul Național „Ștefan
+                        cel Mare” din Târgu Neamț, la profilul Științe ale
+                        Naturii. Sunt pasionat de programare și tehnologie și
+                        îmi dedic o mare parte din timp învățării și dezvoltării
+                        mele în acest domeniu.
                       </p>
                       <p>
-                        Când nu codez, îmi place să citesc documentații, să experimentez cu noi
-                        tool-uri, și să ajut alți developeri în comunitate. Cea mai mare satisfacție
-                        o am când văd cum codul meu rezolvă probleme reale pentru oameni.
+                        Sunt o persoană motivată, curioasă și perseverentă,
+                        mereu interesată să își îmbunătățească abilitățile și să
+                        construiască soluții utile prin cod.
                       </p>
                     </div>
                   </div>
@@ -97,12 +110,12 @@ const About = () => {
             </Dialog>
           </div>
         </div>
-        
+
         <div className="flex justify-center">
           <img
-            src="/user.png"
+            src="public/ionitaurelmihai.jpeg"
             alt="Ionita Aurel Mihai"
-            className="w-full max-w-sm rounded-lg shadow-lg border border-border"
+            className="w-full max-w-xs rounded-full shadow-lg border-4 border-blue-500"
           />
         </div>
       </div>
