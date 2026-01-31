@@ -113,7 +113,7 @@ const About = () => {
 
         <div className="flex justify-center">
           <img
-            src="public/ionitaurelmihai.jpeg"
+            src="/ionitaurelmihai.jpeg"
             alt="Ionita Aurel Mihai"
             className="w-full max-w-xs rounded-full shadow-lg border-4 border-blue-500"
           />
