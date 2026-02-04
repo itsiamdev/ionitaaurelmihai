@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Send, CheckCircle } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+
+const API_URL = import.meta.env.VITE_NEWSLETTER_API_URL || "http://localhost:3001";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -29,28 +31,38 @@ const Newsletter = () => {
     setIsLoading(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke("newsletter-subscribe", {
-        body: { email },
+      console.log("Trimit cerere către:", `${API_URL}/api/newsletter/subscribe`);
+      
+      const response = await fetch(`${API_URL}/api/newsletter/subscribe`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
       });
 
-      if (error) {
+      const data = await response.json();
+      console.log("Răspuns:", data);
+
+      if (!response.ok) {
         toast({
           title: "Eroare",
-          description: "Nu s-a putut realiza abonarea. Încearcă din nou.",
+          description: data.error || "Nu s-a putut realiza abonarea. Încearcă din nou.",
           variant: "destructive",
         });
       } else {
         toast({
-          title: "Verificați email-ul!",
-          description: "Am trimis un email de confirmare. Verificați inbox-ul și spam-ul.",
+          title: "Succes!",
+          description: data.message,
         });
         setEmail("");
         setGdprAccepted(false);
       }
     } catch (error) {
+      console.error("Eroare la abonare:", error);
       toast({
-        title: "Eroare",
-        description: "A apărut o eroare neașteptată.",
+        title: "Eroare de conectare",
+        description: "Nu s-a putut conecta la server. Verifică dacă serverul rulează pe portul 3001.",
         variant: "destructive",
       });
     } finally {
@@ -105,6 +117,9 @@ const Newsletter = () => {
           </form>
           <p className="text-xs text-muted-foreground mt-4 text-center">
             Nu trimitem spam. Te poți dezabona oricând.
+            <Link to="/unsubscribe" className="text-primary hover:underline ml-1">
+              Dezabonează-te
+            </Link>
           </p>
         </CardContent>
       </Card>
