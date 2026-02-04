@@ -1,73 +1,5 @@
 // @ts-nocheck
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-
-// Knowledge base about Ionita Aurel Mihai
-const KNOWLEDGE_BASE = `
-# Informații despre Ionita Aurel Mihai
-
-## Despre
-Ionita Aurel Mihai este dezvoltator Full-Stack pasionat de construirea de aplicații web moderne, scalabile și ușor de utilizat. Îi place să transforme idei complexe în soluții simple, eficiente și bine structurate.
-
-Este elev la Liceul Național „Ștefan cel Mare" din Târgu Neamț, la profilul Științe ale Naturii, unde combină pasiunea pentru programare cu studiul științelor naturale.
-
-Are experiență în dezvoltarea de aplicații cu React și TypeScript, integrarea de API-uri complexe și implementarea de soluții cloud-ready, cu accent pe performanță, calitate și bune practici.
-
-Este mereu interesat de tehnologii noi și de îmbunătățirea continuă a modului în care scrie cod. În timpul liber explorează framework-uri emergente, contribuie la proiecte open-source și împărtășește cunoștințe cu comunitatea tech.
-
-Este deschis colaborărilor și proiectelor care aduc valoare reală și impact pe termen lung.
-
-## Educație
-- **Liceul Național „Ștefan cel Mare" din Târgu Neamț** - Profil: Științe ale Naturii
-
-## Pasiuni
-- Dezvoltare Web Modernă
-- Sport
-- Citit
-- Open Source
-- Învățare Continuă
-- Comunitatea Tech
-
-## Tehnologii
-- Frontend: HTML, CSS, JavaScript, Bootstrap, React, TypeScript, Tailwind CSS
-- Backend: Node.js, Express, PostgreSQL, MongoDB, REST APIs, Supabase
-- DevOps: Git, GitHub, CI/CD, VS Code
-- Soft Skills: Problem Solving, Team Work, Communication, Agile, Leadership
-
-## Certificări
-1. HTML Certificate (Development Factory, 2024): Poate crea structuri HTML semantice, formulare interactive și asigură accesibilitatea web-ului.
-2. CSS Certificate (Development Factory, 2024): Stilizează pagini web cu CSS modern, folosind flexbox, grid și animații pentru design responsive.
-3. JavaScript Certificate (Development Factory, 2024): Dezvoltă funcționalități interactive cu JavaScript, manipulează DOM-ul și lucrează cu API-uri.
-4. TypeScript Certificate (Development Factory, 2024): Scrie cod TypeScript tipizat pentru aplicații scalabile și întreținere ușoară.
-5. Git Certificate (Development Factory, 2024): Se pricepe la controlul versiunilor cu Git, inclusiv branching, merging și colaborare în echipă.
-
-## Proiecte
-1. **Green Week**: Platformă digitală pentru protejarea mediului, dezvoltată cu React, care susține acțiuni ecologice și inițiative sustenabile. Tehnologii: Vite, React, TypeScript, Tailwind CSS.
-2. **Geolocation API**: Aplicație web modernă care folosește GPS și API-ul de Geolocalizare al browserului pentru a afișa în timp real locația utilizatorului. Tehnologii: React, TypeScript, Vite, Tailwind CSS.
-3. **Christmas Memory**: Aplicație web interactivă și festivă care permite utilizatorilor să creeze, să împărtășească și să retrăiască amintiri de Crăciun. Tehnologii: React, TypeScript, Vite, Tailwind CSS, Framer Motion.
-4. **Stan-Radu-Gabriel**: Site portofoliu personal. Tehnologii: HTML, CSS, JavaScript, React.
-
-## Blog
-1. Algoritmi de bază pentru începători: sortare, căutare și complexitate
-2. Cum funcționează HTML, CSS și JavaScript într-o aplicație web
-3. Bazele programării: variabile, tipuri de date și funcții
-
-## Contact
-- Facebook: Ionita Aurel Mihai
-- Instagram: @eusuntaurel1
-- LinkedIn: ionita-aurel-mihai-20648536a
-- GitHub: iam269
-- Email: ionitaaurelmihai@gmail.com
-
-## Servicii Oférite
-- Dezvoltare aplicații web complete
-- Dezvoltare React cu TypeScript
-- Integrări API și backend
-- Design și implementare UI/UX
-- Optimizare performanță web
-- Consultanță tehnică
-- Mentenanță și actualizări
-`;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -89,8 +21,6 @@ serve(async (req) => {
       );
     }
 
-    // For now, return a context-aware response based on keywords
-    // In production, you would integrate with an actual AI API (OpenAI, Anthropic, etc.)
     const response = generateContextualResponse(message, conversationHistory);
 
     return new Response(
@@ -109,6 +39,13 @@ serve(async (req) => {
 function generateContextualResponse(message: string, history: any[]): string {
   const lowerMessage = message.toLowerCase();
 
+  // Specific "La ce liceu sunt?" question
+  if (lowerMessage === "la ce liceu esti" ||
+      lowerMessage === "la ce liceu sunt" ||
+      lowerMessage.includes("la ce liceu") && lowerMessage.includes("esti")) {
+    return "Colegiul Național Ștefan cel Mare";
+  }
+
   // About questions
   if (lowerMessage.includes("cine") && lowerMessage.includes("aurel") || 
       lowerMessage.includes("cine") && lowerMessage.includes("tine") ||
@@ -121,7 +58,7 @@ function generateContextualResponse(message: string, history: any[]): string {
 **Despre Aurel:**
 Ionita Aurel Mihai este dezvoltator Full-Stack pasionat de construirea de aplicații web moderne, scalabile și ușor de utilizat. Îi place să transforme idei complexe în soluții simple, eficiente și bine structurate.
 
-Este elev la **Liceul Național „Ștefan cel Mare" din Târgu Neamț**, la profilul Științe ale Naturii, unde combină pasiunea pentru programare cu studiul științelor naturale.
+Este elev la **Colegiul Național „Ștefan cel Mare" din Târgu Neamț**, la profilul Științe ale Naturii, unde combină pasiunea pentru programare cu studiul științelor naturale.
 
 Are experiență în dezvoltarea de aplicații cu React și TypeScript, integrarea de API-uri complexe și implementarea de soluții cloud-ready, cu accent pe performanță, calitate și bune practici.
 
@@ -295,7 +232,7 @@ Cred cu tărie în puterea învățării practice și a construirii de proiecte 
       lowerMessage.includes("unde învață") || lowerMessage.includes("studiaza") ||
       lowerMessage.includes("stă") || lowerMessage.includes("este la") ||
       lowerMessage.includes("profil") || lowerMessage.includes("științe ale naturii")) {
-    return `Aurel este elev la **Liceul Național "Ștefan cel Mare" din Târgu Neamț** 🏫
+    return `Aurel este elev la **Colegiul Național "Ștefan cel Mare" din Târgu Neamț** 🏫
 
 Este la profilul **Științe ale Naturii**, combinând pasiunea pentru programare cu studiul științelor naturale.
 
@@ -351,7 +288,7 @@ El oferă:
 - 🎨 Design și implementare UI/UX
 - ⚡ Optimizare performanță web
 - 💡 Consultanță tehnică
-- 🛠️ Mentenanță și actualizări
+- 🛠ă Mentenanță și actualizări
 
 Fiecare proiect este unic, așa că discutați detaliile direct! 😊`;
   }

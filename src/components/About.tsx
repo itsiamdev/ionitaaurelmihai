@@ -91,7 +91,7 @@ const About = () => {
                     </h4>
                     <div className="text-sm text-muted-foreground space-y-2">
                       <p>
-                        Am 17 ani și sunt pasionat de programare de la vârsta de 15.
+                        Am 17 ani și sunt pasionat de programare de la vârsta de 15 ani.
                         Sunt elev în clasa a XI-a la Colegiul Național „Ștefan
                         cel Mare” din Târgu Neamț, la profilul Științe ale
                         Naturii. Sunt pasionat de programare și tehnologie și
