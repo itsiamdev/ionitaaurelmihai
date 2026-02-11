@@ -15,7 +15,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "stan-radu-gabriel",
-    title: "Stan-Radu-Gabriel",
+    title: "Portofolio Personal - Stan Radu Gabriel",
     shortDescription: "Site portofoliu personal al lui Stan Radu Gabriel, elev în clasa a 10-a și membru în Consiliul Elevilor la Colegiul Național 'Ștefan cel Mare'.",
     fullDescription: `
       <h2>Despre Proiect</h2>
@@ -596,7 +596,7 @@ bun run build</code></pre>
       <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Medix" target="_blank">Medix GitHub</a>.</p>
     `,
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    image: "public/projects/Medix.png",
+    image: "/projects/Medix.png",
     githubUrl: "https://github.com/iam269/Medix",
     liveUrl: "https://medix-eosin.vercel.app/",
     featured: false,
