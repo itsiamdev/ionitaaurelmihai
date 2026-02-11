@@ -498,4 +498,109 @@ bun run build</code></pre>
     category: "web",
     date: "2026-01-19"
   },
+  {
+    slug: "medix",
+    title: "Medix",
+    shortDescription: "Platformă medicală modernă pentru gestionarea pacienților, programărilor și dosarelor medicale, dezvoltată cu React și tehnologii web avansate.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Medix este o <em>platformă medicală completă</em> destinată gestionării eficiente a pacienților, programărilor și dosarelor medicale. Proiectul oferă o interfață modernă și intuitivă pentru personalul medical, facilitând organizarea și accesul rapid la informațiile esențiale despre pacienți.</p>
+      <p>Platforma este concepută pentru a îmbunătăți fluxul de lucru în cabinetele medicale și clinicile mici, reducând timpul pierdut în sarcini administrative și permițând medicilor să se concentreze pe îngrijirea pacienților.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+      <ul>
+        <li><strong>Gestionarea Pacienților:</strong> Adaugare, editare și vizualizare dosare pacienți cu istoricul medical complet</li>
+        <li><strong>Programări:</strong> Sistem de programări cu calendar interactiv și notificări</li>
+        <li><strong>Dosare Medicale:</strong> Documentare detaliată a consultațiilor, diagnosticelor și tratamentelor</li>
+        <li><strong>Dashboard Medical:</strong> Vizualizare statistici și rapoarte despre activitatea cabinetului</li>
+        <li><strong>Căutare Avansată:</strong> Găsire rapidă a pacienților și programărilor</li>
+        <li><strong>Export Date:</strong> Export programări și rapoarte în diferite formate</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Proiectul este construit folosind tehnologii web moderne:</p>
+      <ul>
+        <li><strong>Frontend:</strong> React 18 cu TypeScript pentru o aplicație sigură și performantă</li>
+        <li><strong>Build Tool:</strong> Vite pentru dezvoltare rapidă și build optimizat</li>
+        <li><strong>Styling:</strong> Tailwind CSS pentru un design modern și responsiv</li>
+        <li><strong>State Management:</strong> React hooks și context pentru gestionarea stării aplicației</li>
+        <li><strong>Routing:</strong> React Router pentru navigare între pagini</li>
+        <li><strong>UI Components:</strong> Componente personalizate pentru interfața de utilizator</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 18 sau mai recentă)</li>
+        <li>npm sau yarn</li>
+        <li>Browser modern</li>
+      </ul>
+
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Medix.git</code></li>
+        <li>Intrați în director: <code>cd Medix</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code>.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat pentru producție:</p>
+      <pre><code>npm run build</code></pre>
+      <p>Fișierele build vor fi generate în directorul <code>dist/</code>.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>Medix/
+├── public/                 # Active statice
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   ├── pages/              # Pagini aplicație
+│   ├── hooks/              # Hook-uri React personalizate
+│   ├── lib/                # Funcții utilitare
+│   ├── App.tsx             # Componenta principală
+│   └── main.tsx            # Punctul de intrare
+├── package.json            # Dependențe și script-uri
+├── vite.config.ts          # Configurație Vite
+├── tailwind.config.ts      # Configurație Tailwind CSS
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Securitate și Confidențialitate</h2>
+      <ul>
+        <li>Datele pacienților sunt gestionate conform standardelor de confidențialitate</li>
+        <li>Accesul la informații sensibile necesită autentificare</li>
+        <li>Toate datele sunt stocate local sau securizat pe server</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Proiect open-source, licențiat sub <strong>MIT License</strong>.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Medix" target="_blank">Medix GitHub</a>.</p>
+    `,
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    image: "public/projects/Medix.png",
+    githubUrl: "https://github.com/iam269/Medix",
+    liveUrl: "https://medix-eosin.vercel.app/",
+    featured: false,
+    category: "web",
+    date: "2025-12-15"
+  }
 ];

@@ -107,7 +107,9 @@ const ProjectDetail = () => {
                   prose-p:text-muted-foreground prose-p:leading-relaxed
                   prose-li:text-muted-foreground
                   prose-strong:text-foreground
-                  prose-a:text-primary hover:prose-a:text-primary/80"
+                  prose-a:text-primary hover:prose-a:text-primary/80
+                  prose-pre:bg-slate-900 prose-pre:border prose-pre:border-border prose-pre:rounded-lg
+                  prose-code:text-primary prose-code:bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none"
                 dangerouslySetInnerHTML={{ __html: project.fullDescription }}
               />
             </div>

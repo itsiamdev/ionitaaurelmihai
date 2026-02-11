@@ -92,3 +92,53 @@ All colors MUST be HSL.
     @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow)];
   }
 }
+
+/* Code block styling */
+@layer components {
+  .prose pre {
+    @apply bg-slate-950 border border-border rounded-lg p-4 overflow-x-auto;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0 text-sm font-mono leading-relaxed;
+    color: #e2e8f0;
+  }
+
+  /* Syntax highlighting colors */
+  .prose code {
+    color: #60a5fa;
+  }
+
+  .prose pre code .keyword {
+    color: #c084fc;
+  }
+
+  .prose pre code .string {
+    color: #4ade80;
+  }
+
+  .prose pre code .function {
+    color: #60a5fa;
+  }
+
+  .prose pre code .comment {
+    color: #64748b;
+    font-style: italic;
+  }
+
+  .prose pre code .tag {
+    color: #f472b6;
+  }
+
+  .prose pre code .attr {
+    color: #60a5fa;
+  }
+
+  .prose pre code .operator {
+    color: #e2e8f0;
+  }
+
+  .prose pre code .punctuation {
+    color: #94a3b8;
+  }
+}
