@@ -113,9 +113,11 @@ const About = () => {
 
         <div className="flex justify-center">
           <img
-            src="/ionitaurelmihai.jpeg"
-            alt="Ionita Aurel Mihai"
+            src="/ionitaaurelmihai.jpg"
+            alt="Ionita Aurel Mihai - Full Stack Developer - Fotografie de profil oficială"
             className="w-full max-w-xs rounded-full shadow-lg border-4 border-blue-500"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </div>
