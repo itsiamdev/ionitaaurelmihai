@@ -1,20 +1,28 @@
 const Skills = () => {
   const skills = [
     {
-      category: "Frontend",
-      items: ["HTML", "CSS", "JavaScript", "Bootstrap", "React", "TypeScript", "Tailwind CSS"],
+      category: "Limbaje de Programare",
+      items: ["C", "C++", "C#", "JavaScript"],
     },
     {
-      category: "Backend",
-      items: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs","Supabase"],
+      category: "Web Development",
+      items: ["HTML5", "CSS3", "React", "Node.js", "Express.js", "Tailwind CSS", "Bootstrap"],
     },
     {
-      category: "DevOps & Tools",
-      items: ["Git", "GitHub", "CI/CD", "VS Code"],
+      category: "Baze de Date",
+      items: ["MongoDB", "PostgreSQL", "Supabase"],
     },
     {
-      category: "Soft Skills",
-      items: ["Problem Solving", "Team Work", "Communication", "Agile", "Leadership"],
+      category: "Game Development",
+      items: ["Unity"],
+    },
+    {
+      category: "Editoare de Cod",
+      items: ["Sublime Text", "VS Code", "IntelliJ IDEA", "Cursor AI"],
+    },
+    {
+      category: "Tools & Platforms",
+      items: ["Git", "GitHub", "Vercel", "REST APIs"],
     },
   ];
 
