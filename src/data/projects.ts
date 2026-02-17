@@ -602,5 +602,99 @@ bun run build</code></pre>
     featured: false,
     category: "web",
     date: "2025-12-15"
+  },
+  {
+    slug: "task-manager",
+    title: "Task Manager",
+    shortDescription: "Aplicație modernă pentru gestionarea sarcinilor și organizarea activităților zilnice, dezvoltată cu tehnologii web avansate.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Task Manager este o <em>aplicație modernă și intuitivă</em> pentru gestionarea sarcinilor și organizarea activităților zilnice. Proiectul oferă o interfață elegantă și ușor de utilizat pentru crearea, editarea și organizarea sarcinilor, ajutând utilizatorii să își crească productivitatea și să își gestioneze timpul eficient.</p>
+      <p>Aplicația este concepută pentru a fi simplă dar puternică, oferind toate funcționalitățile esențiale pentru gestionarea sarcinilor personale sau profesionale.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+      <ul>
+        <li><strong>Creare Sarcini:</strong> Adaugare rapidă de sarcini cu titlu, descriere și prioritate</li>
+        <li><strong>Editare și Ștergere:</strong> Modificare și eliminare ușoară a sarcinilor existente</li>
+        <li><strong>Marcare Completă:</strong> Indicarea vizuală a sarcinilor finalizate</li>
+        <li><strong>Filtrare și Sortare:</strong> Vizualizare sarcinilor în funcție de stare sau prioritate</li>
+        <li><strong>Persistare Date:</strong> Salvarea sarcinilor pentru acces ulterior</li>
+        <li><strong>Design Responsiv:</strong> Interfață adaptată pentru toate dispozitivele</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Proiectul este construit folosind tehnologii web moderne:</p>
+      <ul>
+        <li><strong>Frontend:</strong> React cu JavaScript/TypeScript pentru o interfață dinamică</li>
+        <li><strong>Build Tool:</strong> Vite pentru dezvoltare rapidă și build optimizat</li>
+        <li><strong>Styling:</strong> CSS modern pentru un design atractiv și responsiv</li>
+        <li><strong>State Management:</strong> React hooks pentru gestionarea stării aplicației</li>
+        <li><strong>Local Storage:</strong> Persistarea datelor în browser-ul utilizatorului</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 16 sau mai recentă)</li>
+        <li>npm sau yarn</li>
+        <li>Browser modern</li>
+      </ul>
+
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Task-Manager-main.git</code></li>
+        <li>Intrați în director: <code>cd Task-Manager-main</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code> sau similar.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat pentru producție:</p>
+      <pre><code>npm run build</code></pre>
+      <p>Fișierele build vor fi generate în directorul <code>dist/</code>.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>Task-Manager-main/
+├── public/                 # Active statice
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   ├── pages/              # Pagini aplicație
+│   ├── hooks/              # Hook-uri React personalizate
+│   ├── lib/                # Funcții utilitare
+│   ├── App.jsx             # Componenta principală
+│   └── main.jsx            # Punctul de intrare
+├── package.json            # Dependențe și script-uri
+├── vite.config.js          # Configurație Vite
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Proiect open-source, licențiat sub <strong>MIT License</strong>.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Task-Manager-main" target="_blank">Task Manager GitHub</a>.</p>
+    `,
+    tech: ["React", "JavaScript", "Vite", "CSS"],
+    image: "/projects/Taskmeneger.png",
+    githubUrl: "https://github.com/iam269/Task-Manager-main",
+    liveUrl: "https://iam269.github.io/Task-Manager-main/",
+    featured: false,
+    category: "web",
+    date: "2026-02-17"
   }
 ];
