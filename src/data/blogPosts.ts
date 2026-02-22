@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "cum-functioneaza-html-css-javascript-intr-o-aplicatie-web",
-    title: "Cum funcționează HTML, CSS și JavaScript într-o aplicație web",
+    title: "Cum funcționează HTML, CSS și JavaScript într-o aplicație web?",
     excerpt: "Atunci când vizităm un website, tot ce vedem și cu care interacționăm este rezultatul colaborării dintre HTML, CSS și JavaScript. Fiecare dintre aceste tehnologii are un rol bine definit, iar împreună formează baza oricărei aplicații web moderne.",
     content: `
       <h2>Ce este HTML?</h2>
@@ -145,7 +145,7 @@ button {
         <li>comunica cu servere (API-uri)</li>
       </ul>
       <p><strong>Exemplu simplu de JavaScript:</strong></p>
-      <pre><code class="language-html"><button onclick="afiseazaMesaj()">Click aici</button>
+      <pre><code class="language-javascript"><button onclick="afiseazaMesaj()">Click aici</button>
 
 <script>
   function afiseazaMesaj() {

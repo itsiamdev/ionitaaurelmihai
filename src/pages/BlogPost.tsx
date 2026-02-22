@@ -92,12 +92,32 @@ const BlogPost = () => {
               {parse(post.content, {
                 replace: (domNode) => {
                   if (domNode.type === 'tag' && domNode.name === 'pre') {
-                    const codeElement = domNode.children?.[0];
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    const codeElement = (domNode as any).children?.[0];
                     if (codeElement && codeElement.type === 'tag' && codeElement.name === 'code') {
                       const className = codeElement.attribs?.class || '';
                       const language = className.replace('language-', '') || 'text';
-                      const codeChild = codeElement.children?.[0];
-                      const code = (codeChild && codeChild.type === 'text') ? codeChild.data : '';
+                      
+                      // Extract raw HTML and escape it for display
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      const getRawContent = (children: any[]): string => {
+                        if (!children) return '';
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        return children.map((child: any) => {
+                          if (child.type === 'text') return child.data;
+                          if (child.type === 'tag') {
+                            const tagName = child.name;
+                            const attrs = child.attribs ? ' ' + Object.entries(child.attribs)
+                              .map(([k, v]) => `${k}="${v}"`)
+                              .join(' ') : '';
+                            const inner = getRawContent(child.children);
+                            return `<${tagName}${attrs}>${inner}</${tagName}>`;
+                          }
+                          return '';
+                        }).join('');
+                      };
+                      
+                      const code = getRawContent(codeElement.children);
                       return <CodeBlock code={code} language={language} />;
                     }
                   }
