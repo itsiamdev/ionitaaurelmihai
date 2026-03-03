@@ -14,93 +14,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "stan-radu-gabriel",
-    title: "Portofolio Personal - Stan Radu Gabriel",
-    shortDescription: "Site portofoliu personal al lui Stan Radu Gabriel, elev în clasa a 10-a și membru în Consiliul Elevilor la Colegiul Național 'Ștefan cel Mare'.",
-    fullDescription: `
-      <h2>Despre Proiect</h2>
-      <p>Site-ul portofoliu personal al lui Stan Radu Gabriel reprezintă o platformă digitală modernă unde își prezintă identitatea, activitățile școlare și contribuțiile în cadrul Consiliului Elevilor. Proiectul reflectă pasiunea pentru literatură, istorie și munca în echipă, demonstrând cum ideile și colaborarea pot aduce schimbări pozitive în comunitatea școlară.</p>
-
-      <br><br>
-
-      <h2>Funcționalități Cheie</h2>
-      <ul>
-        <li><strong>Prezentare Personală:</strong> Informații detaliate despre Stan Radu Gabriel, elev în clasa a 10-a la Colegiul Național "Ștefan cel Mare" și membru activ în Consiliul Elevilor</li>
-        <li><strong>Proiecte Școlare:</strong> Prezentarea inițiativelor caritabile și ecologice, inclusiv "Raftul lui Moș Crăciun", evenimente artistice caritabile și "Eco Creații"</li>
-        <li><strong>Contact și Rețele Sociale:</strong> Link-uri către email (raduq.stan@gmail.com), Instagram (@raduq.st) și Facebook (Radu Gabriel Stan)</li>
-        <li><strong>Design Modern:</strong> Interfață atractivă și responsivă pentru o experiență utilizator optimă</li>
-      </ul>
-
-      <br><br>
-
-      <h2>Tehnologii Utilizate</h2>
-      <p>Site-ul este dezvoltat folosind tehnologii web moderne pentru a asigura performanță și accesibilitate:</p>
-      <ul>
-        <li><strong>React:</strong> Framework JavaScript pentru crearea unei interfețe dinamice și interactive</li>
-        <li><strong>HTML & CSS:</strong> Structura și stilizarea fundamentală a paginilor web</li>
-        <li><strong>JavaScript:</strong> Funcționalități interactive și dinamice</li>
-      </ul>
-
-      <br><br>
-
-      <h2>Instalare și Dezvoltare Locală</h2>
-      <p>Pentru a rula proiectul local, urmați acești pași:</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Node.js (versiunea 16 sau mai recentă)</li>
-        <li>Manager de pachete npm</li>
-      </ul>
-      <h3>Pași de Instalare</h3>
-      <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Stan-Radu-Gabriel.git</code></li>
-        <li>Intrați în director: <code>cd Stan-Radu-Gabriel</code></li>
-        <li>Instalați dependențele: <code>npm install</code></li>
-        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
-      </ol>
-
-      <p>Aplicația va fi disponibilă la <code>http://localhost:3000</code> sau similar.</p>
-
-      <h3>Build de Producție</h3>
-      <p>Pentru a crea un build optimizat: <code>npm run build</code></p>
-
-      <br><br>
-
-      <h2>Structura Proiectului</h2>
-      <pre><code>Stan-Radu-Gabriel/
-├── public/                 # Active statice (imagini, favicon)
-├── src/
-│   ├── components/         # Componente React reutilizabile
-│   ├── pages/              # Pagini principale (Acasă, Despre, Proiecte, Contact)
-│   ├── App.js              # Componenta principală
-│   └── index.js            # Punctul de intrare
-├── package.json            # Dependențe și script-uri
-└── README.md               # Documentație</code></pre>
-
-      <br><br>
-
-      <h2>Contribuții</h2>
-      <p>Proiectul este open-source și contribuțiile sunt binevenite pentru îmbunătățiri.</p>
-
-      <br><br>
-
-      <h2>Licență</h2>
-      <p>Acest proiect este open-source și licențiat sub Licența MIT.</p>
-
-      <br><br>
-
-      <h2>Contact</h2>
-      <p>Pentru întrebări, contactați Stan Radu Gabriel prin email sau rețele sociale.</p>
-    `,
-    tech: ["HTML", "CSS", "JavaScript", "React"],
-    image: "/projects/RaduStanGabriel.jpg",
-    githubUrl: "https://github.com/iam269/Stan-Radu-Gabriel",
-    liveUrl: "https://iam269.github.io/Stan-Radu-Gabriel/",
-    featured: false,
-    category: "web",
-    date: "2026-01-26"
-  },
-  {
     slug: "greenweek",
     title: "Green Week",
     shortDescription: "Platformă digitală pentru protejarea mediului, dezvoltată cu React, care susține acțiuni ecologice și inițiative sustenabile.",
@@ -235,13 +148,118 @@ export const projects: Project[] = [
       <h2>Contact</h2>
       <p>Pentru întrebări sau sugestii, vă rugăm să deschideți un issue în repository-ul GitHub sau să contactați echipa de dezvoltare.</p>
     `,
-    tech: ["Vite", "React" , "TypeScript", "Tailwind CSS"],
+    tech: ["Vite", "React", "TypeScript", "Tailwind CSS"],
     image: "/projects/greenweek.jpg",
     githubUrl: "https://github.com/iam269/greenweek",
     liveUrl: "https://iam269.github.io/greenweek/",
     featured: true,
     category: "web",
     date: "2025-10-21"
+  },
+  {
+    slug: "medix",
+    title: "Medix",
+    shortDescription: "Platformă medicală modernă pentru gestionarea pacienților, programărilor și dosarelor medicale, dezvoltată cu React și tehnologii web avansate.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Medix este o <em>platformă medicală completă</em> destinată gestionării eficiente a pacienților, programărilor și dosarelor medicale. Proiectul oferă o interfață modernă și intuitivă pentru personalul medical, facilitând organizarea și accesul rapid la informațiile esențiale despre pacienți.</p>
+      <p>Platforma este concepută pentru a îmbunătăți fluxul de lucru în cabinetele medicale și clinicile mici, reducând timpul pierdut în sarcini administrative și permițând medicilor să se concentreze pe îngrijirea pacienților.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+      <ul>
+        <li><strong>Gestionarea Pacienților:</strong> Adaugare, editare și vizualizare dosare pacienți cu istoricul medical complet</li>
+        <li><strong>Programări:</strong> Sistem de programări cu calendar interactiv și notificări</li>
+        <li><strong>Dosare Medicale:</strong> Documentare detaliată a consultațiilor, diagnosticelor și tratamentelor</li>
+        <li><strong>Dashboard Medical:</strong> Vizualizare statistici și rapoarte despre activitatea cabinetului</li>
+        <li><strong>Căutare Avansată:</strong> Găsire rapidă a pacienților și programărilor</li>
+        <li><strong>Export Date:</strong> Export programări și rapoarte în diferite formate</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Proiectul este construit folosind tehnologii web moderne:</p>
+      <ul>
+        <li><strong>Frontend:</strong> React 18 cu TypeScript pentru o aplicație sigură și performantă</li>
+        <li><strong>Build Tool:</strong> Vite pentru dezvoltare rapidă și build optimizat</li>
+        <li><strong>Styling:</strong> Tailwind CSS pentru un design modern și responsiv</li>
+        <li><strong>State Management:</strong> React hooks și context pentru gestionarea stării aplicației</li>
+        <li><strong>Routing:</strong> React Router pentru navigare între pagini</li>
+        <li><strong>UI Components:</strong> Componente personalizate pentru interfața de utilizator</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 18 sau mai recentă)</li>
+        <li>npm sau yarn</li>
+        <li>Browser modern</li>
+      </ul>
+
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Medix.git</code></li>
+        <li>Intrați în director: <code>cd Medix</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code>.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat pentru producție:</p>
+      <pre><code>npm run build</code></pre>
+      <p>Fișierele build vor fi generate în directorul <code>dist/</code>.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>Medix/
+├── public/                 # Active statice
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   ├── pages/              # Pagini aplicație
+│   ├── hooks/              # Hook-uri React personalizate
+│   ├── lib/                # Funcții utilitare
+│   ├── App.tsx             # Componenta principală
+│   └── main.tsx            # Punctul de intrare
+├── package.json            # Dependențe și script-uri
+├── vite.config.ts          # Configurație Vite
+├── tailwind.config.ts      # Configurație Tailwind CSS
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Securitate și Confidențialitate</h2>
+      <ul>
+        <li>Datele pacienților sunt gestionate conform standardelor de confidențialitate</li>
+        <li>Accesul la informații sensibile necesită autentificare</li>
+        <li>Toate datele sunt stocate local sau securizat pe server</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Proiect open-source, licențiat sub <strong>MIT License</strong>.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Medix" target="_blank">Medix GitHub</a>.</p>
+    `,
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    image: "/projects/Medix.png",
+    githubUrl: "https://github.com/iam269/Medix",
+    liveUrl: "https://medix-eosin.vercel.app/",
+    featured: false,
+    category: "web",
+    date: "2025-12-15"
   },
   {
     slug: "geolocation-api",
@@ -604,6 +622,236 @@ bun run build</code></pre>
     date: "2025-12-15"
   },
   {
+    slug: "greenweek",
+    title: "Green Week",
+    shortDescription: "Platformă digitală pentru protejarea mediului, dezvoltată cu React, care susține acțiuni ecologice și inițiative sustenabile.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Green Week este o aplicație web <em>modernă și interactivă</em> dedicată promovării activităților de mediu și a inițiativelor de curățenie comunitară în timpul <strong>Săptămânii Verzi</strong>. Proiectul reprezintă o <em>inițiativă digitală</em> pentru creșterea conștientizării publice asupra problemelor de mediu, oferind resurse educaționale, informații despre evenimente locale și instrumente pentru implicarea activă în protejarea mediului înconjurător.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+      <ul>
+        <li><strong>Secțiune Hero:</strong> Prezentare vizuală atractivă cu imagini reprezentative pentru activitățile de mediu</li>
+        <li><strong>Activități:</strong> Informații detaliate despre evenimentele de curățenie comunitară și programele de reciclare</li>
+        <li><strong>Resurse:</strong> Ghiduri și materiale utile pentru reciclare și reducerea deșeurilor</li>
+        <li><strong>Sfaturi Practice:</strong> Recomandări pentru un stil de viață sustenabil</li>
+        <li><strong>Galerie Foto:</strong> Colecție de imagini din evenimentele anterioare pentru inspirație</li>
+        <li><strong>Video Educaționale:</strong> Conținut multimedia pentru învățare interactivă</li>
+        <li><strong>Footer Informativ:</strong> Link-uri către organizații partenere și informații de contact</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Proiectul este construit folosind tehnologii web de ultimă generație:</p>
+      <ul>
+        <li><strong>Vite:</strong> Bundler rapid pentru dezvoltarea și procesele de build ale aplicației</li>
+        <li><strong>React:</strong> Framework JavaScript pentru crearea interfețelor utilizator dinamice</li>
+        <li><strong>TypeScript:</strong> Superset JavaScript pentru tipizare statică și dezvoltare mai sigură</li>
+        <li><strong>Tailwind CSS:</strong> Framework CSS utility-first pentru stilizare rapidă și responsivă</li>
+        <li><strong>shadcn/ui:</strong> Componente UI accesibile și personalizabile</li>
+        <li><strong>ESLint:</strong> Pentru asigurarea calității și consistenței codului</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <br>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 16 sau mai recentă)</li>
+        <li>Manager de pachete npm sau yarn</li>
+      </ul>
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/greenweek.git</code></li>
+        <li>Intrați în director: <code>cd greenweek</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <br>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:5173/</code>.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat pentru producție: <code>npm run build</code></p>
+      <p>Fișierele build vor fi generate în directorul <code>dist/</code>.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>greenweek/
+├── public/                 # Active statice
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   │   ├── Activities.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Gallery.jsx
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Resources.jsx
+│   │   ├── Tips.jsx
+│   │   └── Videos.jsx
+│   ├── pages/              # Componente pagină
+│   ├── hooks/              # Hook-uri React personalizate
+│   ├── assets/             # Imagini și fișiere media
+│   ├── App.jsx             # Componenta principală a aplicației
+│   └── main.jsx            # Punctul de intrare al aplicației
+├── package.json            # Dependențe și script-uri ale proiectului
+├── vite.config.js          # Configurație Vite
+├── tailwind.config.js      # Configurație Tailwind CSS
+└── README.md               # Documentație proiect</code></pre>
+
+      <br><br>
+
+      <h2>Contribuții</h2>
+      <p>Contribuțiile sunt binevenite! Dacă doriți să îmbunătățiți proiectul:</p>
+      <ol>
+        <li>Fork repository-ul</li>
+        <li>Creați o ramură pentru feature (<code>git checkout -b feature/new-feature</code>)</li>
+        <li>Commit schimbările (<code>git commit -am 'Add new feature'</code>)</li>
+        <li>Push la ramură (<code>git push origin feature/new-feature</code>)</li>
+        <li>Deschideți un Pull Request</li>
+      </ol>
+
+      <br><br>
+
+      <h2>Variabile de Mediu</h2>
+      <p>Aplicația utilizează Google Analytics pentru urmărirea interacțiunilor utilizatorilor. ID-ul de tracking este configurat în fișierul <code>index.html</code>.</p>
+
+      <br><br>
+
+      <h2>Optimizări de Performanță</h2>
+      <ul>
+        <li><strong>Lazy Loading:</strong> Componentele sunt încărcate la cerere pentru îmbunătățirea timpilor de încărcare inițială</li>
+        <li><strong>Optimizarea Imaginilor:</strong> Imaginile sunt optimizate pentru livrare web</li>
+        <li><strong>Code Splitting:</strong> Codul aplicației este împărțit în chunk-uri pentru caching mai bun</li>
+        <li><strong>Minificare:</strong> Build-urile de producție includ CSS și JavaScript minificat</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Suport Browser</h2>
+      <p>Aplicația suportă toate browserele moderne:</p>
+      <ul>
+        <li>Chrome (ultima versiune)</li>
+        <li>Firefox (ultima versiune)</li>
+        <li>Safari (ultima versiune)</li>
+        <li>Edge (ultima versiune)</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Acest proiect este open-source și licențiat sub Licența MIT.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru întrebări sau sugestii, vă rugăm să deschideți un issue în repository-ul GitHub sau să contactați echipa de dezvoltare.</p>
+    `,
+    tech: ["Vite", "React", "TypeScript", "Tailwind CSS"],
+    image: "/projects/greenweek.jpg",
+    githubUrl: "https://github.com/iam269/greenweek",
+    liveUrl: "https://iam269.github.io/greenweek/",
+    featured: true,
+    category: "web",
+    date: "2025-10-21"
+  },
+  {
+    slug: "stan-radu-gabriel",
+    title: "Portofolio Personal - Stan Radu Gabriel",
+    shortDescription: "Site portofoliu personal al lui Stan Radu Gabriel, elev în clasa a 10-a și membru în Consiliul Elevilor la Colegiul Național 'Ștefan cel Mare'.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Site-ul portofoliu personal al lui Stan Radu Gabriel reprezintă o platformă digitală modernă unde își prezintă identitatea, activitățile școlare și contribuțiile în cadrul Consiliului Elevilor. Proiectul reflectă pasiunea pentru literatură, istorie și munca în echipă, demonstrând cum ideile și colaborarea pot aduce schimbări pozitive în comunitatea școlară.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+      <ul>
+        <li><strong>Prezentare Personală:</strong> Informații detaliate despre Stan Radu Gabriel, elev în clasa a 10-a la Colegiul Național "Ștefan cel Mare" și membru activ în Consiliul Elevilor</li>
+        <li><strong>Proiecte Școlare:</strong> Prezentarea inițiativelor caritabile și ecologice, inclusiv "Raftul lui Moș Crăciun", evenimente artistice caritabile și "Eco Creații"</li>
+        <li><strong>Contact și Rețele Sociale:</strong> Link-uri către email (raduq.stan@gmail.com), Instagram (@raduq.st) și Facebook (Radu Gabriel Stan)</li>
+        <li><strong>Design Modern:</strong> Interfață atractivă și responsivă pentru o experiență utilizator optimă</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Site-ul este dezvoltat folosind tehnologii web moderne pentru a asigura performanță și accesibilitate:</p>
+      <ul>
+        <li><strong>React:</strong> Framework JavaScript pentru crearea unei interfețe dinamice și interactive</li>
+        <li><strong>HTML & CSS:</strong> Structura și stilizarea fundamentală a paginilor web</li>
+        <li><strong>JavaScript:</strong> Funcționalități interactive și dinamice</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 16 sau mai recentă)</li>
+        <li>Manager de pachete npm</li>
+      </ul>
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Stan-Radu-Gabriel.git</code></li>
+        <li>Intrați în director: <code>cd Stan-Radu-Gabriel</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:3000</code> sau similar.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat: <code>npm run build</code></p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>Stan-Radu-Gabriel/
+├── public/                 # Active statice (imagini, favicon)
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   ├── pages/              # Pagini principale (Acasă, Despre, Proiecte, Contact)
+│   ├── App.js              # Componenta principală
+│   └── index.js            # Punctul de intrare
+├── package.json            # Dependențe și script-uri
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Contribuții</h2>
+      <p>Proiectul este open-source și contribuțiile sunt binevenite pentru îmbunătățiri.</p>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Acest proiect este open-source și licențiat sub Licența MIT.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru întrebări, contactați Stan Radu Gabriel prin email sau rețele sociale.</p>
+    `,
+    tech: ["HTML", "CSS", "JavaScript", "React"],
+    image: "/projects/RaduStanGabriel.jpg",
+    githubUrl: "https://github.com/iam269/Stan-Radu-Gabriel",
+    liveUrl: "https://iam269.github.io/Stan-Radu-Gabriel/",
+    featured: false,
+    category: "web",
+    date: "2026-01-10"
+  },
+  {
     slug: "task-manager",
     title: "Task Manager",
     shortDescription: "Aplicație modernă pentru gestionarea sarcinilor și organizarea activităților zilnice, dezvoltată cu tehnologii web avansate.",
@@ -696,5 +944,109 @@ bun run build</code></pre>
     featured: false,
     category: "web",
     date: "2026-02-17"
+  },
+  {
+    slug: "connecto",
+    title: "Connecto",
+    shortDescription: "Platformă de comunicare și colaborare care conectează utilizatorii în timp real, facilitând schimbul de mesaje și gestionarea contactelor.",
+    fullDescription: `
+      <h2>Despre Proiect</h2>
+      <p>Connecto este o <em>platformă modernă de comunicare și colaborare</em> care permite utilizatorilor să se conecteze și să comunice în timp real. Proiectul oferă o interfață intuitivă pentru messaging, gestionarea contactelor și colaborare eficientă între utilizatori.</p>
+      <p>Platforma este concepută pentru a oferi o experiență de comunicare fluidă și sigură, similară cu aplicațiile de messaging populare, dar cu funcționalități personalizate pentru nevoile specifice ale utilizatorilor.</p>
+
+      <br><br>
+
+      <h2>Funcționalități Cheie</h2>
+      <ul>
+        <li><strong>Messaging în Timp Real:</strong> Comunicare instantanee între utilizatori</li>
+        <li><strong>Gestionare Contacte:</strong> Adaugare, editare și organizare a listei de contacte</li>
+        <li><strong>Interfață Modernă:</strong> Design elegant și responsiv pentru o experiență utilizator optimă</li>
+        <li><strong>Notificări:</strong> Alertare în timp real pentru mesaje noi</li>
+        <li><strong>Autentificare Securizată:</strong> Sistem de login și înregistrare utilizatori</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Tehnologii Utilizate</h2>
+      <p>Proiectul este construit folosind tehnologii web moderne:</p>
+      <ul>
+        <li><strong>Frontend:</strong> React cu JavaScript/TypeScript pentru o interfață dinamică</li>
+        <li><strong>Backend:</strong> Node.js pentru procesarea cererilor și gestionarea datelor</li>
+        <li><strong>Real-time:</strong> WebSocket pentru comunicare în timp real</li>
+        <li><strong>Styling:</strong> CSS modern și/sau Tailwind CSS pentru design responsiv</li>
+        <li><strong>Bază de Date:</strong> Sistem de stocare eficient pentru mesaje și date utilizator</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Instalare și Dezvoltare Locală</h2>
+      <p>Pentru a rula proiectul local, urmați acești pași:</p>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Node.js (versiunea 16 sau mai recentă)</li>
+        <li>npm sau yarn</li>
+        <li>Browser modern</li>
+      </ul>
+
+      <h3>Pași de Instalare</h3>
+      <ol>
+        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Connecto.git</code></li>
+        <li>Intrați în director: <code>cd Connecto</code></li>
+        <li>Instalați dependențele: <code>npm install</code></li>
+        <li>Configurați variabilele de mediu</li>
+        <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+      </ol>
+
+      <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code> sau similar.</p>
+
+      <h3>Build de Producție</h3>
+      <p>Pentru a crea un build optimizat pentru producție:</p>
+      <pre><code>npm run build</code></pre>
+      <p>Fișierele build vor fi generate în directorul <code>dist/</code>.</p>
+
+      <br><br>
+
+      <h2>Structura Proiectului</h2>
+      <pre><code>Connecto/
+├── public/                 # Active statice
+├── src/
+│   ├── components/         # Componente React reutilizabile
+│   ├── pages/              # Pagini aplicație
+│   ├── hooks/              # Hook-uri React personalizate
+│   ├── lib/                # Funcții utilitare
+│   ├── App.jsx             # Componenta principală
+│   └── main.jsx            # Punctul de intrare
+├── server/                 # Backend (dacă există)
+├── package.json            # Dependențe și script-uri
+├── vite.config.js          # Configurație Vite
+└── README.md               # Documentație</code></pre>
+
+      <br><br>
+
+      <h2>Securitate</h2>
+      <ul>
+        <li>Autentificare și autorizare utilizatori</li>
+        <li>Criptarea datelor sensibile</li>
+        <li>Protecție împotriva atacurilor comune</li>
+      </ul>
+
+      <br><br>
+
+      <h2>Licență</h2>
+      <p>Proiect open-source, licențiat sub <strong>MIT License</strong>.</p>
+
+      <br><br>
+
+      <h2>Contact</h2>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Connecto" target="_blank">Connecto GitHub</a>.</p>
+    `,
+    tech: ["React", "JavaScript", "Node.js", "WebSocket"],
+    image: "/projects/connecto-icon.png",
+    githubUrl: "https://github.com/iam269/Connecto",
+    liveUrl: "https://connecto-one.vercel.app/",
+    featured: false,
+    category: "fullstack",
+    date: "2026-03-03"
   }
 ];
