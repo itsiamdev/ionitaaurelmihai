@@ -1041,7 +1041,7 @@ bun run build</code></pre>
       <h2>Contact</h2>
       <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Connecto" target="_blank">Connecto GitHub</a>.</p>
     `,
-    tech: ["React", "JavaScript", "Node.js", "WebSocket"],
+    tech: ["React", "JavaScript", "Node.js", "Vercel", "Supabase"],
     image: "/projects/connecto-icon.png",
     githubUrl: "https://github.com/iam269/Connecto",
     liveUrl: "https://connecto-one.vercel.app/",
