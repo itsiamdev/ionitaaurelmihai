@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Cursor - Single Luminous Dot */
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background: hsl(189 94% 43%);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px hsl(189 94% 43%), 0 0 20px hsl(189 94% 43% / 0.6), 0 0 40px hsl(189 94% 43% / 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cursor-dot.hovering {
+  transform: translate(-50%, -50%) scale(1.5);
+  box-shadow: 0 0 15px hsl(189 94% 43%), 0 0 30px hsl(189 94% 43% / 0.8), 0 0 60px hsl(189 94% 43% / 0.4);
+}
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
