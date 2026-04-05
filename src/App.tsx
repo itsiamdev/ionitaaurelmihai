@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor";
+import ChatBot from "./components/ChatBot";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <CustomCursor />
+      <ChatBot />
       <Toaster />
       <Sonner />
       <BrowserRouter>
