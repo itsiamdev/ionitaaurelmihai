@@ -1,7 +1,13 @@
-import { Linkedin, Github } from "lucide-react";
+import { Linkedin, Github, Mail } from "lucide-react";
 
 const Contact = () => {
   const contacts = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "ionitaaurel32@gmail.com",
+      link: "mailto:ionitaaurel32@gmail.com",
+    },
     {
       icon: Linkedin,
       label: "LinkedIn",
@@ -33,7 +39,7 @@ const Contact = () => {
             <a
               key={contact.label}
               href={contact.link}
-              target="_blank"
+              target={contact.label === "Email" ? undefined : "_blank"}
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-card p-4 rounded-lg border border-border hover:border-primary transition-all duration-300 hover:scale-105 group w-full max-w-md"
             >
