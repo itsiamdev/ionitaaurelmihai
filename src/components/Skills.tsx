@@ -6,59 +6,59 @@ const Skills = () => {
       category: "Limbaje de Programare",
       icon: Code2,
       items: [
-        { name: "C", icon: "C" },
-        { name: "C++", icon: "C++" },
-        { name: "C#", icon: "C#" },
-        { name: "JavaScript", icon: "JS" }
+        { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+        { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+        { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+        { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" }
       ],
     },
     {
       category: "Web Development",
       icon: Globe,
       items: [
-        { name: "HTML5", icon: "HTML" },
-        { name: "CSS3", icon: "CSS" },
-        { name: "React", icon: "React" },
-        { name: "Node.js", icon: "Node" },
-        { name: "Express.js", icon: "Express" },
-        { name: "Tailwind CSS", icon: "Tailwind" },
-        { name: "Bootstrap", icon: "Bootstrap" }
+        { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+        { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+        { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" }
       ],
     },
     {
       category: "Baze de Date",
       icon: Database,
       items: [
-        { name: "MongoDB", icon: "MongoDB" },
-        { name: "PostgreSQL", icon: "PostgreSQL" },
-        { name: "Supabase", icon: "Supabase" }
+        { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" }
       ],
     },
     {
       category: "Game Development",
       icon: Gamepad2,
       items: [
-        { name: "Unity", icon: "Unity" }
+        { name: "Unity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" }
       ],
     },
     {
       category: "Editoare de Cod",
       icon: FileCode,
       items: [
-        { name: "Sublime Text", icon: "Sublime" },
-        { name: "VS Code", icon: "VSCode" },
-        { name: "IntelliJ IDEA", icon: "IntelliJ" },
-        { name: "Cursor AI", icon: "Cursor" }
+        { name: "Sublime Text", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sublime/sublime-original.svg" },
+        { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { name: "IntelliJ IDEA", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" },
+        { name: "Cursor AI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg" }
       ],
     },
     {
       category: "Tools & Platforms",
       icon: Wrench,
       items: [
-        { name: "Git", icon: "Git" },
-        { name: "GitHub", icon: "GitHub" },
-        { name: "Vercel", icon: "Vercel" },
-        { name: "REST APIs", icon: "API" }
+        { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+        { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" },
+        { name: "REST APIs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" }
       ],
     },
   ];
@@ -85,7 +85,7 @@ const Skills = () => {
                   key={skill.name}
                   className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
-                  <span className="w-6 h-6 flex items-center justify-center bg-primary/10 rounded text-xs">{skill.icon}</span>
+                  <img src={skill.icon} alt={skill.name} className="w-5 h-5 object-contain" />
                   {skill.name}
                 </div>
               ))}
