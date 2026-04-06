@@ -71,7 +71,7 @@ const Footer = () => {
 
           <div>
             <h4 className="text-sm font-semibold mb-4 text-foreground">Contact</h4>
-            <div className="flex gap-4">
+            <div className="flex justify-center gap-4">
               <a href="https://github.com/iam269" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={20} />
               </a>

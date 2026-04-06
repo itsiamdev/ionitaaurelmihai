@@ -28,31 +28,26 @@ const Contact = () => {
           ezita să mă contactezi. Hai să construim ceva împreună!
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="text-left">
-            <h3 className="text-xl font-semibold mb-6">Mă găsești pe</h3>
-            <div className="space-y-4">
-              {contacts.map((contact) => (
-                <a
-                  key={contact.label}
-                  href={contact.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 bg-card p-4 rounded-lg border border-border hover:border-primary transition-all duration-300 hover:scale-105 group"
-                >
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <contact.icon className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <div className="font-semibold mb-1">{contact.label}</div>
-                    <div className="text-sm text-muted-foreground break-all">
-                      {contact.value}
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+        <div className="flex flex-col items-center justify-center gap-4">
+          {contacts.map((contact) => (
+            <a
+              key={contact.label}
+              href={contact.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 bg-card p-4 rounded-lg border border-border hover:border-primary transition-all duration-300 hover:scale-105 group w-full max-w-md"
+            >
+              <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <contact.icon className="text-primary" size={24} />
+              </div>
+              <div>
+                <div className="font-semibold mb-1">{contact.label}</div>
+                <div className="text-sm text-muted-foreground break-all">
+                  {contact.value}
+                </div>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
