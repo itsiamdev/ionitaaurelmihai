@@ -1,19 +1,7 @@
-import { Linkedin, Github, Instagram, Facebook } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   const contacts = [
-    {
-      icon: Facebook,
-      label: "Facebook",
-      value: "Ionita Aurel Mihai",
-      link: "https://www.facebook.com/profile.php?id=61572090980230&locale=ro_RO",
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      value: "@eusuntaurel1",
-      link: "https://instagram.com/eusuntaurel1",
-    },
     {
       icon: Linkedin,
       label: "LinkedIn",
