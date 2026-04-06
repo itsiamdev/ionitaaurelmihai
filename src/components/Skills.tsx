@@ -46,8 +46,8 @@ const Skills = () => {
       category: "Editoare de Cod",
       icon: FileCode,
       items: [
-        { name: "Sublime Text", icon: "public/icons/sublimetext.png" },
-        { name: "VS Code", icon: "public/icons/vscode.png" },
+        { name: "Sublime Text", icon: "https://img.icons8.com/?size=100&id=6RHskkZGRABM&format=png&color=000000" },
+        { name: "VS Code", icon: "https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000" },
         { name: "IntelliJ IDEA", icon: "https://cdn.simpleicons.org/intellijidea/000000.svg" },
         { name: "Cursor AI", icon: "https://cdn.simpleicons.org/cursor/FF6D00.svg" }
       ],
