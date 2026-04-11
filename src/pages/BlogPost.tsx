@@ -195,13 +195,14 @@ const BlogPost = () => {
                   const url = window.location.href;
                   const title = post.title;
                   
-                  if (navigator.share) {
-                    try {
+                  try {
+                    if (navigator.share) {
                       await navigator.share({ title, url });
-                    } catch (err) {
-                      console.log('Share cancelled');
+                    } else {
+                      await navigator.clipboard.writeText(url);
+                      alert('Link copiat în clipboard!');
                     }
-                  } else {
+                  } catch (err) {
                     await navigator.clipboard.writeText(url);
                     alert('Link copiat în clipboard!');
                   }
