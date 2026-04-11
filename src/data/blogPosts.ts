@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&h=450&fit=crop",
     author: {
       name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+      avatar: "/icons/profileblog.png"
     }
   },
   {
@@ -188,7 +188,7 @@ button {
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=450&fit=crop",
     author: {
       name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+      avatar: "/icons/profileblog.png"
     }
   },
   {
@@ -271,7 +271,98 @@ button {
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop",
     author: {
       name: "Ionita Aurel Mihai",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+      avatar: "/icons/profileblog.png"
+    }
+  },
+  {
+    slug: "dezvoltarea-aplicatiilor-mobile-cum-sa-incepi",
+    title: "Dezvoltarea aplicațiilor mobile: Cum să începi",
+    excerpt: "Dezvoltarea aplicațiilor mobile este un domeniu în plină expansiune. Indiferent dacă vrei să creezi o aplicație pentru iOS, Android sau ambele, în acest articol voi explica pașii esențiali și tehnologiile disponibile pentru a începe în app development.",
+    content: `
+      <h2>De ce să dezvolți aplicații mobile?</h2>
+      <p>Aplicațiile mobile sunt peste tot astăzi. Fiecare persoană cu un smartphone are zeci de aplicații instalate.</p>
+      <p>Dezvoltarea mobile îți oferă șansa de a:</p>
+      <ul>
+        <li>crea produse care ajută milioane de oameni</li>
+        <li>învăța tehnologii moderne și cerute pe piață</li>
+        <li>construi o carieră bine plătită</li>
+        <li>transforma ideile în realitate</li>
+      </ul>
+
+      <h2>Ce platforme poți viza?</h2>
+      <h3>iOS</h3>
+      <p>Apple oferă acces la peste 2 miliarde de dispozitive active. Dezvoltarea pentru iOS se face în principal cu <strong>Swift</strong>.</p>
+      <h3>Android</h3>
+      <p>Sistemul de operare Android domină piața globală cu peste 70% cotă de piață. Se dezvoltă cu <strong>Kotlin</strong> sau Java.</p>
+      <h3>Cross-platform</h3>
+      <p>Dacă vrei să acoperi ambele platforme simultan, poți folosi:</p>
+      <ul>
+        <li><strong>React Native</strong> – folosește JavaScript/React</li>
+        <li><strong>Flutter</strong> – folosește Dart</li>
+        <li><strong>Xamarin</strong> – folosește C#</li>
+      </ul>
+
+      <h2>Primul pas: alegează tehnologia</h2>
+      <h3>Dacă ești începător</h3>
+      <p><strong>React Native</strong> este o alegere excelentă dacă știi JavaScript. Beneficii:</p>
+      <ul>
+        <li>aceeași codă pentru iOS și Android</li>
+        <li>comunitate mare</li>
+        <li>se întețelege ușor dacă știi React</li>
+      </ul>
+      <h3>Dacă vrei performanță maximă</h3>
+      <p><strong>Swift</strong> pentru iOS sau <strong>Kotlin</strong> pentru Android oferă cele mai bune performanțe și acces la toate funcționalitățile platformei.</p>
+
+      <h2>Structura unei aplicații mobile</h2>
+      <p>O aplicație mobile tipică are:</p>
+      <ul>
+        <li><strong>Ecrane</strong> – paginile aplicației</li>
+        <li><strong>Navigație</strong> – cum se trece de la un ecran la altul</li>
+        <li><strong>Stare</strong> – datele aplicației</li>
+        <li><strong>API calls</strong> – comunicarea cu serverul</li>
+      </ul>
+      <p><strong>Exemplu structură React Native:</strong></p>
+      <pre><code class="language-javascript">function App() {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator&gt;
+        &lt;Stack.Screen name="Home" component={HomeScreen} /&gt;
+        &lt;Stack.Screen name="Details" component={DetailsScreen} /&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+}</code></pre>
+
+      <h2>Funcționalități comune</h2>
+      <p>Majoritatea aplicațiilor mobile includ:</p>
+      <ul>
+        <li><strong>Autentificare</strong> – login/signup</li>
+        <li><strong>Camera</strong> – poze și video</li>
+        <li><strong>Localizare</strong> – GPS</li>
+        <li><strong>Notificări</strong> – push notifications</li>
+        <li><strong>Stocare locală</strong> – salvare date pe device</li>
+      </ul>
+
+      <h2>De unde să începi?</h2>
+      <p><strong>Pasul 1:</strong> Alege o tehnologie (recomand React Native pentru începători)</p>
+      <p><strong>Pasul 2:</strong> Instalează mediul de dezvoltare (Node.js, Android Studio, Xcode)</p>
+      <p><strong>Pasul 3:</strong> Creează un proiect simplu – un todo list sau un converter</p>
+      <p><strong>Pasul 4:</strong> Explorează documentația oficială și tutoriale</p>
+      <p><strong>Pasul 5:</strong> Publică prima ta aplicație în App Store sau Google Play</p>
+
+      <h2>Concluzie</h2>
+      <p>Dezvoltarea aplicațiilor mobile este accesibilă oricui are determinare. Cu instrumentele potrivite și practică constantă, poți crea aplicații reale în câteva săptămâni.</p>
+      <p>Indiferent de tehnologia aleasă, cel mai important este să începi și să nu te oprești.</p>
+
+      <p><em>Urmărește site-ul pentru tutoriale practice despre dezvoltarea aplicațiilor mobile!</em></p>
+    `,
+    date: "2026-04-11",
+    readTime: "6 min citire",
+    tags: ["App Development", "Mobile", "React Native", "Swift", "Kotlin"],
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+    author: {
+      name: "Ionita Aurel Mihai",
+      avatar: "/icons/profileblog.png"
     }
   }
 ];
