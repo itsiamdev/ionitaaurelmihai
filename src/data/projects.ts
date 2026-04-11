@@ -61,7 +61,7 @@ export const projects: Project[] = [
       </ul>
       <h3>Pași de Instalare</h3>
       <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/greenweek.git</code></li>
+        <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/greenweek.git</code></li>
         <li>Intrați în director: <code>cd greenweek</code></li>
         <li>Instalați dependențele: <code>npm install</code></li>
         <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
@@ -150,8 +150,8 @@ export const projects: Project[] = [
     `,
     tech: ["Vite", "React", "TypeScript", "Tailwind CSS"],
     image: "/projects/greenweek.jpg",
-    githubUrl: "https://github.com/iam269/greenweek",
-    liveUrl: "https://iam269.github.io/greenweek/",
+    githubUrl: "https://github.com/itsiamdev/greenweek",
+    liveUrl: "https://itsiamdev.github.io/greenweek/",
     featured: true,
     category: "web",
     date: "2025-10-21"
@@ -204,7 +204,7 @@ export const projects: Project[] = [
 
       <h3>Pași de Instalare</h3>
       <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Medix.git</code></li>
+        <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/Medix.git</code></li>
         <li>Intrați în director: <code>cd Medix</code></li>
         <li>Instalați dependențele: <code>npm install</code></li>
         <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
@@ -251,11 +251,11 @@ export const projects: Project[] = [
       <br><br>
 
       <h2>Contact</h2>
-      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Medix" target="_blank">Medix GitHub</a>.</p>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/itsiamdev/Medix" target="_blank">Medix GitHub</a>.</p>
     `,
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     image: "/projects/Medix.png",
-    githubUrl: "https://github.com/iam269/Medix",
+    githubUrl: "https://github.com/itsiamdev/Medix",
     liveUrl: "https://medix-eosin.vercel.app/",
     featured: false,
     category: "web",
@@ -311,7 +311,7 @@ export const projects: Project[] = [
 
       <h3>Pași de Instalare</h3>
       <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/geolocation-api.git</code></li>
+        <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/geolocation-api.git</code></li>
         <li>Intrați în directorul proiectului: <code>cd geolocation-api</code></li>
         <li>Instalați dependențele: <code>npm install</code></li>
         <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
@@ -372,8 +372,8 @@ export const projects: Project[] = [
     `,
     tech: ["React","TypeScript", "Vite", "Tailwind CSS"],
     image: "/projects/geolocationapi.jpg",
-    githubUrl: "https://github.com/iam269/geolocation-api",
-    liveUrl: "https://iam269.github.io/geolocation-api/",
+    githubUrl: "https://github.com/itsiamdev/geolocation-api",
+    liveUrl: "https://itsiamdev.github.io/geolocation-api/",
     featured: true,
     category: "web",
     date: "2026-01-3"
@@ -448,7 +448,7 @@ export const projects: Project[] = [
 
       <h3>Pași de Instalare</h3>
       <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/christmas-memory.git</code></li>
+        <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/christmas-memory.git</code></li>
         <li>Intrați în director: <code>cd christmas-memory</code></li>
         <li>Instalați dependențele: <code>npm install</code> sau <code>bun install</code></li>
         <li>Porniți serverul de dezvoltare: <code>npm run dev</code> sau <code>bun run dev</code></li>
@@ -506,12 +506,12 @@ bun run build</code></pre>
       <br><br>
 
       <h2>Contact</h2>
-      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/christmas-memory" target="_blank">Christmas Memory GitHub</a>.</p>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/itsiamdev/christmas-memory" target="_blank">Christmas Memory GitHub</a>.</p>
     `,
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
     image: "/projects/christmasmemory.jpg",
-    githubUrl: "https://github.com/iam269/christmas-memory",
-    liveUrl: "https://iam269.github.io/christmas-memory/",
+    githubUrl: "https://github.com/itsiamdev/christmas-memory",
+    liveUrl: "https://itsiamdev.github.io/christmas-memory/",
     featured: true,
     category: "web",
     date: "2026-01-19"
@@ -556,7 +556,7 @@ bun run build</code></pre>
       </ul>
       <h3>Pași de Instalare</h3>
       <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Stan-Radu-Gabriel.git</code></li>
+        <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/Stan-Radu-Gabriel.git</code></li>
         <li>Intrați în director: <code>cd Stan-Radu-Gabriel</code></li>
         <li>Instalați dependențele: <code>npm install</code></li>
         <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
@@ -597,8 +597,8 @@ bun run build</code></pre>
     `,
     tech: ["HTML", "CSS", "JavaScript", "TypeScript", "React"],
     image: "/projects/RaduStanGabriel.jpg",
-    githubUrl: "https://github.com/iam269/Stan-Radu-Gabriel",
-    liveUrl: "https://iam269.github.io/Stan-Radu-Gabriel/",
+    githubUrl: "https://github.com/itsiamdev/Stan-Radu-Gabriel",
+    liveUrl: "https://itsiamdev.github.io/Stan-Radu-Gabriel/",
     featured: false,
     category: "web",
     date: "2026-01-10"
@@ -650,7 +650,7 @@ bun run build</code></pre>
 
       <h3>Pași de Instalare</h3>
       <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Task-Manager-main.git</code></li>
+        <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/Task-Manager-main.git</code></li>
         <li>Intrați în director: <code>cd Task-Manager-main</code></li>
         <li>Instalați dependențele: <code>npm install</code></li>
         <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
@@ -687,12 +687,12 @@ bun run build</code></pre>
       <br><br>
 
       <h2>Contact</h2>
-      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Task-Manager-main" target="_blank">Task Manager GitHub</a>.</p>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/itsiamdev/Task-Manager-main" target="_blank">Task Manager GitHub</a>.</p>
     `,
     tech: ["React", "JavaScript", "TypeScript", "Vite", "CSS"],
     image: "/projects/Taskmeneger.png",
-    githubUrl: "https://github.com/iam269/Task-Manager-main",
-    liveUrl: "https://iam269.github.io/Task-Manager-main/",
+    githubUrl: "https://github.com/itsiamdev/Task-Manager-main",
+    liveUrl: "https://itsiamdev.github.io/Task-Manager-main/",
     featured: false,
     category: "web",
     date: "2026-02-17"
@@ -743,7 +743,7 @@ bun run build</code></pre>
 
       <h3>Pași de Instalare</h3>
       <ol>
-        <li>Clonați repository-ul: <code>git clone https://github.com/iam269/Connecto.git</code></li>
+        <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/Connecto.git</code></li>
         <li>Intrați în director: <code>cd Connecto</code></li>
         <li>Instalați dependențele: <code>npm install</code></li>
         <li>Configurați variabilele de mediu</li>
@@ -791,11 +791,11 @@ bun run build</code></pre>
       <br><br>
 
       <h2>Contact</h2>
-      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/iam269/Connecto" target="_blank">Connecto GitHub</a>.</p>
+      <p>Pentru sugestii sau probleme, vă rugăm să deschideți un issue în repository-ul GitHub: <a href="https://github.com/itsiamdev/Connecto" target="_blank">Connecto GitHub</a>.</p>
     `,
     tech: ["React", "TypeScript", "JavaScript", "Node.js", "Vercel", "Supabase"],
     image: "/projects/connecto-icon.png",
-    githubUrl: "https://github.com/iam269/Connecto",
+    githubUrl: "https://github.com/itsiamdev/Connecto",
     liveUrl: "https://connecto-one.vercel.app/",
     featured: false,
     category: "fullstack",

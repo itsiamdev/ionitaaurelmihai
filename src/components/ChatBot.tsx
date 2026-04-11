@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Bot, User } from "lucide-react";
+import { MessageCircle, X, Bot, User } from "lucide-react";
 
 interface Message {
   id: string;
@@ -11,7 +11,7 @@ interface Message {
 const initialGreeting: Message = {
   id: "greeting",
   role: "assistant",
-  content: "Bună! Sunt un asistent virtual. Întreabă-mă despre proiectele mele, skill-uri sau cum mă poți contacta!",
+  content: "Bună! Sunt un asistent virtual al lui Aurel. Întreabă-mă despre proiectele ,skill-uri ,certificări,etc...",
   timestamp: new Date(),
 };
 
@@ -20,53 +20,62 @@ const quickQuestions = [
   "Care sunt skill-urile tale?",
   "Cum te pot contacta?",
   "Ce tehnologii folosești?",
+  "Care sunt framework-urile?",
+  "Ai făcut deployment?",
 ];
 
-const responses: Record<string, string[]> = {
+const qa = {
   proiecte: [
-    "Am lucrat la mai multe proiecte interesante! Vizitează secțiunea Projects pentru a le vedea pe toate.",
-    "Am experiență cu proiecte web diverse. Check proiectele mele!",
+    "Am lucrat la peste 15 proiecte interesante, de la aplicații web simple până la platforme complexe (e-commerce, dashboards, bloguri, aplicații în timp real). Vizitează secțiunea Proiecte pentru a vedea toate detaliile, tehnologiile folosite și link-uri live!",
   ],
   skill: [
-    "Am skill-uri în web development: React, TypeScript, Node.js, și multe altele. Vezi secțiunea About pentru detalii!",
-    "Sunt specializat în frontend dar am și experiență backend. Explorează site-ul pentru mai multe detalii!",
+    "Am skill-uri solide în web development: React, TypeScript, Node.js, Express, MongoDB, PostgreSQL, Next.js, Tailwind CSS, Git, REST APIs, Vue, Angular, Python (Flask, Django), și multe altele. Pentru o listă completă și detalii despre nivelul fiecărei competențe, vizitează secțiunea Skills!",
   ],
   contact: [
-    "Poți să mă contactezi prin secțiunea Contact! Am conturi pe Facebook, Instagram, LinkedIn și GitHub.",
-    "Scrie-mi pe LinkedIn sau trimite un mesaj pe Instagram!",
+    "Poți să mă contactezi prin secțiunea Contact! Am conturi active pe X, Instagram, LinkedIn și GitHub. Răspund de obicei în maxim 24 de ore. Ai și un formular direct în aceeași secțiune.",
   ],
-  html: [
-    "Da, am experiență cu HTML, CSS și JavaScript. Multe din proiectele mele folosesc aceste tehnologii.",
+  tehnologii: [
+    "Folosesc un stack modern: Frontend: React, Vue, Angular, Next.js, TypeScript, Tailwind CSS; Backend: Node.js, Express, Python (Flask, Django); Baze de date: MongoDB, PostgreSQL; Altele: Git, REST APIs, GraphQL, JWT. Toate detaliile sunt în secțiunea Skills!",
   ],
-  javascript: [
-    "JavaScript este una din tehnologiile mele principale de lucru!",
+  frameworkuri: [
+    "Da! Am experiență solidă cu React (inclusiv Hooks, Context API, Redux), Vue.js (Composition API, Pinia) și Angular (RxJS, NgRx). În secțiunea Skills găsești detalii despre fiecare framework și proiecte demonstrative.",
   ],
-  react: [
-    "Lucrez cu React și am realizat mai multe proiecte cu această tehnologie!",
+  deployment: [
+    "Da! Am deployat aplicații pe Vercel, Netlify, Heroku și AWS (EC2, S3). Știu să configurez domenii, variabile de mediu, CI/CD cu GitHub Actions și să optimizez performanța pentru producție. În secțiunea Skills găsești toate detaliile despre DevOps și hosting!",
+  ],
+  openSource: [
+    "Am mai multe proiecte personale pe GitHub, inclusiv un task manager, o aplicație de vreme, un blog cu Next.js și un dashboard cu React. De asemenea, am contribuit la câteva proiecte open-source (traduceri, bug-uri mici). Toate link-urile sunt în secțiunea Skills și Proiecte!",
+  ],
+  organizareCod: [
+    "Folosesc Git pentru version control, cu strategii precum Git Flow. Scriu cod curat, modular, cu comentarii relevante și urmez principiile SOLID. În secțiunea Skills găsești și exemple de structuri de proiect.",
+  ],
+  tooluri: [
+    "Da! Am experiență cu Webpack, Vite, ESLint, Prettier, și tool-uri de testare precum Jest, Vitest și Cypress (teste end-to-end). Vizitează secțiunea Skills pentru o listă completă de tool-uri.",
+  ],
+  certificari: [
+    "Am finalizat multiple cursuri avansate (Frontend Masters, Udemy, freeCodeCamp) și am certificări în JavaScript modern, React, Node.js și Python. În secțiunea Skills sunt detaliate toate certificările și link-urile către ele.",
   ],
   default: [
-    "Interesantă întrebare! Poți găsi mai multe informații navigând prin site-ul meu.",
-    "Încearcă să mă întrebi despre proiecte, skill-uri sau cum mă poți contacta!",
-    "Pentru mai multe detalii, explorează secțiunile site-ului!",
+    "Interesantă întrebare! Cel mai bine este să explorezi secțiunile site-ului: Skills pentru toate abilitățile mele, Proiecte pentru exemple practice, și Contact pentru a vorbi direct cu mine.",
+    "Încearcă să mă întrebi despre proiecte, skill-uri, tehnologii specifice (React, Vue, Node, Python) sau cum mă poți contacta! Toate detaliile sunt în secțiunea Skills.",
   ],
 };
 
 const getResponse = (message: string): string => {
   const lowerMessage = message.toLowerCase();
   
-  for (const [key, value] of Object.entries(responses)) {
+  for (const [key, value] of Object.entries(qa)) {
     if (lowerMessage.includes(key)) {
       return value[Math.floor(Math.random() * value.length)];
     }
   }
   
-  return responses.default[Math.floor(Math.random() * responses.default.length)];
+  return qa.default[Math.floor(Math.random() * qa.default.length)];
 };
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([initialGreeting]);
-  const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -78,22 +87,19 @@ const ChatBot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const handleSend = () => {
-    if (!input.trim()) return;
-
+  const handleSend = (messageText: string) => {
     const userMessage: Message = {
       id: Date.now().toString(),
       role: "user",
-      content: input,
+      content: messageText,
       timestamp: new Date(),
     };
 
     setMessages((prev) => [...prev, userMessage]);
-    setInput("");
     setIsTyping(true);
 
     setTimeout(() => {
-      const response = getResponse(input);
+      const response = getResponse(messageText);
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
@@ -105,16 +111,8 @@ const ChatBot = () => {
     }, 1000);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      handleSend();
-    }
-  };
-
   const handleQuickQuestion = (question: string) => {
-    setInput(question);
-    setTimeout(() => handleSend(), 100);
+    handleSend(question);
   };
 
   return (
@@ -197,25 +195,7 @@ const ChatBot = () => {
             </div>
           </div>
 
-          <div className="p-3 border-t border-border">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Scrie un mesaj..."
-                className="flex-1 bg-muted border-none rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button
-                onClick={handleSend}
-                disabled={!input.trim()}
-                className="p-2 bg-primary rounded-lg text-primary-foreground hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                <Send size={18} />
-              </button>
-            </div>
-          </div>
+          
         </div>
       )}
     </>
