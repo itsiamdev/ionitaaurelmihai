@@ -15,6 +15,13 @@ const initialGreeting: Message = {
   timestamp: new Date(),
 };
 
+const quickQuestions = [
+  "Ce proiecte ai lucrat?",
+  "Care sunt skill-urile tale?",
+  "Cum te pot contacta?",
+  "Ce tehnologii folosești?",
+];
+
 const responses: Record<string, string[]> = {
   proiecte: [
     "Am lucrat la mai multe proiecte interesante! Vizitează secțiunea Projects pentru a le vedea pe toate.",
@@ -105,6 +112,11 @@ const ChatBot = () => {
     }
   };
 
+  const handleQuickQuestion = (question: string) => {
+    setInput(question);
+    setTimeout(() => handleSend(), 100);
+  };
+
   return (
     <>
       <button
@@ -169,6 +181,20 @@ const ChatBot = () => {
               </div>
             )}
             <div ref={messagesEndRef} />
+          </div>
+
+          <div className="px-3 pt-3 border-t border-border">
+            <div className="flex flex-wrap gap-2">
+              {quickQuestions.map((question, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleQuickQuestion(question)}
+                  className="text-xs px-3 py-1.5 bg-muted hover:bg-primary/20 hover:text-primary rounded-full transition-colors"
+                >
+                  {question}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="p-3 border-t border-border">

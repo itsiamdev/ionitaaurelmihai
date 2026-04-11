@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Linkedin, Github, Mail, Twitter } from "lucide-react";
 
 const Contact = () => {
   const contacts = [
@@ -20,6 +20,12 @@ const Contact = () => {
       value: "github.com/iam269",
       link: "https://github.com/iam269",
     },
+    {
+      icon: Twitter,
+      label: "Twitter",
+      value: "twitter.com/itsiamdev",
+      link: "https://twitter.com/itsiamdev",
+    }
   ];
 
   return (
@@ -34,14 +40,14 @@ const Contact = () => {
           ezita să mă contactezi. Hai să construim ceva împreună!
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           {contacts.map((contact) => (
             <a
               key={contact.label}
               href={contact.link}
               target={contact.label === "Email" ? undefined : "_blank"}
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-card p-4 rounded-lg border border-border hover:border-primary transition-all duration-300 hover:scale-105 group w-full max-w-md"
+              className="flex items-center gap-4 bg-card p-4 rounded-lg border border-border hover:border-primary transition-all duration-300 hover:scale-105 group"
             >
               <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                 <contact.icon className="text-primary" size={24} />

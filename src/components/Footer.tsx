@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -80,6 +80,9 @@ const Footer = () => {
               </a>
               <a href="mailto:ionitaaurel32@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={20} />
+              </a>
+              <a href="https://twitter.com/itsiamdev" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter size={20} />
               </a>
             </div>
           </div>
