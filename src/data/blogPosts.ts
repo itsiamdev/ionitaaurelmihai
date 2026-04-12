@@ -287,7 +287,7 @@ button {
       <p>Flutter este un framework open-source dezvoltat de Google, care permite crearea de aplicații mobile pentru iOS și Android din aceeași bază de cod. Folosește limbajul <strong>Dart</strong>, care este ușor de învățat și puternic.</p>
       <p>De ce să alegi Flutter?</p>
       <ul>
-        <li><strong>Single codebase</strong> – aceeași codă pentru iOS și Android</li>
+        <li><strong>Single codebase</strong> – aceelași cod pentru iOS și Android</li>
         <li><strong>Hot reload</strong> – vezi modificările instant</li>
         <li><strong>Beautiful UI</strong> – widget-uri Material și Cupertino</li>
         <li><strong>Performanță</strong> – apropiată de native</li>
