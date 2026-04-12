@@ -8,7 +8,7 @@ import { ArrowLeft, Calendar, Clock, Share2, ArrowRight, Heart } from "lucide-re
 import { blogPosts } from "@/data/blogPosts";
 import { Helmet } from "react-helmet";
 import NotFound from "./NotFound";
-import parse from 'html-react-parser';
+import parse, { DOMNode, Element, Text } from 'html-react-parser';
 import CodeBlock from "@/components/CodeBlock";
 
 const BlogPost = () => {
@@ -158,17 +158,17 @@ const BlogPost = () => {
               {parse(post.content, {
                 replace: (domNode) => {
                   if (domNode.type === 'tag' && domNode.name === 'pre') {
-                    const codeElement = (domNode as any).children?.[0];
+                    const codeElement = (domNode as Element).children?.[0];
                     if (codeElement && codeElement.type === 'tag' && codeElement.name === 'code') {
                       const className = codeElement.attribs?.class || '';
                       const language = className.replace('language-', '') || 'text';
                       
-                      const getRawContent = (children: any[]): string => {
+                      const getRawContent = (children: DOMNode[] | undefined): string => {
                         if (!children) return '';
-                        return children.map((child: any) => {
-                          if (child.type === 'text') return child.data;
+                        return children.map((child) => {
+                          if (child.type === 'text') return (child as Text).data;
                           if (child.type === 'tag') {
-                            const tagName = child.name;
+                            const tagName = (child as Element).name;
                             const attrs = child.attribs ? ' ' + Object.entries(child.attribs)
                               .map(([k, v]) => `${k}="${v}"`)
                               .join(' ') : '';
