@@ -276,7 +276,7 @@ button {
   },
   {
     slug: "dezvoltarea-aplicatiilor-mobile-cum-sa-incepi",
-    title: "Dezvoltarea aplicațiilor mobile: Cum să începi",
+    title: "Dezvoltarea aplicațiilor mobile: Cum să începi?",
     excerpt: "Dezvoltarea aplicațiilor mobile este un domeniu în plină expansiune. Indiferent dacă vrei să creezi o aplicație pentru iOS, Android sau ambele, în acest articol voi explica pașii esențiali și tehnologiile disponibile pentru a începe în app development.",
     content: `
       <h2>De ce să dezvolți aplicații mobile?</h2>
@@ -300,7 +300,7 @@ button {
         <li><strong>React Native</strong> – folosește JavaScript/React</li>
         <li><strong>Flutter</strong> – folosește Dart</li>
         <li><strong>Xamarin</strong> – folosește C#</li>
-        <li><strong>Expo</strong> – framework acima React Native</li>
+        <li><strong>Expo</strong> – tool pentru React Native</li>
       </ul>
 
       <h2>Primul pas: alegează tehnologia</h2>
@@ -445,8 +445,49 @@ class ProfileScreen extends StatelessWidget {
       return const Text('Nu ești logat');
     }
 
-    return Text('Bine ai venit, \${userProvider.user!.name}');
+    return Text('Bine ai venit, userProvider.user!.name');
   }
+}</code></pre>
+
+      <p><em>Notă pentru React Native: În React Native, state management se face diferit. Poți folosi Context API sau hooks:</em></p>
+      <pre><code class="language-javascript">// React Native - Context API
+import { createContext, useContext, useState } from 'react';
+
+const UserContext = createContext();
+
+export function UserProvider({ children }) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const login = async (email, password) => {
+    setLoading(true);
+    // Simulează API call
+    await new Promise(r => setTimeout(r, 1000));
+    setUser({ name: 'John Doe', email });
+    setLoading(false);
+  };
+
+  const logout = () => setUser(null);
+
+  return (
+    &lt;UserContext.Provider value={{ user, loading, login, logout }}&gt;
+      {children}
+    &lt;/UserContext.Provider&gt;
+  );
+}
+
+export function useUser() {
+  return useContext(UserContext);
+}
+
+// Utilizare în componentă
+function ProfileScreen() {
+  const { user, loading } = useUser();
+
+  if (loading) return &lt;ActivityIndicator /&gt;;
+  if (!user) return &lt;Text&gt;Nu ești logat&lt;/Text&gt;;
+
+  return &lt;Text&gt;Bine ai venit, {user.name}&lt;/Text&gt;;
 }</code></pre>
 
       <h3>2. Riverpod (recomandat pentru proiecte mari)</h3>
@@ -493,10 +534,11 @@ class HomeScreen extends ConsumerWidget {
     return userState.when(
       data: (user) => Text(user.name),
       loading: () => CircularProgressIndicator(),
-      error: (e) => Text('Eroare: $e'),
+      error: (e) => Text('Eroare: eroare'),
     );
   }
 }</code></pre>
+</code></pre>
 
       <h3>3. Bloc (Business Logic Component)</h3>
       <p>Excelent pentru aplicații cu logică complexă:</p>
@@ -535,7 +577,7 @@ class CounterPage extends StatelessWidget {
         builder: (context, state) {
           return Column(
             children: [
-              Text('Count: \${state.count}'),
+              Text('Count: state.count'),
               ElevatedButton(
                 onPressed: () => context.read&lt;CounterBloc&gt;().add(Increment()),
                 child: Text('+'),
@@ -700,7 +742,7 @@ Future&lt;User&gt; login(String email, String password) async {
   onRequest: (options, handler) {
     final token = getToken();
     if (token != null) {
-      options.headers['Authorization'] = 'Bearer $token';
+      options.headers['Authorization'] = 'Bearer token';
     }
     return handler.next(options);
   },
@@ -732,124 +774,8 @@ Future&lt;void&gt; initNotifications() async {
     iOS: iosSettings,
   );
 
-  await flutterLocalNotificationsPlugin.initialize(initSettings);
-}</code></pre>
-
-      <h2>Performance și optimizare</h2>
-      <p>Pentru aplicații care funcționează smooth:</p>
-      <h3>1. Optimizarea ListView</h3>
-      <pre><code class="language-dart">class OptimizedList extends StatelessWidget {
-  final List&lt;User&gt; users;
-
-  const OptimizedList({Key? key, required this.users}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: users.length,
-      cacheExtent: 200,
-      itemSeparatorBuilder: (context, index) => Divider(),
-      itemBuilder: (context, index) {
-        final user = users[index];
-        return ListTile(
-          leading: CircleAvatar(child: Text(user.name[0])),
-          title: Text(user.name),
-        );
-      },
-    );
-  }
-}</code></pre>
-}</code></pre>
-
-      <h3>Push Notifications</h3>
-      <pre><code class="language-javascript">import * as Notifications from 'expo-notifications';
-
-// Configurare handler
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: true,
-    shouldSetBadge: true,
-  }),
-});
-
-// Solicitare permisiuni
-const { status: existingStatus } = await Notifications.getPermissionsAsync();
-let finalStatus = existingStatus;
-
-if (existingStatus !== 'granted') {
-  const { status } = await Notifications.requestPermissionsAsync();
-  finalStatus = status;
+      await flutterLocalNotificationsPlugin.initialize(initSettings);
 }
-
-// Creare canal (Android)
-if (Platform.OS === 'android') {
-  await Notifications.setNotificationChannelAsync('default', {
-    name: 'default',
-    importance: Notifications.AndroidImportance.MAX,
-  });
-}</code></pre>
-
-      <h2>Performance și optimizare</h2>
-      <p>Pentru aplicații care funcționează smooth:</p>
-      <h3>1. Memoizare componentelor</h3>
-      <pre><code class="language-javascript">import { memo, useCallback } from 'react';
-
-const UserCard = memo(function UserCard({ user, onPress }) {
-  return (
-    &lt;TouchableOpacity onPress={onPress}&gt;
-      &lt;Text&gt;{user.name}&lt;/Text&gt;
-    &lt;/TouchableOpacity&gt;
-  );
-});
-
-// useCallback pentru callbacks stabile
-function ParentComponent() {
-  const handlePress = useCallback((userId) => {
-    navigation.navigate('Profile', { userId });
-  }, [navigation]);
-
-  return users.map(user => (
-    &lt;UserCard 
-      key={user.id} 
-      user={user} 
-      onPress={() => handlePress(user.id)}
-    /&gt;
-  ));
-}</code></pre>
-
-      <h3>2. Lazy loading</h3>
-      <pre><code class="language-javascript">import { lazy, Suspense } from 'react';
-
-const HeavyComponent = lazy(() => import('./HeavyComponent'));
-
-function App() {
-  return (
-    &lt;Suspense fallback={&lt;ActivityIndicator /&gt;}&gt;
-      &lt;HeavyComponent /&gt;
-    &lt;/Suspense&gt;
-  );
-}</code></pre>
-
-      <h3>3. FlatList optimizat</h3>
-      <pre><code class="language-javascript">function OptimizedList({ data }) {
-  return (
-    &lt;FlatList
-      data={data}
-      keyExtractor={(item) => item.id}
-      getItemLayout={(data, index) => ({
-        length: ITEM_HEIGHT,
-        offset: ITEM_HEIGHT * index,
-        index,
-      })}
-      windowSize={5}
-      maxToRenderPerBatch={10}
-      removeClippedSubviews={true}
-      initialNumToRender={8}
-      renderItem={({ item }) => &lt;ListItem item={item} /&gt;}
-    /&gt;
-  );
-}</code></pre>
 
       <h2>Testare</h2>
       <p>Asigură calitatea aplicației:</p>
@@ -943,12 +869,7 @@ void main() {
 
     expect(result.name, 'John');
     verify(mockService.getUser('1')).called(1);
-  });
-}</code></pre>
-
-      <h2>Publicare în store-uri</h2>
-    await expect(element(by.id('home-screen'))).toBeVisible();
-  });
+  })
 });</code></pre>
 
       <h2>Publicare în store-uri</h2>
@@ -1068,35 +989,6 @@ class UsersPage extends StatelessWidget {
     );
   }
 }</code></pre>
-    └── errors/</code></pre>
-
-      <h3>MVVM (Model-View-ViewModel)</h3>
-      <pre><code class="language-javascript">// ViewModel cu Hooks
-import { useState, useEffect } from 'react';
-
-function useUserViewModel() {
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    loadUsers();
-  }, []);
-
-  async function loadUsers() {
-    try {
-      setLoading(true);
-      const data = await fetchUsers();
-      setUsers(data);
-    } catch (e) {
-      setError(e.message);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  return { users, loading, error, refresh: loadUsers };
-}
 
 // View
 function UsersScreen() {
@@ -1133,8 +1025,6 @@ flutter run</code></pre>
       <p>Dezvoltarea aplicațiilor mobile este accesibilă oricui are determinare. Cu instrumentele potrivite și practică constantă, poți crea aplicații reale în câteva săptămâni.</p>
       <p>Indiferent de tehnologia aleasă, cel mai important este să începi și să nu te oprești. Structură, widget-uri, state management, API calls – toate aceste concepte devin naturale cu practică.</p>
       <p>Flutter este o excelentă alegere pentru începători, dar odată ce ai învățat conceptele de bază, poți explora și alte tehnologii precum <strong>React Native</strong>, <strong>Kotlin</strong> pentru Android, sau <strong>Swift</strong> pentru iOS. Fiecare tehnologie are avantajele sale, iar cunoașterea multiplelor framework-uri te va face un dezvoltator mai versatil.</p>
-      <p>Urmărește site-ul pentru tutoriale practice despre dezvoltarea aplicațiilor mobile!</p>
-
       <p><em>Urmărește site-ul pentru tutoriale practice despre dezvoltarea aplicațiilor mobile!</em></p>
     `,
     date: "2026-04-11",
