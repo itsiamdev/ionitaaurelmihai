@@ -11,6 +11,7 @@ export interface BlogPost {
     name: string;
     avatar?: string;
   };
+  relatedPosts?: string[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -91,7 +92,8 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: "Ioniță Aurel Mihai",
       avatar: "/icons/profileblog.png"
-    }
+    },
+    relatedPosts: ["bazele-programarii-variabile-tipuri-date-functii", "cum-functioneaza-html-css-javascript-intr-o-aplicatie-web"]
   },
   {
     slug: "cum-functioneaza-html-css-javascript-intr-o-aplicatie-web",
@@ -189,7 +191,8 @@ button {
     author: {
       name: "Ioniță Aurel Mihai",
       avatar: "/icons/profileblog.png"
-    }
+    },
+    relatedPosts: ["bazele-programarii-variabile-tipuri-date-functii", "algoritmi-de-baza-pentru-incepatori-sortare-cautare-complexitate"]
   },
   {
     slug: "bazele-programarii-variabile-tipuri-date-functii",
@@ -272,7 +275,8 @@ button {
     author: {
       name: "Ioniță Aurel Mihai",
       avatar: "/icons/profileblog.png"
-    }
+    },
+    relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "algoritmi-de-baza-pentru-incepatori-sortare-cautare-complexitate"]
   },
   {
     slug: "dezvoltarea-aplicatiilor-mobile-cum-sa-incepi",
@@ -393,6 +397,7 @@ flutter run</code></pre>
     author: {
       name: "Ioniță Aurel Mihai",
       avatar: "/icons/profileblog.png"
-    }
+    },
+    relatedPosts: ["bazele-programarii-variabile-tipuri-date-functii", "cum-functioneaza-html-css-javascript-intr-o-aplicatie-web"]
   }
 ];

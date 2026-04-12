@@ -50,9 +50,11 @@ const BlogPost = () => {
     return <NotFound />;
   }
 
-  const relatedPosts = blogPosts
-    .filter((p) => p.slug !== post.slug && p.tags.some((tag) => post.tags.includes(tag)))
-    .slice(0, 3);
+  const relatedPosts = post.relatedPosts 
+    ? blogPosts.filter((p) => post.relatedPosts?.includes(p.slug))
+    : blogPosts
+        .filter((p) => p.slug !== post.slug && p.tags.some((tag) => post.tags.includes(tag)))
+        .slice(0, 3);
 
   const schemaData = {
     "@context": "https://schema.org",
