@@ -276,760 +276,119 @@ button {
   },
   {
     slug: "dezvoltarea-aplicatiilor-mobile-cum-sa-incepi",
-    title: "Dezvoltarea aplicațiilor mobile: Cum să începi?",
-    excerpt: "Dezvoltarea aplicațiilor mobile este un domeniu în plină expansiune. Indiferent dacă vrei să creezi o aplicație pentru iOS, Android sau ambele, în acest articol voi explica pașii esențiali și tehnologiile disponibile pentru a începe în app development.",
+    title: "Dezvoltarea aplicațiilor mobile cu Flutter",
+    excerpt: "Flutter este framework-ul Google pentru dezvoltarea aplicațiilor mobile cross-platform. Cu o singură bază de cod, poți crea aplicații pentru iOS și Android. În acest articol voi explica tot ce trebuie să știi pentru a începe.",
     content: `
-      <h2>De ce să dezvolți aplicații mobile?</h2>
-      <p>Aplicațiile mobile sunt peste tot astăzi. Fiecare persoană cu un smartphone are zeci de aplicații instalate.</p>
-      <p>Dezvoltarea mobile îți oferă șansa de a:</p>
+      <h2>Ce este Flutter?</h2>
+      <p>Flutter este un framework open-source dezvoltat de Google, care permite crearea de aplicații mobile pentru iOS și Android din aceeași bază de cod. Folosește limbajul <strong>Dart</strong>, care este ușor de învățat și puternic.</p>
+      <p>De ce să alegi Flutter?</p>
       <ul>
-        <li>crea produse care ajută milioane de oameni</li>
-        <li>învăța tehnologii moderne și cerute pe piață</li>
-        <li>construi o carieră bine plătită</li>
-        <li>transforma ideile în realitate</li>
+        <li><strong>Single codebase</strong> – aceeași codă pentru iOS și Android</li>
+        <li><strong>Hot reload</strong> – vezi modificările instant</li>
+        <li><strong>Beautiful UI</strong> – widget-uri Material și Cupertino</li>
+        <li><strong>Performanță</strong> – apropiată de native</li>
+        <li><strong>Comunitate</strong> – în creștere rapidă</li>
       </ul>
 
-      <h2>Ce platforme poți viza?</h2>
-      <h3>iOS</h3>
-      <p>Apple oferă acces la peste 2 miliarde de dispozitive active. Dezvoltarea pentru iOS se face în principal cu <strong>Swift</strong>.</p>
-      <h3>Android</h3>
-      <p>Sistemul de operare Android domină piața globală cu peste 70% cotă de pieŃă. Se dezvoltă cu <strong>Kotlin</strong> sau Java.</p>
-      <h3>Cross-platform</h3>
-      <p>Dacă vrei să acoperi ambele platforme simultan, poți folosi:</p>
+      <h2>Instalare și configurare</h2>
+      <p>Pași pentru a începe cu Flutter:</p>
+      <ol>
+        <li>Descarcă Flutter SDK de pe <a href="https://flutter.dev">flutter.dev</a></li>
+        <li>Instalează Android Studio pentru Android</li>
+        <li>Instalează Xcode pentru iOS (necesită Mac)</li>
+        <li>Adaugă Flutter la PATH</li>
+      </ol>
+      <p><strong>Verifică instalarea:</strong></p>
+      <pre><code class="language-bash">flutter doctor</code></pre>
+
+      <h2>Primul proiect Flutter</h2>
+      <p>Crearea unui proiect nou:</p>
+      <pre><code class="language-bash">flutter create my_app
+cd my_app
+flutter run</code></pre>
+
+      <h2>Widget-uri de bază</h2>
+      <p>Flutter folosește widget-uri pentru tot. Iată cele mai comune:</p>
       <ul>
-        <li><strong>React Native</strong> – folosește JavaScript/React</li>
-        <li><strong>Flutter</strong> – folosește Dart</li>
-        <li><strong>Xamarin</strong> – folosește C#</li>
-        <li><strong>Expo</strong> – tool pentru React Native</li>
+        <li><strong>Text</strong> – afișare text</li>
+        <li><strong>Container</strong> – layout și styling</li>
+        <li><strong>Row/Column</strong> – aranjare orizontală/verticală</li>
+        <li><strong>ListView</strong> – liste scrollabile</li>
+        <li><strong>Image</strong> – afișare imagini</li>
+        <li><strong>Button</strong> – butoane interactibile</li>
       </ul>
 
-      <h2>Primul pas: alegează tehnologia</h2>
-      <h3>Dacă ești începător</h3>
-      <p><strong>Flutter</strong> este o alegere excelentă pentru începători, indiferent dacă știi sau nu programare. Beneficii:</p>
+      <h2>State Management</h2>
+      <p>Gestionarea stării în Flutter:</p>
       <ul>
-        <li>aceeași codă pentru iOS și Android (100% shared)</li>
-        <li>Dart – limbaj ușor de învățat</li>
-        <li>Hot reload extrem de rapid</li>
-        <li>UI frumos din start cu widget-uri Material și Cupertino</li>
-        <li>comunitate în creștere rapidă</li>
-        <li>documentație excelentă</li>
+        <li><strong>setState</strong> – pentru stare locală simplă</li>
+        <li><strong>Provider</strong> – pentru stare globală</li>
+        <li><strong>Riverpod</strong> – alternativă modernă la Provider</li>
+        <li><strong>BLoC</strong> – pentru aplicații complexe</li>
       </ul>
-      <h3>Dacă știi JavaScript/React</h3>
-      <p><strong>React Native</strong> cu Expo este o opțiune bună dacă ai experiență cu React. Beneficii:</p>
-      <ul>
-        <li>aceeași codă pentru iOS și Android</li>
-        <li>comunitate mare</li>
-        <li>se înțelege ușor dacă știi React</li>
-        <li>deployment rapid cu EAS Build</li>
-      </ul>
-      <h3>Dacă vrei performanță maximă</h3>
-      <p><strong>Swift</strong> pentru iOS sau <strong>Kotlin</strong> pentru Android oferă cele mai bune performanțe și acces la toate funcționalitățile platformei.</p>
-      <h3>Comparație tehnologii</h3>
-      <pre><code class="language-dart">// Flutter:
-// + Single codebase 100%
-// + Beautiful UI out of the box
-// + Hot reload excelent
-// + Performanță bună
-// + Dart ușor de învățat
-// - Ecosistem mai mic decât React
 
-// React Native:
-// + Large ecosystem
-// + Dacă știi React, e natural
-// - Performanță limitată pentru cazuri complexe
-
-// Swift:
-// + Full platform access
-// + Best performance
-// + SwiftUI modern
-// - Doar iOS
-
-// Kotlin:
-// + Modern, concise
-// + Jetpack Compose
-// - Doar Android</code></pre>
-
-      <h2>Structura unei aplicații mobile</h2>
-      <p>O aplicație mobile tipică are:</p>
-      <ul>
-        <li><strong>Ecrane</strong> – paginile aplicației</li>
-        <li><strong>Navigație</strong> – cum se trece de la un ecran la altul</li>
-        <li><strong>Stare</strong> – datele aplicației</li>
-        <li><strong>API calls</strong> – comunicarea cu serverul</li>
-        <li><strong>Componente reutilizabile</strong> – butoane, inputs, carduri</li>
-      </ul>
-      <p><strong>Exemplu structură Flutter:</strong></p>
-      <pre><code class="language-dart">// Structură proiect Flutter
-lib/
-├── main.dart           # Punct de intrare
-├── app.dart           # Configurare app
-├── core/
-│   ├── constants/     # Constante
-│   │   └── app_colors.dart
-│   ├── theme/        # Tema aplicației
-│   │   └── app_theme.dart
-│   └── utils/        # Funcții utilitare
-├── data/
-│   ├── models/       # Modele de date
-│   │   └── user.dart
-│   ├── repositories/ # Repositories
-│   │   └── user_repository.dart
-│   └── services/     # API services
-│       └── api_service.dart
-├── presentation/
-│   ├── screens/      # Ecrane
-│   │   ├── home/
-│   │   │   ├── home_screen.dart
-│   │   │   └── widgets/
-│   │   └── profile/
-│   │       └── profile_screen.dart
-│   ├── widgets/      # Widget-uri comune
-│   │   ├── custom_button.dart
-│   │   └── loading_indicator.dart
-│   └── providers/   # State management (Provider/Riverpod)
-│       └── user_provider.dart
-└── routes/
-    └── app_router.dart  # Navigație cu GoRouter</code></pre>
-
-      <h2>State Management în Flutter</h2>
-      <p>Gestionarea stării este critică pentru aplicații complexe. Opțiuni populare în Flutter:</p>
-      <h3>1. Provider (cel mai popular)</h3>
-      <p>Simple și eficient, recomandat pentru începători:</p>
-      <pre><code class="language-dart">import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-// Model
-class User {
-  final String name;
-  final String email;
-  User({required this.name, required this.email});
-}
-
-// ChangeNotifier pentru stare
-class UserProvider extends ChangeNotifier {
-  User? _user;
-  bool _isLoading = false;
-
-  User? get user => _user;
-  bool get isLoading => _isLoading;
-
-  Future<void> login(String email, String password) async {
-    _isLoading = true;
-    notifyListeners();
-
-    // Simulează API call
-    await Future.delayed(const Duration(seconds: 1));
-    _user = User(name: 'John Doe', email: email);
-    
-    _isLoading = false;
-    notifyListeners();
-  }
-
-  void logout() {
-    _user = null;
-    notifyListeners();
-  }
-}
-
-// Utilizare în widget
-class ProfileScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final userProvider = context.watch&lt;UserProvider&gt;();
-
-    if (userProvider.isLoading) {
-      return const CircularProgressIndicator();
-    }
-
-    if (userProvider.user == null) {
-      return const Text('Nu ești logat');
-    }
-
-    return Text('Bine ai venit, userProvider.user!.name');
-  }
-}</code></pre>
-
-      <p><em>Notă pentru React Native: În React Native, state management se face diferit. Poți folosi Context API sau hooks:</em></p>
-      <pre><code class="language-javascript">// React Native - Context API
-import { createContext, useContext, useState } from 'react';
-
-const UserContext = createContext();
-
-export function UserProvider({ children }) {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const login = async (email, password) => {
-    setLoading(true);
-    // Simulează API call
-    await new Promise(r => setTimeout(r, 1000));
-    setUser({ name: 'John Doe', email });
-    setLoading(false);
-  };
-
-  const logout = () => setUser(null);
-
-  return (
-    &lt;UserContext.Provider value={{ user, loading, login, logout }}&gt;
-      {children}
-    &lt;/UserContext.Provider&gt;
-  );
-}
-
-export function useUser() {
-  return useContext(UserContext);
-}
-
-// Utilizare în componentă
-function ProfileScreen() {
-  const { user, loading } = useUser();
-
-  if (loading) return &lt;ActivityIndicator /&gt;;
-  if (!user) return &lt;Text&gt;Nu ești logat&lt;/Text&gt;;
-
-  return &lt;Text&gt;Bine ai venit, {user.name}&lt;/Text&gt;;
-}</code></pre>
-
-      <h3>2. Riverpod (recomandat pentru proiecte mari)</h3>
-      <p>Mai flexibil și testabil:</p>
-      <pre><code class="language-dart">import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-// Definire provider
-final userProvider = StateNotifierProvider&lt;UserNotifier, UserState&gt;((ref) {
-  return UserNotifier();
-});
-
-class UserState {
-  final User? user;
-  final bool isLoading;
-  final String? error;
-
-  UserState({this.user, this.isLoading = false, this.error});
-}
-
-class UserNotifier extends StateNotifier&lt;UserState&gt; {
-  UserNotifier() : super(UserState());
-
-  Future&lt;void&gt; login(String email, String password) async {
-    state = UserState(isLoading: true);
-    try {
-      final user = await api.login(email, password);
-      state = UserState(user: user);
-    } catch (e) {
-      state = UserState(error: e.toString());
-    }
-  }
-
-  void logout() {
-    state = UserState();
-  }
-}
-
-// Utilizare
-class HomeScreen extends ConsumerWidget {
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final userState = ref.watch(userProvider);
-    
-    return userState.when(
-      data: (user) => Text(user.name),
-      loading: () => CircularProgressIndicator(),
-      error: (e) => Text('Eroare: eroare'),
-    );
-  }
-}</code></pre>
-</code></pre>
-
-      <h3>3. Bloc (Business Logic Component)</h3>
-      <p>Excelent pentru aplicații cu logică complexă:</p>
-      <pre><code class="language-dart">import 'package:flutter_bloc/flutter_bloc.dart';
-
-// Evenimente
-abstract class CounterEvent {}
-class Increment extends CounterEvent {}
-class Decrement extends CounterEvent {}
-
-// State
-class CounterState {
-  final int count;
-  CounterState(this.count);
-}
-
-// Bloc
-class CounterBloc extends Bloc&lt;CounterEvent, CounterState&gt; {
-  CounterBloc() : super(CounterState(0));
-
-  @override
-  Stream&lt;CounterState&gt; mapEventToState(CounterEvent event) async* {
-    if (event is Increment) {
-      yield CounterState(state.count + 1);
-    } else if (event is Decrement) {
-      yield CounterState(state.count - 1);
-}
-
-// Utilizare
-class CounterPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => CounterBloc(),
-      child: BlocBuilder&lt;CounterBloc, CounterState&gt;(
-        builder: (context, state) {
-          return Column(
-            children: [
-              Text('Count: state.count'),
-              ElevatedButton(
-                onPressed: () => context.read&lt;CounterBloc&gt;().add(Increment()),
-                child: Text('+'),
-              ),
-            ],
-          );
-        },
-      ),
-    );
-  }
-}</code></pre>
-
-      <h2>Navigație în Flutter</h2>
+      <h2>Navigație</h2>
       <p>Flutter oferă mai multe modalități de navigație:</p>
-      <h3>1. Navigator basic</h3>
-      <pre><code class="language-dart">// Navigare simplă
-Navigator.push(
-  context,
-  MaterialPageRoute(builder: (context) => DetailsScreen()),
-);
+      <ul>
+        <li><strong>Navigator.push/pop</strong> – navigație de bază</li>
+        <li><strong>GoRouter</strong> – navigație declarativă</li>
+        <li><strong>Bottom Navigation</strong> – navigație cu tab-uri</li>
+      </ul>
 
-// Cu parametri
-Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => DetailsScreen(productId: 123),
-  ),
-);
+      <h2>API calls</h2>
+      <p>Pentru comunicarea cu serverul, poți folosi:</p>
+      <ul>
+        <li><strong>Dio</strong> – client HTTP puternic</li>
+        <li><strong>http</strong> – pachet simplu</li>
+      </ul>
 
-// Revenire
-Navigator.pop(context);
+      <h2>Baze de date locale</h2>
+      <p>Pentru stocarea datelor pe dispozitiv:</p>
+      <ul>
+        <li><strong>SharedPreferences</strong> – date simple cheie-valoare</li>
+        <li><strong>SQLite/sqflite</strong> – bază de date relațională</li>
+        <li><strong>Isar</strong> – bază de date NoSQL rapidă</li>
+      </ul>
 
-// Navigator 2.0 (declarativ)
-Navigator.pushNamed(context, '/details', arguments: product);</code></pre>
-
-      <h3>2. GoRouter (recomandat)</h3>
-      <p>Navigație declarativă cu deep linking:</p>
-      <pre><code class="language-dart">import 'package:go_router/go_router.dart';
-
-final router = GoRouter(
-  initialLocation: '/',
-  routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => HomeScreen(),
-    ),
-    GoRoute(
-      path: '/details/:id',
-      builder: (context, state) {
-        final id = state.pathParameters['id']!;
-        return DetailsScreen(productId: id);
-      },
-    ),
-    GoRoute(
-      path: '/profile',
-      builder: (context, state) => ProfileScreen(),
-    ),
-  ],
-);
-
-// În main.dart
-MaterialApp.router(
-  routerConfig: router,
-  title: 'My App',
-);
-
-// Navigare
-context.go('/details/123');</code></pre>
-
-      <h3>3. Bottom Navigation cu IndexedStack</h3>
-      <pre><code class="language-dart">class MainScreen extends StatefulWidget {
-  @override
-  State&lt;MainScreen&gt; createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State&lt;MainScreen&gt; {
-  int _currentIndex = 0;
-  
-  final _screens = [
-    HomeScreen(),
-    SearchScreen(),
-    ProfileScreen(),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) => setState(() => _currentIndex = index),
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        ],
-      ),
-    );
-  }
-}</code></pre>
-      <pre><code class="language-javascript">import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
-function MainTabs() {
-  return (
-    &lt;Tab.Navigator&gt;
-      &lt;Tab.Screen name="Home" component={HomeScreen} /&gt;
-      &lt;Tab.Screen name="Profile" component={ProfileScreen} /&gt;
-    &lt;/Tab.Navigator&gt;
-  );
-}
-
-function App() {
-  return (
-    &lt;NavigationContainer&gt;
-      &lt;Stack.Navigator&gt;
-        &lt;Stack.Screen name="Login" component={LoginScreen} /&gt;
-        &lt;Stack.Screen 
-          name="Main" 
-          component={MainTabs} 
-          options={{ headerShown: false }}
-        /&gt;
-        &lt;Stack.Screen name="Details" component={DetailsScreen} /&gt;
-      &lt;/Stack.Navigator&gt;
-    &lt;/NavigationContainer&gt;
-  );
-}</code></pre>
-
-      <h2>Comunicare cu serverul (API)</h2>
-      <p>Aplicațiile mobile au nevoie de date externe:</p>
-      <h3>HTTP cu Dio</h3>
-      <pre><code class="language-dart">import 'package:dio/dio.dart';
-
-final dio = Dio(BaseOptions(
-  baseURL: 'https://api.exemplu.com',
-  connectTimeout: const Duration(seconds: 10),
-));
-
-// GET request
-Future&lt;List&lt;User&gt;&gt; fetchUsers() async {
-  final response = await dio.get('/users');
-  return (response.data as List).map((e) => User.fromJson(e)).toList();
-}
-
-// POST request cu auth
-Future&lt;User&gt; login(String email, String password) async {
-  final response = await dio.post(
-    '/auth/login',
-    data: {'email': email, 'password': password},
-  );
-  return User.fromJson(response.data);
-}</code></pre>
-
-      <h3>Interceptors pentru auth</h3>
-      <pre><code class="language-dart">dio.interceptors.add(InterceptorsWrapper(
-  onRequest: (options, handler) {
-    final token = getToken();
-    if (token != null) {
-      options.headers['Authorization'] = 'Bearer token';
-    }
-    return handler.next(options);
-  },
-  onError: (error, handler) {
-    if (error.response?.statusCode == 401) {
-      // Token expirat - logout
-      logout();
-    }
-    return handler.next(error);
-  },
-));</code></pre>
-}</code></pre>
-
-      <h3>Push Notifications</h3>
-      <pre><code class="language-dart">import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
-final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
-
-Future&lt;void&gt; initNotifications() async {
-  const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
-  const iosSettings = DarwinInitializationSettings(
-    requestAlertPermission: true,
-    requestBadgePermission: true,
-    requestSoundPermission: true,
-  );
-
-  const initSettings = InitializationSettings(
-    android: androidSettings,
-    iOS: iosSettings,
-  );
-
-      await flutterLocalNotificationsPlugin.initialize(initSettings);
-}
-
-      <h2>Testare</h2>
-      <p>Asigură calitatea aplicației:</p>
-      <h3>Widget Testing</h3>
-      <pre><code class="language-dart">import 'package:flutter_test/flutter_test.dart';
-import 'package:my_app/widgets/my_button.dart';
-
-void main() {
-  testWidgets('Button apasă corect', (WidgetTester tester) async {
-    bool pressed = false;
-
-    await tester.pumpWidget(
-      MaterialApp(
-        home: MyButton(
-          onPressed: () => pressed = true,
-          child: Text('Click me'),
-        ),
-      ),
-    );
-
-    await tester.tap(find.text('Click me'));
-    expect(pressed, true);
-  });
-
-  testWidgets('Button disabled nu funcționează', (WidgetTester tester) async {
-    bool pressed = false;
-
-    await tester.pumpWidget(
-      MaterialApp(
-        home: MyButton(
-          onPressed: null,
-          child: Text('Click me'),
-        ),
-      ),
-    );
-
-    await tester.tap(find.text('Click me'));
-    expect(pressed, false);
-  });
-}</code></pre>
-
-      <h3>Integration Testing</h3>
-      <pre><code class="language-dart">import 'package:flutter_test/flutter_test.dart';
-import 'package:integration_test/integration_test.dart';
-import 'package:my_app/main.dart' as app;
-
-void main() {
-  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
-
-  group('Login flow', () {
-    testWidgets('login cu succes', (WidgetTester tester) async {
-      app.main();
-      await tester.pumpAndSettle();
-
-      // Complete login form
-      await tester.enterText(find.byKey('email'), 'test@test.com');
-      await tester.enterText(find.byKey('password'), 'password123');
-      
-      // Tap login button
-      await tester.tap(find.byKey('login-button'));
-      await tester.pumpAndSettle();
-
-      // Verify we're on home screen
-      expect(find.byKey('home-screen'), findsOneWidget);
-    });
-  });
-}</code></pre>
-
-      <h3>Unit Testing cu Mockito</h3>
-      <pre><code class="language-dart">import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
-import 'package:my_app/services/user_service.dart';
-import 'package:my_app/repositories/user_repository.dart';
-
-@GenerateMocks([UserService])
-void main() {
-  late UserRepository repository;
-  late MockUserService mockService;
-
-  setUp(() {
-    mockService = MockUserService();
-    repository = UserRepository(mockService);
-  });
-
-  test('getUserById returnează user corect', () async {
-    final expectedUser = User(id: '1', name: 'John');
-    when(mockService.getUser('1')).thenAnswer((_) async => expectedUser);
-
-    final result = await repository.getUserById('1');
-
-    expect(result.name, 'John');
-    verify(mockService.getUser('1')).called(1);
-  })
-});</code></pre>
+      <h2>Funcționalități native</h2>
+      <p>Flutter oferă acces la funcționalitățile dispozitivului:</p>
+      <ul>
+        <li><strong>Camera</strong> – cu pachetul camera</li>
+        <li><strong>Location</strong> – cu geolocator</li>
+        <li><strong>Notificări</strong> – cu flutter_local_notifications</li>
+        <li><strong>Sensors</strong> – accelerometru, giroscop</li>
+      </ul>
 
       <h2>Publicare în store-uri</h2>
       <h3>Google Play Store</h3>
       <ul>
-        <li>Cont Google Developer (o singură taxă de $25)</li>
-        <li>APK sau AAB (Android App Bundle)</li>
-        <li>Screenshot-uri și descriere</li>
-        <li>Review în ~2-24 ore</li>
+        <li>Creează cont Google Developer ($25 taxă unică)</li>
+        <li>Generează APK sau AAB</li>
+        <li>Încarcă în Google Play Console</li>
+        <li>Publică (review în 2-24 ore)</li>
       </ul>
       <h3>App Store (iOS)</h3>
       <ul>
-        <li>Cont Apple Developer ($99/an)</li>
-        <li>Build din Flutter pentru iOS simulator</li>
-        <li>Certificate și profile de provisioning</li>
-        <li>Review în ~1-3 zile</li>
+        <li>Creează cont Apple Developer ($99/an)</li>
+        <li>Generează build din Flutter</li>
+        <li>Încarcă în App Store Connect</li>
+        <li>Publică (review în 1-3 zile)</li>
       </ul>
-      <h3>Build și deploy cu Flutter</h3>
-      <pre><code class="language-bash"># Verifică configurarea
-flutter doctor
 
-# Build pentru Android
-flutter build apk --release
-
-# Build pentru iOS (necesită macOS)
-flutter build ios --release --no-codesign
-
-# Build pentru iOS simulator (pentru testare)
-flutter build ios --simulator --no-codesign
-
-# Upload la Google Play (după configurare)
-flutter build appbundle --release</code></pre>
-
-      <h2>Pattern-uri arhitectură</h2>
-      <h3>Clean Architecture</h3>
-      <pre><code class="language-dart">// Structura Clean Architecture
-lib/
-├── core/               # Cod partajat
-│   ├── errors/         # Erori custom
-│   ├── usecases/       # Use case base
-│   └── utils/          # Utilități
-├── features/
-│   └── users/
-│       ├── data/       # Implementare
-│       │   ├── datasources/
-│       │   ├── models/
-│       │   └── repositories/
-│       ├── domain/    # Logica de business
-│       │   ├── entities/
-│       │   ├── repositories/
-│       │   └── usecases/
-│       └── presentation/  # UI
-│           ├── bloc/
-│           ├── pages/
-│           └── widgets/
-└── injection_container.dart  # Dependency Injection</code></pre>
-
-      <h3>BLoC Pattern</h3>
-      <pre><code class="language-dart">// Event
-abstract class UserEvent {}
-class LoadUsers extends UserEvent {}
-
-class LoadMoreUsers extends UserEvent {}
-
-// State
-abstract class UserState {}
-class UserInitial extends UserState {}
-class UserLoading extends UserState {}
-class UserLoaded extends UserState {
-  final List&lt;User&gt; users;
-  UserLoaded(this.users);
-}
-class UserError extends UserState {
-  final String message;
-  UserError(this.message);
-}
-
-// Bloc
-class UserBloc extends Bloc&lt;UserEvent, UserState&gt; {
-  final UserRepository repository;
-
-  UserBloc(this.repository) : super(UserInitial()) {
-    on&lt;LoadUsers&gt;(_onLoadUsers);
-  }
-
-  Future&lt;void&gt; _onLoadUsers(LoadUsers event, Emitter&lt;UserState&gt; emit) async {
-    emit(UserLoading());
-    try {
-      final users = await repository.getUsers();
-      emit(UserLoaded(users));
-    } catch (e) {
-      emit(UserError(e.toString()));
-    }
-  }
-}
-
-// Utilizare în UI
-class UsersPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => UserBloc(UserRepository())..add(LoadUsers()),
-      child: BlocBuilder&lt;UserBloc, UserState&gt;(
-        builder: (context, state) {
-          if (state is UserLoading) {
-            return CircularProgressIndicator();
-          }
-          if (state is UserLoaded) {
-            return ListView.builder(
-              itemCount: state.users.length,
-              itemBuilder: (context, index) => Text(state.users[index].name),
-            );
-          }
-          return SizedBox();
-        },
-      ),
-    );
-  }
-}</code></pre>
-
-// View
-function UsersScreen() {
-  const { users, loading, error, refresh } = useUserViewModel();
-
-  if (loading) return &lt;Spinner /&gt;;
-  if (error) return &lt;Error message={error} /&gt;;
-
-  return &lt;FlatList data={users} onRefresh={refresh} /&gt;;
-}</code></pre>
-
-      <h2>De unde să începi?</h2>
-      <p><strong>Pasul 1:</strong> Alege tehnologia (recomand Flutter pentru începători)</p>
-      <p><strong>Pasul 2:</strong> Instalează mediul de dezvoltare</p>
-      <pre><code class="language-bash"># Instalează Flutter SDK
-# Descarcă de pe flutter.dev
-
-# Verifică instalarea
-flutter doctor
-
-# Creează proiect
-flutter create my_app
-
-# Rulează
-cd my_app
-flutter run</code></pre>
-      <p><strong>Pasul 3:</strong> Învață bazele Dart și widget-urile Flutter</p>
-      <p><strong>Pasul 4:</strong> Creează un proiect practic – todo list, weather app, sau tracker</p>
-      <p><strong>Pasul 5:</strong> Învață navigație și state management</p>
-      <p><strong>Pasul 6:</strong> Adaugă funcționalități native (camera, localizare)</p>
-      <p><strong>Pasul 7:</strong> Publică prima ta aplicație!</p>
+      <h2>Resurse pentru învățare</h2>
+      <ul>
+        <li><a href="https://docs.flutter.dev">Documentație oficială Flutter</a></li>
+        <li><a href="https://flutter.dev/codelabs">Codelabs</a></li>
+      </ul>
 
       <h2>Concluzie</h2>
-      <p>Dezvoltarea aplicațiilor mobile este accesibilă oricui are determinare. Cu instrumentele potrivite și practică constantă, poți crea aplicații reale în câteva săptămâni.</p>
-      <p>Indiferent de tehnologia aleasă, cel mai important este să începi și să nu te oprești. Structură, widget-uri, state management, API calls – toate aceste concepte devin naturale cu practică.</p>
-      <p>Flutter este o excelentă alegere pentru începători, dar odată ce ai învățat conceptele de bază, poți explora și alte tehnologii precum <strong>React Native</strong>, <strong>Kotlin</strong> pentru Android, sau <strong>Swift</strong> pentru iOS. Fiecare tehnologie are avantajele sale, iar cunoașterea multiplelor framework-uri te va face un dezvoltator mai versatil.</p>
-      <p><em>Urmărește site-ul pentru tutoriale practice despre dezvoltarea aplicațiilor mobile!</em></p>
+      <p>Flutter este o alegere excelentă pentru dezvoltarea aplicațiilor mobile. Cu o singură bază de cod, poți ajunge la milioane de utilizatori pe iOS și Android.</p>
+      <p>Conceptele prezentate în acest articol sunt fundamentul pe care îl vei folosi în orice proiect Flutter. Practică și vei deveni fluent în Flutter.</p>
+      <p><em>Urmărește site-ul pentru tutoriale practice despre dezvoltarea aplicațiilor mobile cu Flutter!</em></p>
     `,
     date: "2026-04-11",
-    readTime: "12 min citire",
-    tags: ["App Development", "Mobile", "Flutter", "React Native", "Swift", "Kotlin", "State Management", "Performance"],
+    readTime: "6 min citire",
+    tags: ["App Development", "Mobile", "Flutter", "Dart", "Google"],
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
     author: {
       name: "Ioniță Aurel Mihai",
