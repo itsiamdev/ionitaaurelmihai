@@ -639,6 +639,36 @@ class _MainScreenState extends State&lt;MainScreen&gt; {
     );
   }
 }</code></pre>
+      <pre><code class="language-javascript">import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+function MainTabs() {
+  return (
+    &lt;Tab.Navigator&gt;
+      &lt;Tab.Screen name="Home" component={HomeScreen} /&gt;
+      &lt;Tab.Screen name="Profile" component={ProfileScreen} /&gt;
+    &lt;/Tab.Navigator&gt;
+  );
+}
+
+function App() {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator&gt;
+        &lt;Stack.Screen name="Login" component={LoginScreen} /&gt;
+        &lt;Stack.Screen 
+          name="Main" 
+          component={MainTabs} 
+          options={{ headerShown: false }}
+        /&gt;
+        &lt;Stack.Screen name="Details" component={DetailsScreen} /&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+}</code></pre>
 
       <h2>Comunicare cu serverul (API)</h2>
       <p>Aplicațiile mobile au nevoie de date externe:</p>
