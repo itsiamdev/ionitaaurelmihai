@@ -17,8 +17,8 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/iam269",
-      link: "https://github.com/iam269",
+      value: "github.com/itsiamdev",
+      link: "https://github.com/itsiamdev",
     },
     {
       icon: Twitter,
