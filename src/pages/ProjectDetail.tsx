@@ -27,8 +27,6 @@ const ProjectDetail = () => {
         <meta name="description" content={project.shortDescription} />
         <meta name="keywords" content={project.tech.join(", ") + ", Ionita Aurel Mihai"} />
         <link rel="canonical" href={`https://ionita-aurel-mihai.lovable.app/projects/${project.slug}`} />
-        
-        {/* Open Graph */}
         <meta property="og:title" content={`${project.title} - Ionita Aurel Mihai`} />
         <meta property="og:description" content={project.shortDescription} />
         <meta property="og:image" content={project.image} />
@@ -38,7 +36,6 @@ const ProjectDetail = () => {
       <div className="min-h-screen">
         <Navigation />
         <main className="section-container pt-32">
-          {/* Back Button */}
           <Link
             to="/projects"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -47,7 +44,6 @@ const ProjectDetail = () => {
             Înapoi la Proiecte
           </Link>
 
-          {/* Header */}
           <header className="mb-12">
             <div className="flex flex-wrap items-center gap-3 mb-4">
               <Badge variant="secondary" className="capitalize">
@@ -88,7 +84,6 @@ const ProjectDetail = () => {
             </div>
           </header>
 
-          {/* Hero Image */}
           <div className="aspect-video overflow-hidden rounded-xl border border-border/50 mb-12">
             <img
               src={project.image}
@@ -97,26 +92,15 @@ const ProjectDetail = () => {
             />
           </div>
 
-          {/* Content Grid */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
-            {/* Main Content */}
             <div className="lg:col-span-2">
               <article
-                className="prose prose-invert prose-lg max-w-none
-                  prose-headings:text-foreground prose-headings:font-semibold
-                  prose-p:text-muted-foreground prose-p:leading-relaxed
-                  prose-li:text-muted-foreground
-                  prose-strong:text-foreground
-                  prose-a:text-primary hover:prose-a:text-primary/80
-                  prose-pre:bg-slate-900 prose-pre:border prose-pre:border-border prose-pre:rounded-lg
-                  prose-code:text-primary prose-code:bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none"
+                className="prose prose-invert prose-lg max-w-none"
                 dangerouslySetInnerHTML={{ __html: project.fullDescription }}
               />
             </div>
 
-            {/* Sidebar */}
             <aside className="space-y-8">
-              {/* Technologies */}
               <div className="p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm">
                 <h3 className="text-lg font-semibold mb-4">Tehnologii Folosite</h3>
                 <div className="flex flex-wrap gap-2">
@@ -128,7 +112,6 @@ const ProjectDetail = () => {
                 </div>
               </div>
 
-              {/* Links */}
               <div className="p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm">
                 <h3 className="text-lg font-semibold mb-4">Link-uri</h3>
                 <div className="space-y-3">
@@ -159,7 +142,6 @@ const ProjectDetail = () => {
             </aside>
           </div>
 
-          {/* Related Projects */}
           {relatedProjects.length > 0 && (
             <section className="border-t border-border/50 pt-12">
               <h2 className="text-2xl font-semibold mb-8">Proiecte Similare</h2>

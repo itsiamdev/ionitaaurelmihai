@@ -42,7 +42,6 @@ const ProjectsPreview = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-80"></div>
                 
-                {/* Overlay buttons */}
                 <div className="absolute bottom-3 left-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                   {project.githubUrl && (
                     <Button

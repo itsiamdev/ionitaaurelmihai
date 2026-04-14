@@ -15,7 +15,7 @@ const Projects = () => {
     <>
       <Helmet>
         <title>Proiecte - Ionita Aurel Mihai | Portfolio Dezvoltator Web</title>
-        <meta name="description" content="Portofoliu cu proiecte de dezvoltare web și aplicații. E-commerce, dashboards, aplicații mobile și multe altele de la Ionita Aurel Mihai." />
+        <meta name="description" content="Portofoliu cu proiecte de dezvoltare web și aplicații." />
         <meta name="keywords" content="portofoliu programare, proiecte web, Ionita Aurel Mihai proiecte, React projects" />
         <link rel="canonical" href="https://ionita-aurel-mihai/projects" />
       </Helmet>
@@ -23,7 +23,6 @@ const Projects = () => {
       <div className="min-h-screen">
         <Navigation />
         <main className="section-container pt-32">
-          {/* Header */}
           <div className="mb-16 max-w-3xl">
             <Badge variant="outline" className="mb-4 text-primary border-primary/30">
               <Sparkles className="w-3 h-3 mr-1" />
@@ -37,7 +36,6 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* All Projects */}
           <section>
             <div className="grid gap-8 lg:grid-cols-2">
               {allProjects.map((project) => (

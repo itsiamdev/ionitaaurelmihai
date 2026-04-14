@@ -62,10 +62,7 @@ const BlogPost = () => {
     "headline": post.title,
     "description": post.excerpt,
     "datePublished": post.date,
-    "author": {
-      "@type": "Person",
-      "name": "Ionita Aurel Mihai"
-    },
+    "author": { "@type": "Person", "name": "Ionita Aurel Mihai" },
     "image": post.image,
     "keywords": post.tags.join(", ")
   };
@@ -77,19 +74,14 @@ const BlogPost = () => {
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.tags.join(", ")} />
         <link rel="canonical" href={`https://ionita-aurel-mihai.lovable.app/blog/${post.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
 
       <div className="min-h-screen">
         <Navigation />
         <main className="section-container pt-32">
           <Link to="/blog">
-            <Button 
-              variant="ghost" 
-              className="mb-8 -ml-4 group flex items-center gap-2 hover:bg-primary/10 hover:text-primary transition-all duration-300"
-            >
+            <Button variant="ghost" className="mb-8 -ml-4 group flex items-center gap-2 hover:bg-primary/10 hover:text-primary transition-all duration-300">
               <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
               Înapoi la blog
             </Button>
@@ -99,11 +91,7 @@ const BlogPost = () => {
             <header className="mb-12">
               <div className="flex gap-2 mb-6 flex-wrap">
                 {post.tags.map((tag) => (
-                  <Badge 
-                    key={tag} 
-                    variant="secondary"
-                    className="bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
-                  >
+                  <Badge key={tag} variant="secondary" className="bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors">
                     {tag}
                   </Badge>
                 ))}
@@ -120,11 +108,7 @@ const BlogPost = () => {
               <div className="flex flex-wrap items-center gap-6 py-6 border-y border-border/50">
                 <div className="flex items-center gap-3">
                   {post.author?.avatar && (
-                    <img 
-                      src={post.author.avatar} 
-                      alt={post.author.name}
-                      className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
-                    />
+                    <img src={post.author.avatar} alt={post.author.name} className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20" />
                   )}
                   <div>
                     <p className="font-semibold">{post.author?.name || "Ionita Aurel Mihai"}</p>
@@ -148,11 +132,7 @@ const BlogPost = () => {
             {post.image && (
               <div className="aspect-video overflow-hidden rounded-2xl mb-12 relative group">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-full object-cover"
-                />
+                <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
               </div>
             )}
 
@@ -171,16 +151,14 @@ const BlogPost = () => {
                           if (child.type === 'text') return (child as Text).data;
                           if (child.type === 'tag') {
                             const tagName = (child as Element).name;
-                            const attrs = child.attribs ? ' ' + Object.entries(child.attribs)
-                              .map(([k, v]) => `${k}="${v}"`)
-                              .join(' ') : '';
+                            const attrs = child.attribs ? ' ' + Object.entries(child.attribs).map(([k, v]) => `${k}="${v}"`).join(' ') : '';
                             const inner = getRawContent(child.children);
                             return `<${tagName}${attrs}>${inner}</${tagName}>`;
                           }
                           return '';
                         }).join('');
                       };
-                      
+
                       const code = getRawContent(codeElement.children);
                       return <CodeBlock code={code} language={language} />;
                     }
@@ -190,34 +168,25 @@ const BlogPost = () => {
             </div>
 
             <div className="flex items-center gap-4 mt-12 pt-8 border-t border-border/50">
-              <Button 
-                variant="outline" 
-                className="flex items-center gap-2"
-                onClick={async () => {
-                  const url = window.location.href;
-                  const title = post.title;
-                  
-                  try {
-                    if (navigator.share) {
-                      await navigator.share({ title, url });
-                    } else {
-                      await navigator.clipboard.writeText(url);
-                      alert('Link copiat în clipboard!');
-                    }
-                  } catch (err) {
+              <Button variant="outline" className="flex items-center gap-2" onClick={async () => {
+                const url = window.location.href;
+                const title = post.title;
+                try {
+                  if (navigator.share) {
+                    await navigator.share({ title, url });
+                  } else {
                     await navigator.clipboard.writeText(url);
                     alert('Link copiat în clipboard!');
                   }
-                }}
-              >
+                } catch (err) {
+                  await navigator.clipboard.writeText(url);
+                  alert('Link copiat în clipboard!');
+                }
+              }}>
                 <Share2 className="w-4 h-4" />
                 Distribuie
               </Button>
-              <Button 
-                variant={isLiked ? "default" : "outline"}
-                className={`flex items-center gap-2 ${isLiked ? "bg-red-500 hover:bg-red-600" : ""}`}
-                onClick={handleLike}
-              >
+              <Button variant={isLiked ? "default" : "outline"} className={`flex items-center gap-2 ${isLiked ? "bg-red-500 hover:bg-red-600" : ""}`} onClick={handleLike}>
                 <Heart className={`w-4 h-4 ${isLiked ? "fill-current" : ""}`} />
                 {likeCount} {isLiked ? "Apreciat!" : "Apreciază"}
               </Button>
@@ -228,26 +197,15 @@ const BlogPost = () => {
                 <h2 className="text-2xl font-bold mb-8">Articole similare</h2>
                 <div className="grid gap-6 md:grid-cols-3">
                   {relatedPosts.map((relatedPost) => (
-                    <Link 
-                      key={relatedPost.slug} 
-                      to={`/blog/${relatedPost.slug}`}
-                      className="group"
-                    >
+                    <Link key={relatedPost.slug} to={`/blog/${relatedPost.slug}`} className="group">
                       {relatedPost.image && (
                         <div className="aspect-video overflow-hidden rounded-lg mb-4">
-                          <img 
-                            src={relatedPost.image} 
-                            alt={relatedPost.title}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
+                          <img src={relatedPost.image} alt={relatedPost.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                         </div>
                       )}
-                      <h3 className="font-semibold group-hover:text-primary transition-colors line-clamp-2">
-                        {relatedPost.title}
-                      </h3>
+                      <h3 className="font-semibold group-hover:text-primary transition-colors line-clamp-2">{relatedPost.title}</h3>
                       <p className="text-sm text-muted-foreground mt-2 flex items-center gap-1">
-                        Citește mai mult
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        Citește mai mult <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </p>
                     </Link>
                   ))}
