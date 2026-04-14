@@ -399,5 +399,127 @@ flutter run</code></pre>
       avatar: "/icons/profileblog.png"
     },
     relatedPosts: ["bazele-programarii-variabile-tipuri-date-functii", "cum-functioneaza-html-css-javascript-intr-o-aplicatie-web"]
+  },
+  {
+    slug: "git-si-github-ghid-complet",
+    title: "Git și GitHub - Ghid Complet pentru Începători",
+    excerpt: "Git și GitHub sunt instrumente esențiale pentru orice programator. Află ce sunt, cum au apărut, care sunt avantajele și cum să le folosești în proiectele tale.",
+    content: `
+      <h2>Introducere</h2>
+      <p>Git și GitHub sunt două dintre cele mai utilizate instrumente în lumea programării. Deși sunt adesea amestecate, ele au roluri diferite dar complementare.</p>
+      <p><strong>Git</strong> este un sistem de control al versiunilor (Version Control System) care urmărește modificările în fișierele unui proiect. <strong>GitHub</strong> este o platformă de hosting care permite stocarea și colaborarea pe proiecte Git.</p>
+      <p>Împreună, aceste instrumente au revoluționat modul în care programatorii lucrează în echipă și gestionează proiectele.</p>
+
+      <h2>Istoria</h2>
+      <h3>Git</h3>
+      <p>Git a fost creat de <strong>Linus Torvalds</strong> în 2005, creatorul sistemului de operare Linux. A fost inițial conceput pentru a gestiona dezvoltarea kernelului Linux, după ce compania BitKeeper (folosită anterior) a încetat să fie gratuită.</p>
+      <p>Numele „Git" vine din argoul britanic și înseamnă „neînțelept" sau „idiot" - Torvalds și-a numit proiectul așa ca o glumă.</p>
+      <p>Git a fost proiectat pentru a fi:</p>
+      <ul>
+        <li><strong>rapid</strong> - operațiile locale sunt instantanee</li>
+        <li><strong>distribuit</strong> - fiecare dezvoltator are o copie completă a proiectului</li>
+        <li><strong>sigur</strong> - folosește hashing SHA-1 pentru integritate</li>
+        <li><strong>flexibil</strong> - suportă branching și merging ușor</li>
+      </ul>
+
+      <h3>GitHub</h3>
+      <p>GitHub a fost fondat în 2008 de <strong>Tom Preston-Werner</strong>, <strong>Chris Wanstrath</strong> și <strong>PJ Hyett</strong>. A fost una dintre primele platforme care au făcut Git accesibil tuturor.</p>
+      <p>În 2018, Microsoft a achiziționat GitHub pentru 7.5 miliarde de dolari. În 2025, GitHub avea peste 100 de milioane de dezvoltatori.</p>
+      <p>Alte platforme populare care folosesc Git:</p>
+      <ul>
+        <li><strong>GitLab</strong> - open-source, cu versiune gratuită self-hosted</li>
+        <li><strong>Bitbucket</strong> - de la Atlassian</li>
+        <li><strong>SourceForge</strong> - veche dar încă populară</li>
+      </ul>
+
+      <h2>Ai avantaje ale Git</h2>
+      <p>Git oferă numeroase avantaje pentru dezvoltatori:</p>
+      <ul>
+        <li><strong>Urmărirea modificărilor</strong> - știi cine a schimbat ce și când</li>
+        <li><strong>Branching</strong> - creezi ramuri separate pentru funcționalități noi</li>
+        <li><strong>Revenire</strong> - poți întoarce ușor la versiuni anterioare</li>
+        <li><strong>Colaborare</strong> - echipe multiple pot lucra simultan</li>
+        <li><strong>Merge</strong> - combinarea modificărilor se face automat</li>
+        <li><strong>Backup</strong> - codul este în siguranță</li>
+      </ul>
+
+      <h2>Beneficiile GitHub</h2>
+      <h3>Hosting Gratuit</h3>
+      <p>GitHub oferă <strong>depozite publice gratuite</strong> nelimitate pentru oricine dorește să-și găzduiască proiectele open-source. Pentru proiecte private, există planuri plătise.</p>
+      <p>Beneficiile includ:</p>
+      <ul>
+        <li>Stocare nelimitată pentru cod</li>
+        <li>Folosiți GitHub Pages pentru site-uri web statice</li>
+        <li>Acces la GitHub Actions pentru CI/CD</li>
+        <li>Comunitate vastă de dezvoltatori</li>
+      </ul>
+
+      <h3>Organizații</h3>
+      <p>GitHub Organizations permit:</p>
+      <ul>
+        <li>Gestionarea echipelor multiple</li>
+        <li>Permisiuni diferite pe depozite</li>
+        <li>Organizarea proiectelor pe echipe</li>
+        <li>Review-uri de cod în echipă</li>
+        <li>Wiki-uri și documentație</li>
+        <li>Issue tracker integrat</li>
+      </ul>
+      <p>Planul gratuit pentru organizații include depozite publice și private nelimitate, cu până la 3 colaboratori.</p>
+
+      <h2>Utilitate</h2>
+      <p>Git și GitHub sunt esențiale pentru:</p>
+      <ul>
+        <li><strong>Proiecte personale</strong> - backup și versiuni ale codului</li>
+        <li><strong>Colaborare</strong> - lucru în echipă pe același proiect</li>
+        <li><strong>Portofoliu</strong> - arătarea proiectelor angajatorilor</li>
+        <li><strong>Open source</strong> - contribuții la proiecte publice</li>
+        <li><strong>Documentație</strong> - Wiki-uri și README-uri</li>
+      </ul>
+
+      <h3>Comenzi de bază Git</h3>
+      <pre><code class="language-bash">git init</code></pre>
+      <p>initializează un depozit nou</p>
+      <pre><code class="language-bash">git add .</code></pre>
+      <p>adaugă toate fișierele</p>
+      <pre><code class="language-bash">git commit -m "mesaj"</code></pre>
+      <p>salvează modificările</p>
+      <pre><code class="language-bash">git push</code></pre>
+      <p>încarcă pe GitHub</p>
+      <pre><code class="language-bash">git pull</code></pre>
+      <p>descarcă modificările</p>
+      <pre><code class="language-bash">git clone url</code></pre>
+      <p>descarcă un proiect</p>
+
+      <h2>Folosirea în Industrie</h2>
+      <p>Git este folosit de companii mari:</p>
+      <ul>
+        <li><strong>Google</strong> - toate proiectele interne folosesc Git</li>
+        <li><strong>Microsoft</strong> - Windows, VS Code, și multe altele</li>
+        <li><strong>Facebook</strong> - infrastructura și aplicațiile</li>
+        <li><strong>Netflix</strong> - streaming și sisteme distribuite</li>
+        <li><strong>Airbnb</strong> - aplicații web și mobile</li>
+      </ul>
+      <p>GitHub este standardul în industrie:</p>
+      <ul>
+        <li>Peste 90% din companiile tech folosesc Git</li>
+        <li>Majoritatea joburilor necesită cunoștințe de Git</li>
+        <li>Proiectele open-source sunt găzduite pe GitHub</li>
+        <li>Interviurile tehnice includ întrebări despre Git</li>
+      </ul>
+
+      <h2>Concluzie</h2>
+      <p>Git și GitHub sunt instrumente fundamentale pentru orice programator. Indiferent dacă ești începător sau experimentat, înțelegerea acestor instrumente este esențială pentru cariera ta în tech.</p>
+      <p>Începe cu basics-ul: creează un cont GitHub, încarcă primul tău proiect și explorează. Restul vine cu practica.</p>
+      <p><em>Urmărește site-ul pentru tutoriale practice despre Git și GitHub!</em></p>
+    `,
+    date: "2026-04-14",
+    readTime: "6 min citire",
+    tags: ["Git", "GitHub", "Version Control", "Programare", "Colaborare"],
+    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=450&fit=crop",
+    author: {
+      name: "Ioniță Aurel Mihai",
+      avatar: "/icons/profileblog.png"
+    },
+    relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "bazele-programarii-variabile-tipuri-date-functii"]
   }
 ];
