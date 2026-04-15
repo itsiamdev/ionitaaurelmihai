@@ -29,10 +29,11 @@ The site is meticulously built with React and TypeScript for robust type safety 
   | Tools | Git, VS Code, Figma, Postman |
   | Styling | Tailwind CSS, shadcn/ui |
 - **Certifications** 🏆: Accredited achievements displayed with verification links.
-- **Blog Platform** 📚: Content-rich articles on web development topics, with features like:
+- **Blog Platform** 📚: Content-rich articles on web development topics including programming basics, web development, Git & GitHub, and mobile development with Flutter, with features like:
   - Search functionality
   - Category filtering
   - SEO-optimized posts
+  - Related posts suggestions
 - **Contact Integration** 📞: Multi-channel contact options including forms, social links, and direct messaging.
 - **AI Assistant** 🤖: Powered by Supabase Edge Functions, offering contextual responses about projects and technologies.
 
@@ -122,7 +123,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Live Site**: [https://ionitaaurelmihai.vercel.app/](https://ionitaaurelmihai.vercel.app/)
 - **Email**: aurel.ionita@example.com (placeholder)
 - **LinkedIn**: [linkedin.com/in/ionitaaurelmihai](https://linkedin.com/in/ionitaaurelmihai)
-- **GitHub**: [github.com/ionitaaurelmihai](https://github.com/ionitaaurelmihai)
+- **GitHub**: [github.com/itsiamdev](https://github.com/itsiamdev)
 
 ---
 
