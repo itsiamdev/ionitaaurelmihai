@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-border/50 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Ionita Aurel Mihai. Toate drepturile rezervate.</p>
+          <p>&copy; {new Date().getFullYear()} Ioniță Aurel Mihai. Toate drepturile rezervate.</p>
         </div>
       </div>
     </footer>

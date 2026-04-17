@@ -53,7 +53,7 @@ const Navigation = () => {
             to="/"
             className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
           >
-            Ionita Aurel Mihai
+            Ioniță Aurel Mihai
           </Link>
 
           {/* Desktop Navigation */}

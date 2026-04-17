@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <p className="text-primary text-lg mb-4 font-mono">Salut, sunt</p>
           <h1 className="mb-6">
-            <span className="text-gradient">Ionita Aurel Mihai</span>
+            <span className="text-gradient">Ioniță Aurel Mihai</span>
           </h1>
           <h2 className="text-2xl md:text-4xl text-muted-foreground mb-8">
             Frontend Developer
