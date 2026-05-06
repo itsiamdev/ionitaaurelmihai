@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { ExternalLink, Award, Download, FileText, Palette, Code, GitBranch } from "lucide-react";
+import { ExternalLink, Award, Download, FileText, Palette, Code, GitBranch, Globe } from "lucide-react";
 
 const Certifications = () => {
   const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
@@ -89,14 +89,22 @@ const Certifications = () => {
             <p className="text-center text-muted-foreground">
               {selectedCert?.description}
             </p>
-            <div className="flex justify-center gap-4">
-              <Button asChild>
-                <a href={selectedCert?.logo} download={`${selectedCert?.name}.png`}>
-                  <Download className="w-4 h-4 mr-2" />
-                  Descarcă
-                </a>
-              </Button>
-            </div>
+             <div className="flex justify-center gap-4">
+               {selectedCert?.websiteUrl && (
+                 <Button asChild variant="outline">
+                   <a href={selectedCert.websiteUrl} target="_blank" rel="noopener noreferrer">
+                     <Globe className="w-4 h-4 mr-2" />
+                     Vezi live
+                   </a>
+                 </Button>
+               )}
+               <Button asChild>
+                 <a href={selectedCert?.credentialUrl} download={`${selectedCert?.name}.png`}>
+                   <Download className="w-4 h-4 mr-2" />
+                   Descarcă
+                 </a>
+               </Button>
+             </div>
           </div>
         </DialogContent>
       </Dialog>
