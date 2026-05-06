@@ -37,6 +37,7 @@ const Certifications = () => {
                 {cert.name.includes("JavaScript") && <Code className="w-8 h-8 text-yellow-500" />}
                 {cert.name.includes("TypeScript") && <Code className="w-8 h-8 text-blue-600" />}
                 {cert.name.includes("Git") && <GitBranch className="w-8 h-8 text-red-500" />}
+                
               </div>
               <div className="w-16 h-16 mb-4 flex items-center justify-center bg-muted rounded-lg p-3">
                 <img

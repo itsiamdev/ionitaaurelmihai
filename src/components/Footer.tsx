@@ -75,7 +75,7 @@ const Footer = () => {
               <a href="https://github.com/itsiamdev" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/ionita-aurel-mihai-20648536a/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/itsiamdev/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="mailto:ionitaaurel32@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">

@@ -12,7 +12,7 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "linkedin.com/in/ionita-aurel-mihai-20648536a/",
-      link: "https://www.linkedin.com/in/ionita-aurel-mihai-20648536a/",
+      link: "https://www.linkedin.com/in/itsiamdev/",
     },
     {
       icon: Github,
