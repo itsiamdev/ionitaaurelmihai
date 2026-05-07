@@ -17,7 +17,7 @@ export const certifications: Certification[] = [
     logo: "public/certification/html.png",
     date: "2024",
     credentialUrl: "public/certification/html.png",
-    websiteUrl: "https://www.freecodecamp.org/",
+    websiteUrl: "https://learn.developmentfactory.ro/certificates/cert_VRGiYKql",
     description: "Pot crea structuri HTML semantice, formulare interactive și asigur accesibilitatea web-ului.",
   },
   {
@@ -27,7 +27,7 @@ export const certifications: Certification[] = [
     logo: "public/certification/css.png",
     date: "2024",
     credentialUrl: "public/certification/css.png",
-    websiteUrl: "https://www.freecodecamp.org/",
+    websiteUrl: "https://learn.developmentfactory.ro/certificates/cert_gmghAKaz",
     description: "Stilizez pagini web cu CSS modern, folosind flexbox, grid și animații pentru design responsive.",
   },
   {
