@@ -11,7 +11,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/ionita-aurel-mihai-20648536a/",
+      value: "linkedin.com/in/itsiamdev/",
       link: "https://www.linkedin.com/in/itsiamdev/",
     },
     {
