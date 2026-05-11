@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const ProjectsPreview = () => {
-  const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
+  const featuredProjects = projects.filter(p => p.featured).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
   return (
     <section id="proiecte" className="section-container">

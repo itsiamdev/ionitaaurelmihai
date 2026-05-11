@@ -9,7 +9,7 @@ import { projects } from "@/data/projects";
 import { ExternalLink, Github, ArrowRight, Sparkles } from "lucide-react";
 
 const Projects = () => {
-  const allProjects = [...projects].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  const allProjects = [...projects].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <>

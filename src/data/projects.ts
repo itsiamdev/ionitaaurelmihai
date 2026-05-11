@@ -376,7 +376,7 @@ export const projects: Project[] = [
     liveUrl: "https://itsiamdev.github.io/geolocation-api/",
     featured: true,
     category: "web",
-    date: "2026-01-3"
+    date: "2026-01-03"
   },
   {
     slug: "christmas-memory",
