@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const ProjectsPreview = () => {
-  const featuredProjects = projects.filter(p => p.featured).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
+  const recentProjects = [...projects].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
   return (
     <section id="proiecte" className="section-container">
@@ -27,7 +27,7 @@ const ProjectsPreview = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {featuredProjects.map((project) => (
+        {recentProjects.map((project) => (
           <Link
             key={project.slug}
             to={`/projects/${project.slug}`}
