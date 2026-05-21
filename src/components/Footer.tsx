@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-primary">Ionita Aurel Mihai</h3>
             <p className="text-muted-foreground text-sm">
-              Fronted developer pasionat de tehnologii moderne
+              Web developer pasionat de tehnologii moderne
             </p>
           </div>
           
