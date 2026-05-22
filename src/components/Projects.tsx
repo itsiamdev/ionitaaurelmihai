@@ -26,6 +26,12 @@ const Projects = () => {
       tech: ["Vue.js", "Firebase", "Node.js", "WebSockets"],
       image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
     },
+    {
+      title: "Targu Neamt Local Events App",
+      description: "Aplicație web pentru evenimente locale în Târgu Neamț, cu calendar, hărți și notificări personalizate.",
+      tech: ["React","TypeScript","Google Maps API"],
+      image: "https://targuneamt.vercel.app/apple-responsive-devices-mockup%20(1).png",
+    },
   ];
 
   return (
