@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "Social Media Platform",
       description: "Platformă socială cu feed în timp real, chat, stories și sistem complex de notificări.",
-      tech: ["Vue.js", "Firebase", "Node.js", "WebSockets"],
+      tech: ["React", "Firebase", "Node.js", "WebSockets"],
       image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
     },
     {
