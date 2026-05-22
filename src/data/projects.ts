@@ -800,5 +800,119 @@ bun run build</code></pre>
     featured: false,
     category: "fullstack",
     date: "2026-03-03"
-  }
+  },
+  {
+  slug: "targu-neamt",
+  title: "Târgu Neamț - Ghid Turistic Digital",
+  shortDescription: "Ghid turistic digital pentru orașul Târgu Neamț, oferind informații despre atracții, istorie și cultură locală.",
+  
+  fullDescription: `
+    <h2>Despre Proiect</h2>
+    <p>Târgu Neamț este o <em>platformă web modernă</em> dedicată promovării turistice a orașului și a împrejurimilor sale. Aplicația oferă utilizatorilor o experiență interactivă prin care pot descoperi atracții turistice, obiective istorice și elemente culturale reprezentative ale zonei.</p>
+
+    <p>Proiectul este construit cu scopul de a transforma modul în care turiștii explorează destinațiile locale, oferind o interfață intuitivă, rapidă și optimizată pentru toate dispozitivele. Platforma poate fi utilizată atât de turiști, cât și de localnici interesați de patrimoniul zonei.</p>
+
+    <br><br>
+
+    <h2>Funcționalități Cheie</h2>
+    <ul>
+      <li><strong>Catalog de Atracții:</strong> Listare și prezentare detaliată a obiectivelor turistice</li>
+      <li><strong>Pagini Individuale:</strong> Fiecare atracție are descriere, imagini și informații relevante</li>
+      <li><strong>Design Responsiv:</strong> Optimizare completă pentru mobil, tabletă și desktop</li>
+      <li><strong>Navigare Intuitivă:</strong> UX simplu și rapid pentru explorarea conținutului</li>
+      <li><strong>Performanță Ridicată:</strong> Timp de încărcare redus și optimizare SEO</li>
+      <li><strong>Interfață Modernă:</strong> Design curat, minimalist și ușor de utilizat</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Tehnologii Utilizate</h2>
+    <p>Aplicația este dezvoltată folosind tehnologii moderne din ecosistemul web:</p>
+    <ul>
+      <li><strong>Frontend:</strong> React + TypeScript pentru componente dinamice și scalabile</li>
+      <li><strong>Styling:</strong> Tailwind CSS pentru design rapid și responsive</li>
+      <li><strong>Deployment:</strong> Vercel pentru hosting și livrare rapidă</li>
+      <li><strong>Backend & Database:</strong> Supabase pentru stocarea datelor și gestionarea conținutului</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Instalare și Dezvoltare Locală</h2>
+    <p>Pentru a rula proiectul local, urmați pașii de mai jos:</p>
+
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Node.js (versiunea 16+)</li>
+      <li>npm sau yarn</li>
+      <li>Browser modern</li>
+    </ul>
+
+    <h3>Pași de Instalare</h3>
+    <ol>
+      <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/targuneamt.git</code></li>
+      <li>Accesați directorul proiectului: <code>cd targuneamt</code></li>
+      <li>Instalați dependențele: <code>npm install</code></li>
+      <li>Configurați variabilele de mediu (Supabase, etc.)</li>
+      <li>Porniți serverul de dezvoltare: <code>npm run dev</code></li>
+    </ol>
+
+    <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code>.</p>
+
+    <h3>Build de Producție</h3>
+    <p>Pentru a crea un build optimizat:</p>
+    <pre><code>npm run build</code></pre>
+    <p>Fișierele vor fi generate în folderul <code>dist/</code>.</p>
+
+    <br><br>
+
+    <h2>Structura Proiectului</h2>
+    <pre><code>targuneamt/
+├── public/                 
+├── src/
+│   ├── components/         
+│   ├── pages/              
+│   ├── hooks/              
+│   ├── lib/                
+│   ├── App.jsx             
+│   └── main.jsx            
+├── package.json            
+├── vite.config.js          
+└── README.md               
+    </code></pre>
+
+    <br><br>
+
+    <h2>Securitate și Optimizare</h2>
+    <ul>
+      <li>Validarea datelor din input-uri</li>
+      <li>Protecție împotriva vulnerabilităților comune</li>
+      <li>Optimizare pentru SEO și performanță</li>
+      <li>Hosting securizat prin Vercel</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Scopul Proiectului</h2>
+    <p>Scopul aplicației este de a crea un <strong>ghid turistic digital modern</strong> care să promoveze zona Târgu Neamț și să ofere utilizatorilor o experiență plăcută și informativă.</p>
+
+    <br><br>
+
+    <h2>Licență</h2>
+    <p>Proiect open-source, disponibil sub licența <strong>MIT License</strong>.</p>
+
+    <br><br>
+
+    <h2>Contact</h2>
+    <p>Pentru sugestii sau probleme, accesați repository-ul GitHub:</p>
+    <p><a href="https://github.com/itsiamdev/targuneamt" target="_blank">GitHub Project</a></p>
+  `,
+
+  tech: ["React", "TypeScript", "JavaScript", "Vercel"],
+  image: "https://targuneamt.vercel.app/apple-responsive-devices-mockup%20(1).png",
+  githubUrl: "https://github.com/itsiamdev/targuneamt",
+  liveUrl: "https://targuneamt.vercel.app/",
+  featured: true,
+  category: "web",
+  date: "2026-03-30",
+}
 ];
