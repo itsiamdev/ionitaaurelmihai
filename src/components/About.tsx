@@ -91,19 +91,20 @@ const About = () => {
                     </h4>
                     <div className="text-sm text-muted-foreground space-y-2">
                       <p>
-                        La doar 17 ani, dezvolt aplicații web încă din 15 ani,
-                        moment în care am descoperit pasiunea pentru
+                        La vârsta de 17 ani, dezvolt aplicații web deja de la 15
+                        ani, moment în care am descoperit pasiunea pentru
                         programare și tehnologie. În prezent, sunt elev în clasa
-                        a XI-a la Colegiul Național „Ștefan cel Mare" din
-                        Târgu Neamț, la profilul Științe ale Naturii, și
-                        îmi dedic aproape tot timpul liber învățării practice și
-                        dezvoltării continue în acest domeniu.
+                        a XI-a la Colegiul Național „Ștefan cel Mare" din Târgu
+                        Neamț, la profilul Științe ale Naturii, și îmi dedic
+                        majoritatea timpului liber învățării practice și
+                        dezvoltării continue în acest sector.
                       </p>
                       <p>
-                        Mă caracterizez prin perseverență și ochiul pentru
-                        detalii, iar procesul de construire a unui produs
-                        digital funcțional începe cu înțelegerea profundă a
-                        problemelor pe care le rezolvă.
+                        Mă caracterizez prin perseverență și atenție la detalii,
+                        iar procesul de construire a unui produs digital
+                        funcțional începe cu înțelegerea profundă a problemelor
+                        pe care le rezolvă. În ultima perioadă mă concentrez pe
+                        admiterea la <a href="https://info.uaic.ro/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Facultatea de Informatică din Iași</a>.
                       </p>
                     </div>
                   </div>
