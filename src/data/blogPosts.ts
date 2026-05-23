@@ -521,5 +521,172 @@ flutter run</code></pre>
       avatar: "/icons/profileblog.png"
     },
     relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "bazele-programarii-variabile-tipuri-date-functii"]
-  }
+  },{
+  slug: "react-pentru-incepatori-ghid-complet",
+  title: "React pentru începători: Ghid complet pentru prima aplicație",
+  excerpt: "React este una dintre cele mai populare biblioteci JavaScript pentru construirea interfețelor de utilizator. În acest articol vei învăța ce este React, cum funcționează și cum să creezi prima ta aplicație pas cu pas.",
+  content: `
+    <h2>Ce este React?</h2>
+    <p>React este o bibliotecă JavaScript dezvoltată de Facebook pentru construirea interfețelor de utilizator. Aceasta folosește <strong>componente</strong> pentru a crea UI-uri modulare, ușor de întreținut și reutilizabile.</p>
+    <p>Principalele avantaje ale React sunt:</p>
+    <ul>
+      <li><strong>Arhitectură bazată pe componente</strong> – cod reutilizabil și organizat</li>
+      <li><strong>Virtual DOM</strong> – performanță ridicată</li>
+      <li><strong>Flux de date unidirecțional</strong> – aplicații mai ușor de înțeles</li>
+      <li><strong>Comunitate mare</strong> – multe librării și resurse disponibile</li>
+    </ul>
+
+    <h2>Prerechizite</h2>
+    <p>Înainte să începi cu React, ar trebui să ai cunoștințe de bază despre:</p>
+    <ul>
+      <li>HTML, CSS și JavaScript (ES6+)</li>
+      <li>Concepte precum funcții, array-uri și obiecte</li>
+      <li>npm sau yarn pentru gestionarea pachetelor</li>
+    </ul>
+
+    <h2>Instalare și configurare</h2>
+    <p>Cea mai simplă metodă de a începe este folosind Create React App:</p>
+    <pre><code class="language-bash">npx create-react-app prima-mea-aplicatie
+cd prima-mea-aplicatie
+npm start</code></pre>
+    <p>Aplicația va rula la <code>http://localhost:3000</code></p>
+
+    <h2>Structura unei aplicații React</h2>
+    <pre><code class="language-jsx">my-app/
+├── node_modules/
+├── public/
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   └── components/
+└── package.json</code></pre>
+
+    <h2>Prima componentă</h2>
+    <p>Deschide <code>src/App.js</code> și înlocuiește conținutul cu următorul cod:</p>
+    <pre><code class="language-jsx">import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;h1&gt;Salut, React!&lt;/h1&gt;
+      &lt;p&gt;Prima mea aplicație React&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;</code></pre>
+
+    <h2>Componente și Props</h2>
+    <p>Componentele sunt blocurile de bază ale unei aplicații React. Poți transmite date între componente folosind props:</p>
+    <pre><code class="language-jsx">function Salutare(props) {
+  return &lt;h2&gt;Salut, {props.nume}!&lt;/h2&gt;;
+}
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Salutare nume="Mihai" /&gt;
+      &lt;Salutare nume="Ana" /&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+    <h2>State și hook-ul useState</h2>
+    <p>State-ul este folosit pentru a stoca date care se pot modifica în timp:</p>
+    <pre><code class="language-jsx">import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Ai apăsat de {count} ori&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Apasă-mă
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+    <h2>Liste și cheia (key)</h2>
+    <p>Atunci când afișezi liste în React, este important să folosești o cheie unică pentru fiecare element:</p>
+    <pre><code class="language-jsx">function Lista() {
+  const fructe = ['măr', 'banană', 'pară'];
+  
+  return (
+    &lt;ul&gt;
+      {fructe.map(item =&gt; (
+        &lt;li key={item}&gt;{item}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+
+    <h2>useEffect Hook</h2>
+    <p>Hook-ul <code>useEffect</code> este folosit pentru efecte secundare, precum încărcarea datelor:</p>
+    <pre><code class="language-jsx">import React, { useState, useEffect } from 'react';
+
+function UserData() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/user')
+      .then(res =&gt; res.json())
+      .then(data =&gt; setUser(data));
+  }, []);
+
+  return &lt;div&gt;{user ? user.name : 'Se încarcă...'}&lt;/div&gt;;
+}</code></pre>
+
+    <h2>Formulare (Form Handling)</h2>
+    <p>Formularele în React sunt gestionate folosind controlled components:</p>
+    <pre><code class="language-jsx">function Form() {
+  const [nume, setNume] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Salut, ' + nume);
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input 
+        value={nume} 
+        onChange={(e) =&gt; setNume(e.target.value)} 
+      /&gt;
+      &lt;button type="submit"&gt;Trimite&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}</code></pre>
+
+    <h2>Randare condițională</h2>
+    <pre><code class="language-jsx">function Buton({ autentificat }) {
+  return (
+    &lt;div&gt;
+      {autentificat ? (
+        &lt;button&gt;Logout&lt;/button&gt;
+      ) : (
+        &lt;button&gt;Login&lt;/button&gt;
+      )}
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+    <h2>Concluzie</h2>
+    <p>React este o bibliotecă puternică pentru construirea aplicațiilor web moderne. Cu ajutorul componentelor, state-ului și hook-urilor, poți crea aplicații interactive și scalabile.</p>
+    <p>Continuă să exersezi construind proiecte simple și consultă documentația oficială pentru a aprofunda conceptele.</p>
+
+    <p><em>Dacă ești la început, încearcă să construiești o aplicație de tip todo list sau o aplicație meteo. Practica este cheia progresului!</em></p>
+  `,
+  date: "2026-05-23",
+  readTime: "7 min citire",
+  tags: ["React", "JavaScript", "Frontend", "Web Development", "Începători"],
+  image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0",
+  author: {
+    name: "Ioniță Aurel Mihai",
+    avatar: "/icons/profileblog.png"
+  },
+  relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "bazele-programarii-variabile-tipuri-date-functii"]
+}
 ];
