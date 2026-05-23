@@ -91,17 +91,19 @@ const About = () => {
                     </h4>
                     <div className="text-sm text-muted-foreground space-y-2">
                       <p>
-                        Am 17 ani și sunt pasionat de programare de la vârsta de 15 ani.
-                        Sunt elev în clasa a XI-a la Colegiul Național „Ștefan
-                        cel Mare” din Târgu Neamț, la profilul Științe ale
-                        Naturii. Sunt pasionat de programare și tehnologie și
-                        îmi dedic o mare parte din timp învățării și dezvoltării
-                        mele în acest domeniu.
+                        La doar 17 ani, dezvolt aplicații web încă din 15 ani,
+                        moment în care am descoperit pasiunea pentru
+                        programare și tehnologie. În prezent, sunt elev în clasa
+                        a XI-a la Colegiul Național „Ștefan cel Mare" din
+                        Târgu Neamț, la profilul Științe ale Naturii, și
+                        îmi dedic aproape tot timpul liber învățării practice și
+                        dezvoltării continue în acest domeniu.
                       </p>
                       <p>
-                        Sunt o persoană motivată, curioasă și perseverentă,
-                        mereu interesată să își îmbunătățească abilitățile și să
-                        construiască soluții utile prin cod.
+                        Mă caracterizez prin perseverență și ochiul pentru
+                        detalii, iar procesul de construire a unui produs
+                        digital funcțional începe cu înțelegerea profundă a
+                        problemelor pe care le rezolvă.
                       </p>
                     </div>
                   </div>
