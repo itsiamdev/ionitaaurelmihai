@@ -914,5 +914,119 @@ bun run build</code></pre>
   featured: true,
   category: "web",
   date: "2026-03-30",
+},
+{
+  slug: "olimpix",
+  title: "Olimpix - Platformă Educațională Digitală",
+  shortDescription: "Platformă educațională modernă pentru pregătirea elevilor, oferind resurse, exerciții și experiențe interactive de învățare.",
+
+  fullDescription: `
+    <h2>Despre Proiect</h2>
+    <p>Olimpix este o <em>platformă educațională modernă</em> dedicată elevilor care doresc să își îmbunătățească cunoștințele și să se pregătească pentru examene și competiții. Aplicația oferă o experiență interactivă prin care utilizatorii pot accesa lecții, exerciții și materiale educaționale într-un mod simplu și eficient.</p>
+
+    <p>Proiectul este construit pentru a transforma modul în care elevii învață, oferind o interfață intuitivă, rapidă și optimizată pentru toate dispozitivele. Platforma poate fi utilizată atât pentru studiu individual, cât și ca suport educațional.</p>
+
+    <br><br>
+
+    <h2>Funcționalități Cheie</h2>
+    <ul>
+      <li><strong>Exerciții Interactive:</strong> Probleme și teste pentru antrenament continuu</li>
+      <li><strong>Resurse Educaționale:</strong> Lecții și materiale structurate pe niveluri</li>
+      <li><strong>Pagini Individuale:</strong> Fiecare lecție sau test are detalii și explicații</li>
+      <li><strong>Design Responsiv:</strong> Optimizare completă pentru mobil, tabletă și desktop</li>
+      <li><strong>Navigare Intuitivă:</strong> UX simplu pentru acces rapid la conținut</li>
+      <li><strong>Performanță Ridicată:</strong> Încărcare rapidă și optimizare SEO</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Tehnologii Utilizate</h2>
+    <p>Aplicația este dezvoltată folosind tehnologii moderne din ecosistemul web:</p>
+    <ul>
+      <li><strong>Frontend:</strong> React + TypeScript pentru componente scalabile</li>
+      <li><strong>Styling:</strong> Tailwind CSS pentru design modern și responsive</li>
+      <li><strong>Deployment:</strong> Vercel pentru hosting rapid și stabil</li>
+      <li><strong>Backend & Database:</strong> Supabase pentru gestionarea datelor</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Instalare și Dezvoltare Locală</h2>
+    <p>Pentru a rula proiectul local, urmați pașii de mai jos:</p>
+
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Node.js (versiunea 16+)</li>
+      <li>npm sau yarn</li>
+      <li>Browser modern</li>
+    </ul>
+
+    <h3>Pași de Instalare</h3>
+    <ol>
+      <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/olimpix.git</code></li>
+      <li>Accesați directorul proiectului: <code>cd olimpix</code></li>
+      <li>Instalați dependențele: <code>npm install</code></li>
+      <li>Configurați variabilele de mediu</li>
+      <li>Porniți serverul: <code>npm run dev</code></li>
+    </ol>
+
+    <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code>.</p>
+
+    <h3>Build de Producție</h3>
+    <p>Pentru a crea un build optimizat:</p>
+    <pre><code>npm run build</code></pre>
+    <p>Fișierele vor fi generate în folderul <code>dist/</code>.</p>
+
+    <br><br>
+
+    <h2>Structura Proiectului</h2>
+    <pre><code>olimpix/
+├── public/                 
+├── src/
+│   ├── components/         
+│   ├── pages/              
+│   ├── hooks/              
+│   ├── lib/                
+│   ├── App.jsx             
+│   └── main.jsx            
+├── package.json            
+├── vite.config.js          
+└── README.md               
+    </code></pre>
+
+    <br><br>
+
+    <h2>Securitate și Optimizare</h2>
+    <ul>
+      <li>Validarea datelor introduse de utilizatori</li>
+      <li>Protecție împotriva vulnerabilităților comune</li>
+      <li>Optimizare SEO și performanță</li>
+      <li>Hosting securizat prin Vercel</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Scopul Proiectului</h2>
+    <p>Scopul aplicației este de a crea o <strong>platformă educațională modernă</strong> care să ajute elevii să învețe mai eficient și să își atingă potențialul maxim.</p>
+
+    <br><br>
+
+    <h2>Licență</h2>
+    <p>Proiect open-source, disponibil sub licența <strong>MIT License</strong>.</p>
+
+    <br><br>
+
+    <h2>Contact</h2>
+    <p>Pentru sugestii sau probleme, accesați repository-ul GitHub:</p>
+    <p><a href="https://github.com/itsiamdev/olimpix" target="_blank">GitHub Project</a></p>
+  `,
+
+  tech: ["React", "TypeScript", "JavaScript", "GitHub Pages"],
+  image: "public/projects/olimpix.png",
+  githubUrl: "https://github.com/itsiamdev/olimpix",
+  liveUrl: "https://olimpix.vercel.app/",
+  featured: true,
+  category: "web",
+  date: "2026-03-30",
 }
 ];
