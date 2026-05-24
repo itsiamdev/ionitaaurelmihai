@@ -77,7 +77,7 @@ const About = () => {
                         Pasiuni
                       </h4>
                       <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Dezvoltare Web Modernă</li>
+                        <li>• Programare</li>
                         <li>• Sport</li>
                         <li>• Citit</li>
                       </ul>
