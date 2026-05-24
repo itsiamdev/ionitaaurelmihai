@@ -1022,7 +1022,7 @@ bun run build</code></pre>
   `,
 
   tech: ["React", "TypeScript", "JavaScript", "GitHub Pages"],
-  image: "public/projects/olimpix.png",
+  image: "/projects/olimpix.png",
   githubUrl: "https://github.com/itsiamdev/olimpix",
   liveUrl: "https://olimpix.vercel.app/",
   featured: true,
