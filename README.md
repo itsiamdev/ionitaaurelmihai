@@ -9,25 +9,34 @@
 
 ## Description 📝
 
-Welcome to the personal portfolio of **Ionita Aurel Mihai**, a dedicated full-stack developer with a keen interest in crafting innovative web solutions. This dynamic website serves as a comprehensive showcase of professional expertise, creative projects, and technical proficiency in modern web development. Leveraging cutting-edge technologies, the portfolio not only highlights completed works but also demonstrates a commitment to clean code, user-centric design, and scalable architecture.
+Welcome to the personal portfolio of **Ionita Aurel Mihai**, a dedicated web developer with a keen interest in crafting innovative web solutions. This dynamic website serves as a comprehensive showcase of professional expertise, creative projects, and technical proficiency in modern web development. Leveraging cutting-edge technologies, the portfolio not only highlights completed works but also demonstrates a commitment to clean code, user-centric design, and scalable architecture.
 
 The site is meticulously built with React and TypeScript for robust type safety and component reusability, accelerated by Vite's lightning-fast build process. Tailwind CSS ensures a sleek, responsive design that adapts seamlessly across devices, while shadcn/ui components provide polished, accessible UI elements. Supabase powers backend functionalities, including an intelligent AI assistant that enhances user interaction.
 
 ### Key Features ✨
 - **Hero Section** 🚀: Dynamic animations and a compelling personal narrative to captivate visitors immediately.
 - **About Section** 👨‍💻: In-depth biography covering professional journey, education, and personal interests.
-- **Projects Gallery** 💼: Interactive showcase of diverse projects, featuring:
-  - High-quality images and live demos
-  - Detailed descriptions with tech stacks used
-  - Links to GitHub repositories and deployed versions
-  - Examples include Christmas Memory Game, Geolocation API integrations, and Green Week environmental projects
+- **Projects Gallery** 💼: Interactive showcase of 8 diverse projects including:
+   - **Green Week** - Environmental platform for eco-friendly actions and community cleaning events
+   - **Medix** - Medical platform for patient management, appointments, and medical records
+   - **Geolocation API** - Real-time location tracking with interactive maps (Leaflet.js, OpenStreetMap)
+   - **Christmas Memory** - Festive web app with memory games, gift catcher, and holiday memory wall
+   - **Stan Radu Gabriel Portfolio** - Personal portfolio for a high school student and student council member
+   - **Task Manager** - Productivity app for task creation, tracking, and organization
+   - **Connecto** - Real-time messaging platform with contact management
+   - **Târgu Neamț Tourism Guide** - Digital guide for Târgu Neamț city attractions and history
+   - **Olimpix** - Educational platform for student learning and exam preparation
+   - High-quality images and live demos
+   - Detailed descriptions with tech stacks used
+   - Links to GitHub repositories and deployed versions
 - **Skills Overview** 🛠️: Categorized competencies with proficiency levels:
-  | Category | Technologies |
-  |----------|--------------|
-  | Frontend | React, TypeScript, HTML5, CSS3, JavaScript |
-  | Backend | Node.js, Express, Supabase |
-  | Tools | Git, VS Code, Figma, Postman |
-  | Styling | Tailwind CSS, shadcn/ui |
+   | Category | Technologies |
+   |----------|--------------|
+   | Frontend | React, TypeScript, HTML5, CSS3, JavaScript, Tailwind CSS, shadcn/ui, Framer Motion |
+   | Backend | Node.js, Express, Supabase, WebSocket |
+   | Tools | Git, VS Code, Figma, Postman |
+   | Styling | Tailwind CSS, shadcn/ui, CSS3 |
+   | Other | Leaflet.js, OpenStreetMap, Nominatim API, TanStack Query |
 - **Certifications** 🏆: Accredited achievements displayed with verification links.
 - **Blog Platform** 📚: Content-rich articles on web development topics including programming basics, web development, Git & GitHub, and mobile development with Flutter, with features like:
   - Search functionality
@@ -122,7 +131,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Contact 📧
 - **Live Site**: [https://ionitaaurelmihai.vercel.app/](https://ionitaaurelmihai.vercel.app/)
 - **Email**: aurel.ionita@example.com (placeholder)
-- **LinkedIn**: [linkedin.com/in/ionitaaurelmihai](https://linkedin.com/in/ionitaaurelmihai)
+- **LinkedIn**: [linkedin.com/in/itsiamdev](https://linkedin.com/in/itsiamdev)
 - **GitHub**: [github.com/itsiamdev](https://github.com/itsiamdev)
 
 ---
