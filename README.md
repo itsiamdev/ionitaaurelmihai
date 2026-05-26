@@ -14,6 +14,7 @@ Welcome to the personal portfolio of **Ionita Aurel Mihai**, a dedicated web dev
 The site is meticulously built with React and TypeScript for robust type safety and component reusability, accelerated by Vite's lightning-fast build process. Tailwind CSS ensures a sleek, responsive design that adapts seamlessly across devices, while shadcn/ui components provide polished, accessible UI elements. Supabase powers backend functionalities, including an intelligent AI assistant that enhances user interaction.
 
 ### Key Features ✨
+
 - **Hero Section** 🚀: Dynamic animations and a compelling personal narrative to captivate visitors immediately.
 - **About Section** 👨‍💻: In-depth biography covering professional journey, education, and personal interests.
 - **Projects Gallery** 💼: Interactive showcase of 8 diverse projects including:
