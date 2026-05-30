@@ -1028,5 +1028,110 @@ bun run build</code></pre>
   featured: true,
   category: "web",
   date: "2026-03-30",
+},{
+  slug: "jaysontatum",
+  title: "Jayson Tatum - Website Prezentare",
+  shortDescription: "Website modern realizat în React dedicat jucătorului NBA Jayson Tatum, cu design interactiv și experiență dinamică.",
+
+  fullDescription: `
+    <h2>Despre Proiect</h2>
+    <p>Jayson Tatum este un <em>website de prezentare dezvoltat în React</em>, dedicat celebrului jucător NBA. Proiectul oferă o experiență modernă și dinamică, utilizând componente reutilizabile și o structură scalabilă.</p>
+
+    <p>Aplicația este construită pentru a demonstra bune practici în dezvoltarea frontend, incluzând organizarea pe componente, performanță ridicată și un design responsive optimizat pentru toate dispozitivele.</p>
+
+    <br><br>
+
+    <h2>Funcționalități Cheie</h2>
+    <ul>
+      <li><strong>Arhitectură pe Componente:</strong> Cod organizat și reutilizabil</li>
+      <li><strong>Interfață Interactivă:</strong> UI dinamic bazat pe React</li>
+      <li><strong>Design Responsiv:</strong> Adaptare pentru mobil, tabletă și desktop</li>
+      <li><strong>Navigare Rapidă:</strong> Experiență fluidă fără reload</li>
+      <li><strong>Performanță:</strong> Randare eficientă și optimizare modernă</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Tehnologii Utilizate</h2>
+    <p>Proiectul este realizat folosind tehnologii moderne:</p>
+    <ul>
+      <li><strong>Frontend:</strong> React (Vite / Create React App)</li>
+      <li><strong>Styling:</strong> CSS / posibil Tailwind CSS</li>
+      <li><strong>Deployment:</strong> GitHub Pages</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Instalare și Dezvoltare Locală</h2>
+    <p>Pentru a rula proiectul local:</p>
+
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Node.js (versiunea 16+)</li>
+      <li>npm sau yarn</li>
+    </ul>
+
+    <h3>Pași de Instalare</h3>
+    <ol>
+      <li>Clonați repository-ul: <code>git clone https://github.com/itsiamdev/jaysontatum.git</code></li>
+      <li>Accesați directorul: <code>cd jaysontatum</code></li>
+      <li>Instalați dependențele: <code>npm install</code></li>
+      <li>Porniți aplicația: <code>npm run dev</code></li>
+    </ol>
+
+    <p>Aplicația va fi disponibilă la <code>http://localhost:5173</code>.</p>
+
+    <h3>Build de Producție</h3>
+    <pre><code>npm run build</code></pre>
+
+    <br><br>
+
+    <h2>Structura Proiectului</h2>
+    <pre><code>jaysontatum/
+├── public/                 
+├── src/
+│   ├── components/         
+│   ├── pages/              
+│   ├── assets/             
+│   ├── App.jsx             
+│   └── main.jsx            
+├── package.json            
+├── vite.config.js          
+└── README.md               
+    </code></pre>
+
+    <br><br>
+
+    <h2>Securitate și Optimizare</h2>
+    <ul>
+      <li>Optimizare pentru performanță și loading rapid</li>
+      <li>Structură modulară pentru scalabilitate</li>
+      <li>Best practices React</li>
+    </ul>
+
+    <br><br>
+
+    <h2>Scopul Proiectului</h2>
+    <p>Scopul acestui proiect este de a demonstra dezvoltarea unui <strong>website modern în React</strong>, folosind o arhitectură scalabilă și o experiență de utilizare fluidă.</p>
+
+    <br><br>
+
+    <h2>Licență</h2>
+    <p>Proiect open-source disponibil pe GitHub.</p>
+
+    <br><br>
+
+    <h2>Contact</h2>
+    <p>Pentru sugestii sau colaborări:</p>
+    <p><a href="https://github.com/itsiamdev/jaysontatum" target="_blank">GitHub Project</a></p>
+  `,
+
+  tech: ["React", "JavaScript", "CSS", "GitHub Pages"],
+  image: "/projects/jaysontatum.png",
+  githubUrl: "https://github.com/itsiamdev/jaysontatum",
+  liveUrl: "https://itsiamdev.github.io/jaysontatum/",
+  featured: false,
+  category: "web",
+  date: "2026-03-25",
 }
 ];
