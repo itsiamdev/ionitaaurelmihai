@@ -46,7 +46,7 @@ const BackgroundMusic = () => {
   return (
     <button
       onClick={togglePlay}
-      className="fixed bottom-6 right-6 z-[9998] p-3 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/30 transition-all duration-300"
+      className="fixed bottom-6 left-6 z-[9998] p-3 rounded-full bg-primary/20 backdrop-blur-sm hover:bg-primary/30 transition-all duration-300"
       aria-label={isPlaying ? "Oprire muzică" : "Pornire muzică"}
     >
       {isPlaying ? (
