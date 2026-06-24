@@ -12,6 +12,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor";
 import ChatBot from "./components/ChatBot";
+import BackgroundMusic from "./components/BackgroundMusic";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
     <TooltipProvider>
       <CustomCursor />
       <ChatBot />
+      <BackgroundMusic />
       <Toaster />
       <Sonner />
       <BrowserRouter>
