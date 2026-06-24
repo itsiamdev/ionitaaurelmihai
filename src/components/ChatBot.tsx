@@ -313,7 +313,7 @@ const ChatBot = () => {
             <div>
               <h3 className="font-semibold text-sm">Asistentul lui Aurel</h3>
               <p className="text-xs text-muted-foreground">
-                R\u0103spunde instant despre Aurel
+                {"R\u0103spunde instant despre Aurel"}
               </p>
             </div>
             <div className="ml-auto flex items-center gap-1.5">
@@ -364,7 +364,7 @@ const ChatBot = () => {
           {messages.length <= 1 && (
             <div className="px-3 py-2 border-t border-border">
               <p className="text-xs text-muted-foreground mb-2">
-                \u00centreb\u0103ri rapide:
+                {"\u00centreb\u0103ri rapide:"}
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {quickQuestions.map((question, index) => (
@@ -389,7 +389,7 @@ const ChatBot = () => {
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Scrie o \u00eentrebare..."
+              placeholder={"Scrie o \u00eentrebare..."}
               className="flex-1 px-3 py-2 text-sm bg-muted rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
             />
             <button
