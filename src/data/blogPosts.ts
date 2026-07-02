@@ -688,5 +688,158 @@ function UserData() {
     avatar: "/icons/profileblog.png"
   },
   relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "bazele-programarii-variabile-tipuri-date-functii"]
+  },{
+  slug: "cum-sa-ti-faci-primul-site-si-sa-l-pui-online-gratis",
+  title: "Cum să-ți faci primul site și să-l pui online gratuit (Vercel, GitHub Pages.Netlify)",
+  excerpt: "Ai învățat HTML, CSS și JavaScript și dorești să-ți arăți primul site cu întreaga lume? În acest articol îți explic pas cu pas cum să construiești un website simplu și cum să-l publici gratuit folosind platforme precum GitHub Pages, Vercel, Netlify și Cloudflare Pages.",
+  content: `
+    <h2>Ce ai nevoie pentru a începe?</h2>
+    <p>Înainte să pui site-ul online, trebuie să ai un website funcțional. Pentru începători, cel mai simplu este să construiești un site static format din fișiere <strong>HTML</strong>, <strong>CSS</strong> și <strong>JavaScript</strong>.</p>
+    <p>Structura minimă a unui proiect:</p>
+    <pre><code class="language-plaintext">primul-meu-site/
+├── index.html
+├── styles.css
+├── script.js
+└── imagini/</code></pre>
+
+    <h2>Pasul 1: Creează un site simplu</h2>
+    <p>Începe cu un fișier <code>index.html</code> de bază:</p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ro"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Primul meu site&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bun venit pe primul meu site!&lt;/h1&gt;
+    &lt;p&gt;Acesta este un website construit de mine.&lt;/p&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Pasul 2: Testează local</h2>
+    <p>Deschide fișierul <code>index.html</code> în browser pentru a vedea cum arată site-ul tău. Asigură-te că totul funcționează corect înainte de a-l publica.</p>
+
+    <h2>Pasul 3: Alege o platformă de hosting gratuit</h2>
+    <p>Există mai multe platforme excelente care oferă hosting gratuit pentru site-uri statice. Iată cele mai populare:</p>
+
+    <h3>1. GitHub Pages</h3>
+    <p><strong>GitHub Pages</strong> este serviciul de hosting gratuit oferit de GitHub. Ideal pentru începători.</p>
+    <ul>
+      <li><strong>Gratuit</strong> pentru depozite publice</li>
+      <li><strong>SSL gratuit</strong> (certificat HTTPS)</li>
+      <li><strong>Domeniu personalizat</strong> suportat</li>
+      <li><strong>Strat direct din GitHub</strong></li>
+    </ul>
+    <p><strong>Pași pentru a publica:</strong></p>
+    <ol>
+      <li>Creează un cont pe <a href="https://github.com">GitHub</a></li>
+      <li>Creează un depozit nou numit <code>username.github.io</code> (înlocuiește <code>username</code> cu numele tău de utilizator)</li>
+      <li>Încarcă fișierele site-ului în depozit</li>
+      <li>Accesează site-ul la <code>https://username.github.io</code></li>
+    </ol>
+
+    <h3>2. Vercel</h3>
+    <p><strong>Vercel</strong> este o platformă modernă de hosting optimizată pentru aplicații statice și front-end. Foarte populară în comunitatea de dezvoltatori.</p>
+    <ul>
+      <li><strong>Deployment instant</strong> din Git</li>
+      <li><strong>SSL automat</strong></li>
+      <li><strong>CDN global</strong> pentru viteză mare</li>
+      <li><strong>Suport pentru framework-uri</strong> (React, Next.js, Vue etc.)</li>
+      <li><strong>Plan gratuit generos</strong></li>
+    </ul>
+    <p><strong>Pași pentru a publica:</strong></p>
+    <ol>
+      <li>Creează un cont pe <a href="https://vercel.com">Vercel</a></li>
+      <li>Conectează-ți contul de GitHub</li>
+      <li>Importează depozitul cu site-ul</li>
+      <li>Vercel detectează automat tipul de proiect și îl publică</li>
+    </ol>
+
+    <h3>3. Netlify</h3>
+    <p><strong>Netlify</strong> este o altă platformă excelentă, foarte ușor de folosit și cu funcționalități avansate.</p>
+    <ul>
+      <li><strong>Drag & Drop</strong> pentru deployment rapid</li>
+      <li><strong>SSL gratuit</strong></li>
+      <li><strong>Form handling</strong> gratuit</li>
+      <li><strong>Serverless functions</strong></li>
+      <li><strong>Branch previews</strong></li>
+    </ul>
+    <p><strong>Pași pentru a publica:</strong></p>
+    <ol>
+      <li>Creează un cont pe <a href="https://netlify.com">Netlify</a></li>
+      <li>Trage fișierele site-ului în fereastra Netlify (drag & drop)</li>
+      <li>Sau conectează un depozit Git pentru deployment automat</li>
+      <li>Site-ul devine live în câteva secunde</li>
+    </ol>
+
+    <h3>4. Cloudflare Pages</h3>
+    <p><strong>Cloudflare Pages</strong> este soluția de hosting de la Cloudflare, bazată pe rețeaua lor globală CDN.</p>
+    <ul>
+      <li><strong>Gratuit nelimitat</strong></li>
+      <li><strong>Viteză extraordinară</strong> datorită rețelei Cloudflare</li>
+      <li><strong>SSL automat</strong></li>
+      <li><strong>Integrare cu Git</strong></li>
+      <li><strong>Edge functions</strong> gratuite</li>
+    </ul>
+    <p>Pașii sunt similari cu Vercel: conectează un depozit Git și Cloudflare se ocupă de restul.</p>
+
+    <h2>Comparație platforme</h2>
+    <p>| Platformă | Avantaj | Limita plan gratuit |</p>
+    <p>| GitHub Pages | Simplu pentru începători | Nu suportă server-side |</p>
+    <p>| Vercel | Optimizat pentru modern web | 100 GB bandwidth/lună |</p>
+    <p>| Netlify | Drag & drop ușor | 100 GB bandwidth/lună |</p>
+    <p>| Cloudflare Pages | CDN global rapid | 500 build-uri/lună |</p>
+
+    <h2>Cum să alegi platforma potrivită?</h2>
+    <ul>
+      <li><strong>Dacă ești începător</strong> – începe cu GitHub Pages, cel mai simplu</li>
+      <li><strong>Dacă folosești React/Vue/Angular</strong> – alege Vercel sau Netlify</li>
+      <li><strong>Dacă vrei viteză maximă</strong> – Cloudflare Pages</li>
+      <li><strong>Dacă vrei și backend</strong> – Vercel sau Netlify funcții serverless</li>
+    </ul>
+
+    <h2>Domeniu personalizat</h2>
+    <p>Toate platformele susțin <strong>domenii personalizate</strong>. Poți cumpăra un domeniu de la:</p>
+    <ul>
+      <li><strong>Namecheap</strong></li>
+      <li><strong>GoDaddy</strong></li>
+      <li><strong>Cloudflare Registrar</strong></li>
+    </ul>
+    <p>După ce ai domeniul, adaugă-l în setările platformei de hosting și configurează DNS-ul.</p>
+
+    <h2>Actualizări ulterioare</h2>
+    <p>Când modifici site-ul:</p>
+    <ul>
+      <li><strong>GitHub Pages</strong> – fă un commit și push</li>
+      <li><strong>Vercel/Netlify/Cloudflare</strong> – conectează un depozit Git pentru actualizări automate</li>
+    </ul>
+    <p>Platforma va reconstrui și republica site-ul automat cu noile modificări.</p>
+
+    <h2>Sfaturi utile</h2>
+    <ul>
+      <li><strong>Optimizează imaginile</strong> – comprimă-le înainte de a le încărca</li>
+      <li><strong>Minimizază CSS și JS</strong> – reduce timpul de încărcare</li>
+      <li><strong>Folosește HTTPS</strong> – toate platformele îl oferă gratuit</li>
+      <li><strong>Testează pe mobile</strong> – asigură-te că site-ul este responsive</li>
+      <li><strong>Verifică viteza</strong> – folosește Google PageSpeed Insights</li>
+    </ul>
+
+    <h2>Concluzie</h2>
+    <p>Publicarea unui site gratuit nu a fost niciodată mai ușoară. Indiferent de platforma pe care o alegi, poți avea un website live în câteva minute, fără să plătești nimic.</p>
+    <p>Începe cu cea mai simplă metodă (GitHub Pages) și evoluează pe măsură ce devii mai experimentat. Site-ul tău este doar la câteva clic distanță!</p>
+    <p><em>Fă primul pas astăzi: creează un cont GitHub, fă un commit și vei ave primul tău site live!</em></p>
+  `,
+  date: "2026-07-02",
+  readTime: "7 min citire",
+  tags: ["Web Development", "Hosting", "Vercel", "GitHub Pages", "Netlify", "Începători", "Gratuit"],
+  image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop",
+  author: {
+    name: "Ioniță Aurel Mihai",
+    avatar: "/icons/profileblog.png"
+  },
+  relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "bazele-programarii-variabile-tipuri-date-functii"]
 }
 ];
