@@ -690,7 +690,7 @@ function UserData() {
   relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "bazele-programarii-variabile-tipuri-date-functii"]
   },{
   slug: "cum-sa-ti-faci-primul-site-si-sa-l-pui-online-gratis",
-  title: "Cum să-ți faci primul site și să-l pui online gratuit (Vercel, GitHub Pages.Netlify)",
+  title: "Cum să-ți faci primul site și să-l pui online gratuit (Vercel, GitHub Pages,Netlify)?",
   excerpt: "Ai învățat HTML, CSS și JavaScript și dorești să-ți arăți primul site cu întreaga lume? În acest articol îți explic pas cu pas cum să construiești un website simplu și cum să-l publici gratuit folosind platforme precum GitHub Pages, Vercel, Netlify și Cloudflare Pages.",
   content: `
     <h2>Ce ai nevoie pentru a începe?</h2>
