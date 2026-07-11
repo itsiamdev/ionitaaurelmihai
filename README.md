@@ -5,7 +5,7 @@
 <div align="center">
   <h3>🎬 Presentation</h3>
   <video src="public/presentetion.mp4" controls style="max-width: 800px; width: 100%; border-radius: 12px; border: 2px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-    Your browser does not support the video tag.
+    
   </video>
 </div>
 
