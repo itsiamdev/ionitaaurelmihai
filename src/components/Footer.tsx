@@ -54,17 +54,17 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4 text-foreground">Blog</h4>
+            <h4 className="text-sm font-semibold mb-4 text-foreground">Suport</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button onClick={() => scrollToSection("blog")} className="text-muted-foreground hover:text-primary transition-colors">
-                  Toate Articolele
-                </button>
+                <Link to="/politica-de-confidentialitate" className="text-muted-foreground hover:text-primary transition-colors">
+                  Politica de Confidențialitate
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection("blog")} className="text-muted-foreground hover:text-primary transition-colors">
-                  Articole Recente
-                </button>
+                <Link to="/termeni-si-conditii" className="text-muted-foreground hover:text-primary transition-colors">
+                  Termeni și Condiții
+                </Link>
               </li>
             </ul>
           </div>

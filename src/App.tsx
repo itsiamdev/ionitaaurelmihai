@@ -9,6 +9,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor";
 import ChatBot from "./components/ChatBot";
@@ -42,6 +44,8 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/politica-de-confidentialitate" element={<PrivacyPolicy />} />
+          <Route path="/termeni-si-conditii" element={<TermsAndConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
