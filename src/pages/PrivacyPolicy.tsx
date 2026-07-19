@@ -19,7 +19,6 @@ const PrivacyPolicy = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-8">
               <span className="text-gradient">Politica de Confidențialitate</span>
             </h1>
-
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
                 Ultima actualizare: 19 iulie 2026

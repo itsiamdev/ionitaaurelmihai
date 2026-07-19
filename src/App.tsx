@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor";
 import ChatBot from "./components/ChatBot";
 import BackgroundMusic from "./components/BackgroundMusic";
+import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/termeni-si-conditii" element={<TermsAndConditions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieBanner />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
