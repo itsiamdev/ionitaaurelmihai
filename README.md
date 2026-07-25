@@ -58,7 +58,11 @@ The site is meticulously built with React and TypeScript for robust type safety 
    - JSON-LD Schema.org structured data for SEO
 - **Projects Preview** 🖼️: Homepage section showcasing 3 recent projects with hover overlays, category badges, and tech stack chips.
 - **Blog Preview** 📄: Homepage section displaying 3 latest blog posts with images, tags, dates, read time, and "View all articles" link.
-- **Footer** 📋: Multi-column footer with navigation buttons, blog section links, copyright notice, and social icons (GitHub, LinkedIn, Mail, Twitter/X).
+ - **Privacy Policy** 🔒: Dedicated `/politica-de-confidentialitate` page detailing data collection, usage, cookie policy, and contact info.
+- **Terms & Conditions** 📜: Dedicated `/termeni-si-conditii` page with usage rules, copyright, liability limitations, and contact info.
+- **Cookie Banner** 🍪: Consent banner with accept/reject all options, expandable settings for granular cookie preferences (necessary, analytics, marketing), and localStorage persistence.
+- **Background Decoration** 🎨: Reusable `BackgroundDecoration` component with animated floating glow orbs and optional grid pattern overlay, themed to match the dark cyan design system.
+- **Footer** 📋: Multi-column footer with navigation buttons, policy/legal links, copyright notice, and social icons (GitHub, LinkedIn, Mail, Twitter/X).
 - **404 Not Found Page** ❌: Dedicated error page for invalid routes.
 - **Contact Integration** 📞: Multi-channel contact options with form validation using react-hook-form, zod schema validation, and toast notifications (sonner).
 - **Chatbot** 🤖: Client-side AI assistant with smart keyword/intent matching for contextual responses about projects and technologies.
@@ -124,6 +128,8 @@ ionitaaurelmihai/
 │   │   ├── ui/           # shadcn/ui components
 │   │   ├── CustomCursor.tsx
 │   │   ├── BackgroundMusic.tsx
+│   │   ├── CookieBanner.tsx
+│   │   ├── BackgroundDecoration.tsx
 │   │   ├── Navigation.tsx
 │   │   ├── Footer.tsx
 │   │   ├── BlogPreview.tsx
@@ -132,10 +138,13 @@ ionitaaurelmihai/
 │   │   ├── Certifications.tsx
 │   │   └── *.tsx         # Custom components (Hero, About, Projects, etc.)
 │   ├── pages/            # Route-based page components
+│   │   ├── Index.tsx
 │   │   ├── Blog.tsx
 │   │   ├── BlogPost.tsx
 │   │   ├── Projects.tsx
 │   │   ├── ProjectDetail.tsx
+│   │   ├── PrivacyPolicy.tsx
+│   │   ├── TermsAndConditions.tsx
 │   │   └── NotFound.tsx
 │   ├── data/             # Static data files (projects.ts, blogPosts.ts, etc.)
 │   ├── hooks/            # Custom React hooks (useToast.ts)
@@ -153,6 +162,8 @@ ionitaaurelmihai/
 - `/blog/:slug` - Individual blog post with likes, sharing, and related posts
 - `/projects` - All projects in a sortable grid with SEO optimization
 - `/projects/:slug` - Individual project detail page
+- `/politica-de-confidentialitate` - Cookie and privacy policy page
+- `/termeni-si-conditii` - Terms and conditions of use
 - `*` - 404 Not Found error page
 
 ## SEO & Accessibility ♿
