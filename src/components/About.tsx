@@ -7,11 +7,24 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { User, Code, Heart, Coffee, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  User,
+  Code,
+  Heart,
+  Coffee,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const aboutImages = [
-  { src: "public/ionitaaurelmihai/image.png", alt: "Ionita Aurel Mihai - Fotografie 1" },
-  { src: "public/ionitaaurelmihai/image2.png", alt: "Ionita Aurel Mihai - Fotografie 2" },
+  {
+    src: "public/ionitaaurelmihai/image.png",
+    alt: "Ionita Aurel Mihai - Fotografie 1",
+  },
+  {
+    src: "public/ionitaaurelmihai/image2.png",
+    alt: "Ionita Aurel Mihai - Fotografie 2",
+  },
 ];
 
 const About = () => {
@@ -102,10 +115,13 @@ const About = () => {
                     </h4>
                     <div className="text-sm text-muted-foreground space-y-2">
                       <p>
-                        La vârsta de 17 ani, dezvolt aplicații web deja de la 15
-                        ani, moment în care am descoperit pasiunea pentru
-                        programare și tehnologie. În prezent, sunt elev în clasa
-                        a XII-a la{" "}
+                        Pasiunea mea pentru programare a început la 15 ani, când
+                        am descoperit lumea tehnologiei și posibilitățile pe
+                        care le oferă dezvoltarea software. Astăzi, lucrez la
+                        proiecte web și mobile, îmi dezvolt constant abilitățile
+                        și urmăresc să construiesc produse digitale care pot
+                        avea un impact real. În prezent, sunt elev în clasa a
+                        XII-a la{" "}
                         <a
                           href="https://www.cnsm.ro/"
                           target="_blank"
@@ -119,11 +135,11 @@ const About = () => {
                         dezvoltării continue în acest sector.
                       </p>
                       <p>
-                        Mă caracterizează prin perseverență și atenție la detalii,
-                        iar procesul de construire a unui produs digital
-                        funcțional începe cu înțelegerea profundă a problemelor
-                        pe care le rezolvă. În ultima perioadă mă concentrez pe
-                        admiterea la{" "}
+                        Mă caracterizează prin perseverență și atenție la
+                        detalii, iar procesul de construire a unui produs
+                        digital funcțional începe cu înțelegerea profundă a
+                        problemelor pe care le rezolvă. În ultima perioadă mă
+                        concentrez pe admiterea la{" "}
                         <a
                           href="https://info.uaic.ro/"
                           target="_blank"
@@ -171,7 +187,9 @@ const About = () => {
                   key={index}
                   onClick={() => setCurrentImage(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    index === currentImage ? "bg-primary" : "bg-muted-foreground/30"
+                    index === currentImage
+                      ? "bg-primary"
+                      : "bg-muted-foreground/30"
                   }`}
                   aria-label={`Mergi la imaginea ${index + 1}`}
                 />
