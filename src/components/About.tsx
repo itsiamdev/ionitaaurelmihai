@@ -18,11 +18,11 @@ import {
 
 const aboutImages = [
   {
-    src: "public/ionitaaurelmihai/image.png",
+    src: "/ionitaaurelmihai/image.png",
     alt: "Ionita Aurel Mihai - Fotografie 1",
   },
   {
-    src: "public/ionitaaurelmihai/image2.png",
+    src: "/ionitaaurelmihai/image2.png",
     alt: "Ionita Aurel Mihai - Fotografie 2",
   },
 ];
