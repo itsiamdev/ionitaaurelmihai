@@ -104,6 +104,9 @@ const About = () => {
                         <li>• Programare</li>
                         <li>• Sport</li>
                         <li>• Citit</li>
+                        <li>• Baschet</li>
+                        <li>• Filme</li>
+                        <li>• Muzică</li>
                       </ul>
                     </div>
                   </div>
