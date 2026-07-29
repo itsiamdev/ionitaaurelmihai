@@ -841,5 +841,100 @@ function UserData() {
     avatar: "/icons/profileblog.png"
   },
   relatedPosts: ["cum-functioneaza-html-css-javascript-intr-o-aplicatie-web", "bazele-programarii-variabile-tipuri-date-functii"]
-}
+  },
+  {
+    slug: "tech-stack-dezvoltator-2026",
+    title: "Tech Stack-ul meu ca developer în 2026",
+    excerpt: "O privire de ansamblu asupra tehnologiilor și instrumentelor de frontend pe care le folosesc în 2026 pentru a construi aplicații web moderne, rapide și ușor de utilizat.",
+    content: `
+      <h2>De ce un tech stack?</h2>
+      <p>Un tech stack reprezintă combinația de tehnologii pe care un dezvoltator le folosește pentru a construi, testa și déploia o aplicație. Alegerea corectă a stack-ului influențează direct performanța, scalabilitatea și experiența dezvoltatorului.</p>
+      <p>În 2026, peisajul dezvoltării web este mai divers decât oricând. Mai jos îți prezint tool-ul de frontend pe care îl folosesc în proiecte personale și profesionale.</p>
+
+      <h2>Frontend</h2>
+      <p>Frontend-ul este prima interacțiune pe care o are utilizatorul cu aplicația. Fiecare element trebuie să fie rapid, responsive și estetic.</p>
+      <h3>Limbaje fundamentale</h3>
+      <ul>
+        <li><strong>HTML5</strong> — structura semantică a paginilor</li>
+        <li><strong>CSS3</strong> — stilizare și layout, inclusiv animații și responsive design</li>
+        <li><strong>JavaScript (ES6+)</strong> — interacțiune și logica aplicației</li>
+        <li><strong>TypeScript</strong> — JavaScript cu tipărire statică pentru cod mai sigur și mai ușor de întreținut</li>
+      </ul>
+
+      <h3>Framework-uri și biblioteci</h3>
+      <ul>
+        <li><strong>React</strong> — componente UI declarative, Virtual DOM, ecosistem vast</li>
+        <li><strong>Tailwind CSS</strong> — framework CSS utility-first pentru design rapid și consistent</li>
+        <li><strong>shadcn/ui</strong> — componente UI construite pe Radix UI cu stil personalizabil</li>
+        <li><strong>Framer Motion</strong> — animații fluide și gesture-uri pentru React</li>
+        <li><strong>Bootstrap</strong> — grid system și componente predefinite pentru prototipare rapidă</li>
+      </ul>
+
+      <h3>Instrumente de dezvoltare frontend</h3>
+      <ul>
+        <li><strong>Vite</strong> — build tool ultra-rapid cu HMR (Hot Module Replacement)</li>
+        <li><strong>ESLint + Prettier</strong> — linting și formatare automată a codului</li>
+        <li><strong>Git</strong> — controlul versiunilor pentru urmărirea schimbărilor și colaborare</li>
+      </ul>
+
+      <h2>Instrumente de productivitate</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Instrument</th>
+            <th>Utilizare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>VS Code</td>
+            <td>Editor principal cu extensii pentru debugging, Git și live share</td>
+          </tr>
+          <tr>
+            <td>Figma</td>
+            <td>Design UI/UX și prototipare colaborativă</td>
+          </tr>
+          <tr>
+            <td>Postman</td>
+            <td>Testare și documentare API-uri REST</td>
+          </tr>
+          <tr>
+            <td>Cursor AI</td>
+            <td>AI-powered code editor cu autocompletare și refactoring contextual</td>
+          </tr>
+          <tr>
+            <td>GitHub</td>
+            <td>Hosting cod, colaborare, review-uri și CI/CD</td>
+          </tr>
+          <tr>
+            <td>Vercel / Netlify</td>
+            <td>Deploy automat și hosting pentru site-uri static și aplicații React</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>De ce aceste alegeri?</h2>
+      <p>Fiecare tehnologie din stack-ul meu a fost selectată pentru un motiv anume:</p>
+      <ul>
+        <li><strong>React + TypeScript</strong> oferă o experiență de dezvoltare robustă, cu tipărire statică care prinde erorile înainte de runtime</li>
+        <li><strong>Tailwind + shadcn/ui</strong> permite construirea rapidă de interfețe consistente fără să părăsești fișierul HTML</li>
+        <li><strong>Vite</strong> oferă build-uri ultra-rapide și HMR instant, esențial pentru productivitate</li>
+        <li><strong>Cursor AI</strong> accelerează scrisul codului cu sugestii inteligente contextuale</li>
+      </ul>
+
+      <h2>Concluzie</h2>
+      <p>Acest articol reflectă stack-ul meu actual de front-end din 2026. Tehnologia evoluează rapid, iar eu evoluez odată cu ea — învățând constant framework-uri noi, instrumente și bune practici.</p>
+      <p>Pe viitor, intenționez să învăț și <strong>aplicațiile mobile</strong> (cu Flutter sau React Native) și să aprofundez <strong>dezvoltarea backend</strong> (Node.js, Express, baze de date, autentificare și deploy-uri complexe). Dezvoltarea nu se oprește niciodată — este un proces continuu de învățare și experimentare.</p>
+      <p><em>Dacă ai întrebări despre oricare dintre aceste tehnologii, nu ezita să mă contactezi sau să explorezi articolele de pe blogul meu!</em></p>
+    `,
+    date: "2026-07-29",
+    readTime: "8 min citire",
+    tags: ["Tech Stack", "Developer", "2026", "Frontend", "React", "TypeScript", "Node.js", "Instrumente"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=450&fit=crop",
+    author: {
+      name: "Ioniță Aurel Mihai",
+      avatar: "/icons/profileblog.png"
+    },
+    relatedPosts: ["react-pentru-incepatori-ghid-complet", "cum-functioneaza-html-css-javascript-intr-o-aplicatie-web"]
+  }
 ];

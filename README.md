@@ -79,6 +79,7 @@ The blog contains multiple in-depth articles:
 - "Git și GitHub - Ghid Complet" (2026-04-14)
 - "React pentru începători" (2026-05-23)
 - "Cum să-ți faci primul site și să-l pui online gratis" (2026-07-02)
+- "Tech Stack-ul meu ca developer în 2026" (2026-07-29)
 
 ## Tech Stack 🛠️
 - **Core Framework**: React ⚛️ with TypeScript 📘 for type-safe development
