@@ -49,7 +49,8 @@ The site is meticulously built with React and TypeScript for robust type safety 
    | Tools | Git, VS Code, Figma, Postman, Sublime Text, IntelliJ IDEA, Cursor AI |
    | Programming | C, C++, C#, JavaScript, TypeScript |
    | Other | Leaflet.js, OpenStreetMap, Nominatim API, TanStack Query |
-- **Certifications** 🏆: Interactive cards opening modal dialogs with credential images, descriptions, verification links, and download buttons.
+- **Certifications** 🏆: Full `/certificari` route with modal dialogs showing credential images, descriptions, verification links, and download buttons. Homepage preview shows the first 4 certifications with a "View all" button leading to the full list.
+- **Certifications Preview** 📜: Homepage section showcasing 4 recent certifications with hover overlays, institution logos, and "View all certifications" link.
 - **Blog Platform** 📚: Full `/blog` and `/blog/:slug` routes with SEO optimization, search functionality, category filtering, and advanced features:
    - Syntax-highlighted code blocks (prism-react-renderer)
    - Like/heart button with localStorage persistence
@@ -135,8 +136,10 @@ ionitaaurelmihai/
 │   │   ├── Footer.tsx
 │   │   ├── BlogPreview.tsx
 │   │   ├── ProjectsPreview.tsx
+│   │   ├── CertificationsPreview.tsx
 │   │   ├── CodeBlock.tsx
 │   │   ├── Certifications.tsx
+│   │   ├── CertificationsPreview.tsx
 │   │   └── *.tsx         # Custom components (Hero, About, Projects, etc.)
 │   ├── pages/            # Route-based page components
 │   │   ├── Index.tsx
@@ -144,6 +147,7 @@ ionitaaurelmihai/
 │   │   ├── BlogPost.tsx
 │   │   ├── Projects.tsx
 │   │   ├── ProjectDetail.tsx
+│   │   ├── CertificationsPage.tsx
 │   │   ├── PrivacyPolicy.tsx
 │   │   ├── TermsAndConditions.tsx
 │   │   └── NotFound.tsx
@@ -163,6 +167,7 @@ ionitaaurelmihai/
 - `/blog/:slug` - Individual blog post with likes, sharing, and related posts
 - `/projects` - All projects in a sortable grid with SEO optimization
 - `/projects/:slug` - Individual project detail page
+- `/certificari` - Full certifications page with all credentials and download links
 - `/politica-de-confidentialitate` - Cookie and privacy policy page
 - `/termeni-si-conditii` - Terms and conditions of use
 - `*` - 404 Not Found error page

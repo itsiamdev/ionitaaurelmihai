@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
+import CertificationsPage from "./pages/CertificationsPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/politica-de-confidentialitate" element={<PrivacyPolicy />} />
           <Route path="/termeni-si-conditii" element={<TermsAndConditions />} />
+          <Route path="/certificari" element={<CertificationsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieBanner />
