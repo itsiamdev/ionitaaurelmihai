@@ -859,6 +859,7 @@ function UserData() {
         <li><strong>CSS3</strong> — stilizare și layout, inclusiv animații și responsive design</li>
         <li><strong>JavaScript (ES6+)</strong> — interacțiune și logica aplicației</li>
         <li><strong>TypeScript</strong> — JavaScript cu tipărire statică pentru cod mai sigur și mai ușor de întreținut</li>
+        <li><strong>C++</strong> — algoritmică si intelegerea fundamentala a programarii</li>
       </ul>
 
       <h3>Framework-uri și biblioteci</h3>
