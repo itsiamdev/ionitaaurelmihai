@@ -36,26 +36,6 @@ const CertificationsPreview = () => {
             className="card-hover border-border/50 bg-card/50 backdrop-blur-sm group"
           >
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="mb-4">
-                {cert.name.includes("HTML") && (
-                  <span className="text-orange-500">📄</span>
-                )}
-                {cert.name.includes("CSS") && (
-                  <span className="text-blue-500">🎨</span>
-                )}
-                {cert.name.includes("JavaScript") && (
-                  <span className="text-yellow-500">⚡</span>
-                )}
-                {cert.name.includes("TypeScript") && (
-                  <span className="text-blue-600">🔷</span>
-                )}
-                {cert.name.includes("Git") && (
-                  <span className="text-red-500">🔀</span>
-                )}
-                {cert.name.includes("Responsive") && (
-                  <span className="text-green-500">📱</span>
-                )}
-              </div>
               <div className="w-16 h-16 mb-4 flex items-center justify-center bg-muted rounded-lg p-3">
                 <img
                   src={cert.logo}
