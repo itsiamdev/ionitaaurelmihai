@@ -223,7 +223,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Special appreciation for shadcn/ui and Supabase for empowering modern web development
 
 ## Contact 📧
-- **Live Site**: [https://itsiamdev.com/](https://ionitaaurelmihai.vercel.app/)
+- **Live Site**: [https://itsiamdev.com/](https://itsiamdev.com/)
 - **Email**: itsiamdev@gmail.com
 - **LinkedIn**: [linkedin.com/in/itsiamdev](https://linkedin.com/in/itsiamdev)
 - **GitHub**: [github.com/itsiamdev](https://github.com/itsiamdev)
